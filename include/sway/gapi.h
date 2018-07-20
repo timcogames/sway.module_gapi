@@ -7,7 +7,9 @@
 #include <sway/gapi/bufferaccesses.h>
 #include <sway/gapi/bufferdescription.h>
 #include <sway/gapi/buffercreateinfo.h>
+#include <sway/gapi/buffer.h>
 #include <sway/gapi/primitivetypes.h>
+#include <sway/gapi/drawcall.h>
 #include <sway/gapi/viewportmodes.h>
 
 #endif // SWAY_GAPI_H

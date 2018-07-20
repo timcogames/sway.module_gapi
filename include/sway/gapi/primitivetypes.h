@@ -2,6 +2,7 @@
 #define SWAY_GAPI_PRIMITIVETYPES_H
 
 #include <sway/namespacemacros.h>
+#include <sway/types.h>
 
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
@@ -10,7 +11,7 @@ NAMESPACE_BEGIN(gapi)
  * \brief
  *    Перечисление типов примитива.
  */
-enum class PrimitiveType_t {
+enum class PrimitiveType_t : u8_t {
 	kNone,
 	kPointList, /*!< Список точек. */
 	kLineList, /*!< Список линий. */
