@@ -152,6 +152,12 @@ public:
 	 *    Значение uniform-переменной.
 	 */
 	virtual void setUniformCol4f(const std::string & uniform, const math::col4f_t & col) = 0;
+
+	/*!
+	 * \brief
+	 *    Получает идентификатор объекта.
+	 */
+	virtual u32_t getObjectId() const = 0;
 };
 
 NAMESPACE_END(gapi)
