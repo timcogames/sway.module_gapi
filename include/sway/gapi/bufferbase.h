@@ -1,5 +1,5 @@
-#ifndef SWAY_GAPI_BUFFER_H
-#define SWAY_GAPI_BUFFER_H
+#ifndef SWAY_GAPI_BUFFERBASE_H
+#define SWAY_GAPI_BUFFERBASE_H
 
 #include <sway/gapi/buffertargets.h>
 #include <sway/gapi/bufferusages.h>
@@ -178,7 +178,7 @@ public:
 
 	/*!
 	 * \brief
-	 *    Получает идентификатор ресурса.
+	 *    Получает идентификатор объекта.
 	 */
 	virtual u32_t getObjectId() const = 0;
 };
@@ -186,4 +186,4 @@ public:
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
 
-#endif // SWAY_GAPI_BUFFER_H
+#endif // SWAY_GAPI_BUFFERBASE_H

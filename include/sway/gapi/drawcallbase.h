@@ -1,7 +1,7 @@
-#ifndef SWAY_GAPI_DRAWCALL_H
-#define SWAY_GAPI_DRAWCALL_H
+#ifndef SWAY_GAPI_DRAWCALLBASE_H
+#define SWAY_GAPI_DRAWCALLBASE_H
 
-#include <sway/gapi/buffer.h>
+#include <sway/gapi/bufferbase.h>
 #include <sway/gapi/primitivetypes.h>
 #include <sway/visibilitymacros.h>
 #include <sway/namespacemacros.h>
@@ -52,4 +52,4 @@ public:
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
 
-#endif // SWAY_GAPI_DRAWCALL_H
+#endif // SWAY_GAPI_DRAWCALLBASE_H
