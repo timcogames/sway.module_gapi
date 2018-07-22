@@ -3,6 +3,7 @@
 
 #include <sway/gapi/shadertypes.h>
 #include <sway/namespacemacros.h>
+#include <string>
 
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)

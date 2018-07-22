@@ -38,10 +38,10 @@ public:
 	 * \brief
 	 *    Добавляет вершинный атрибут.
 	 * 
-	 * \param[in] attrib
+	 * \param[in] attributeDesc
 	 *    Описание вершинного атрибута.
 	 */
-	virtual void addAttribute(VertexAttributeDescriptor attrib) = 0;
+	virtual void addAttribute(VertexAttributeDescriptor attributeDesc) = 0;
 
 	virtual void enable() = 0;
 
