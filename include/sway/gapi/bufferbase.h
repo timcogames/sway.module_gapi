@@ -3,7 +3,7 @@
 
 #include <sway/gapi/buffertargets.h>
 #include <sway/gapi/bufferusages.h>
-#include <sway/gapi/bufferdescription.h>
+#include <sway/gapi/bufferdescriptor.h>
 #include <sway/visibilitymacros.h>
 #include <sway/namespacemacros.h>
 #include <sway/types.h>
@@ -21,7 +21,7 @@ public:
 	 * \brief
 	 *    Конструктор класса.
 	 */
-	IBufferBase(const BufferDescription & desc) {
+	IBufferBase(const BufferDescriptor & desc) {
 		// Empty
 	}
 

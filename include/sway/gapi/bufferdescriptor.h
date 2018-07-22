@@ -1,5 +1,5 @@
-#ifndef SWAY_GAPI_BUFFERDESCRIPTION_H
-#define SWAY_GAPI_BUFFERDESCRIPTION_H
+#ifndef SWAY_GAPI_BUFFERDESCRIPTOR_H
+#define SWAY_GAPI_BUFFERDESCRIPTOR_H
 
 #include <sway/gapi/buffertargets.h>
 #include <sway/gapi/bufferusages.h>
@@ -9,7 +9,7 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-struct BufferDescription {
+struct BufferDescriptor {
 	BufferTarget_t target;
 	BufferUsage_t usage;
 	s32_t byteStride;
@@ -19,4 +19,4 @@ struct BufferDescription {
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
 
-#endif // SWAY_GAPI_BUFFERDESCRIPTION_H
+#endif // SWAY_GAPI_BUFFERDESCRIPTOR_H
