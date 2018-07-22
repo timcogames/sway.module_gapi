@@ -11,6 +11,8 @@
 #include <sway/gapi/bufferdescription.h>
 #include <sway/gapi/buffercreateinfo.h>
 #include <sway/gapi/bufferbase.h>
+#include <sway/gapi/vertexsemantics.h>
+#include <sway/gapi/vertexattribute.h>
 #include <sway/gapi/primitivetypes.h>
 #include <sway/gapi/drawcallbase.h>
 #include <sway/gapi/viewportmodes.h>
