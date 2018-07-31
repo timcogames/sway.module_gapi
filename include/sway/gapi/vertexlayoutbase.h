@@ -38,13 +38,21 @@ public:
 	 * \brief
 	 *    Добавляет вершинный атрибут.
 	 * 
-	 * \param[in] attributeDesc
+	 * \param[in] desc
 	 *    Описание вершинного атрибута.
 	 */
-	virtual void addAttribute(VertexAttributeDescriptor attributeDesc) = 0;
+	virtual void addAttribute(VertexAttributeDescriptor desc) = 0;
 
+	/*!
+	 * \brief
+	 *    Включает чтение атрибутов.
+	 */
 	virtual void enable() = 0;
 
+	/*!
+	 * \brief
+	 *    Отключает чтение атрибутов.
+	 */
 	virtual void disable() = 0;
 };
 

@@ -20,4 +20,16 @@
 #include <sway/gapi/drawcallbase.h>
 #include <sway/gapi/viewportmodes.h>
 
+NAMESPACE_BEGIN(sway)
+NAMESPACE_BEGIN(gapi)
+
+EXTERN_C IShaderProgramBase * createShaderProgram();
+EXTERN_C IShaderBase * createShader(const ShaderCreateInfo &);
+EXTERN_C IVertexLayoutBase * createVertexLayout(IShaderProgramBase *);
+EXTERN_C IBufferBase * createBuffer(const BufferCreateInfo & createInfo);
+EXTERN_C IDrawCallBase * createDrawCall();
+
+NAMESPACE_END(gapi)
+NAMESPACE_END(sway)
+
 #endif // SWAY_GAPI_H
