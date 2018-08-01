@@ -11,7 +11,7 @@ NAMESPACE_BEGIN(gapi)
  * \brief
  *    Перечисление типов примитива.
  */
-enum class PrimitiveType_t : u8_t {
+enum class PrimitiveType_t : u32_t {
 	kNone,
 	kPointList, /*!< Список точек. */
 	kLineList, /*!< Список линий. */

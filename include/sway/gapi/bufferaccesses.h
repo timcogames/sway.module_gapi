@@ -7,7 +7,7 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-enum class BufferAccess_t : u8_t {
+enum class BufferAccess_t : u32_t {
 	kNone,
 	kRead,
 	kWrite,

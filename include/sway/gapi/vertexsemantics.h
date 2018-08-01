@@ -7,7 +7,7 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-enum class VertexSemantic_t : u8_t {
+enum class VertexSemantic_t : u32_t {
 	kPosition,
 	kColor,
 	kTexCoord_0,

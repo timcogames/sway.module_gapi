@@ -7,7 +7,7 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-enum class BufferUsage_t : u8_t {
+enum class BufferUsage_t : u32_t {
 	kNone,
 	kStatic,
 	kDynamic,

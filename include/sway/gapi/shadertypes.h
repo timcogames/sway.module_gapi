@@ -11,7 +11,7 @@ NAMESPACE_BEGIN(gapi)
  * \brief
  *    Перечисление типов шейдера.
  */
-enum class ShaderType_t : u8_t {
+enum class ShaderType_t : u32_t {
 	kVertex, /*!< Вершинный шейдер. */
 	kFragment /*!< Фрагментный шейдер. */
 };
