@@ -1,6 +1,7 @@
 #ifndef SWAY_GAPI_H
 #define SWAY_GAPI_H
 
+#include <sway/gapi/extensions/extensionhelper.h>
 #include <sway/gapi/clearflags.h>
 #include <sway/gapi/shadertypes.h>
 #include <sway/gapi/shadercreateinfo.h>
