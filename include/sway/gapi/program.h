@@ -1,5 +1,5 @@
-#ifndef SWAY_GAPI_SHADERPROGRAM_H
-#define SWAY_GAPI_SHADERPROGRAM_H
+#ifndef SWAY_GAPI_PROGRAM_H
+#define SWAY_GAPI_PROGRAM_H
 
 #include <sway/gapi/resource.h>
 #include <sway/gapi/shader.h>
@@ -8,22 +8,25 @@
 #include <sway/namespacemacros.h>
 #include <sway/types.h>
 
+#include <boost/shared_ptr.hpp> // boost::shared_ptr
 #include <string>
 
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
+typedef std::shared_ptr<class AProgram> ProgramRef_t;
+
 /*!
  * \brief
  *    Представление шейдерной программы.
  */
-class AShaderProgram : public Resource {
+class AProgram : public Resource {
 public:
 	/*!
 	 * \brief
 	 *    Конструктор класса.
 	 */
-	AShaderProgram() {
+	AProgram() {
 		// Empty
 	}
 
@@ -31,7 +34,7 @@ public:
 	 * \brief
 	 *    Деструктор класса.
 	 */
-	virtual ~AShaderProgram() {
+	virtual ~AProgram() {
 		// Empty
 	}
 
@@ -154,4 +157,4 @@ public:
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
 
-#endif // SWAY_GAPI_SHADERPROGRAM_H
+#endif // SWAY_GAPI_PROGRAM_H

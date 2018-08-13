@@ -5,7 +5,7 @@
 #include <sway/gapi/shadertypes.h>
 #include <sway/gapi/shadercreateinfo.h>
 #include <sway/gapi/shader.h>
-#include <sway/gapi/shaderprogram.h>
+#include <sway/gapi/program.h>
 #include <sway/gapi/buffertargets.h>
 #include <sway/gapi/bufferusages.h>
 #include <sway/gapi/bufferaccesses.h>

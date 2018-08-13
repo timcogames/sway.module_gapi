@@ -9,8 +9,12 @@
 #include <sway/namespacemacros.h>
 #include <sway/types.h>
 
+#include <boost/shared_ptr.hpp> // boost::shared_ptr
+
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
+
+typedef std::shared_ptr<class ABuffer> BufferRef_t;
 
 /*!
  * \brief

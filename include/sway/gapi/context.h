@@ -2,7 +2,7 @@
 #define SWAY_GAPI_CONTEXT_H
 
 #include <sway/gapi/shader.h>
-#include <sway/gapi/shaderprogram.h>
+#include <sway/gapi/program.h>
 #include <sway/gapi/buffer.h>
 #include <sway/gapi/vertexlayout.h>
 #include <sway/visibilitymacros.h>
@@ -34,13 +34,13 @@ public:
 		// Empty
 	}
 
-	virtual boost::shared_ptr<AShader> createShader(const ShaderCreateInfo & createInfo) = 0;
+	virtual ShaderRef_t createShader(const ShaderCreateInfo & createInfo) = 0;
 	
-	virtual boost::shared_ptr<AShaderProgram> createShaderProgram() = 0;
+	virtual ProgramRef_t createProgram() = 0;
 
-	virtual boost::shared_ptr<ABuffer> createBuffer(const BufferCreateInfo & createInfo) = 0;
+	virtual BufferRef_t createBuffer(const BufferCreateInfo & createInfo) = 0;
 
-	virtual boost::shared_ptr<IVertexLayout> createVertexLayout(AShaderProgram * program) = 0;
+	virtual VertexLayoutRef_t createVertexLayout(AProgram * program) = 0;
 };
 
 NAMESPACE_END(gapi)
