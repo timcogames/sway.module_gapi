@@ -1,7 +1,7 @@
-#ifndef SWAY_GAPI_VERTEXLAYOUTBASE_H
-#define SWAY_GAPI_VERTEXLAYOUTBASE_H
+#ifndef SWAY_GAPI_VERTEXLAYOUT_H
+#define SWAY_GAPI_VERTEXLAYOUT_H
 
-#include <sway/gapi/shaderprogrambase.h>
+#include <sway/gapi/shaderprogram.h>
 #include <sway/gapi/vertexattributedescriptor.h>
 #include <sway/namespacemacros.h>
 #include <sway/types.h>
@@ -9,28 +9,24 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-class IVertexLayoutBase {
+class IVertexLayout {
 public:
 	/*!
 	 * \brief
 	 *    Конструктор класса.
-	 *
-	 *    Выполняет инициализацию нового экземпляра класса.
 	 * 
-	 * \param[in] shader
+	 * \param[in] program
 	 *    Указатель на шейдерную программу.
 	 */
-	IVertexLayoutBase(IShaderProgramBase * shader) {
+	IVertexLayout(AShaderProgram * program) {
 		// Empty
 	}
 
 	/*!
 	 * \brief
 	 *    Деструктор класса.
-	 *
-	 *    Освобождает захваченные ресурсы.
 	 */
-	virtual ~IVertexLayoutBase() {
+	virtual ~IVertexLayout() {
 		// Empty
 	}
 
@@ -59,4 +55,4 @@ public:
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
 
-#endif // SWAY_GAPI_VERTEXLAYOUTBASE_H
+#endif // SWAY_GAPI_VERTEXLAYOUT_H

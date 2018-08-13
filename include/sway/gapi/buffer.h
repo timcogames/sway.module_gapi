@@ -1,6 +1,7 @@
-#ifndef SWAY_GAPI_BUFFERBASE_H
-#define SWAY_GAPI_BUFFERBASE_H
+#ifndef SWAY_GAPI_BUFFER_H
+#define SWAY_GAPI_BUFFER_H
 
+#include <sway/gapi/resource.h>
 #include <sway/gapi/buffertargets.h>
 #include <sway/gapi/bufferusages.h>
 #include <sway/gapi/bufferdescriptor.h>
@@ -15,23 +16,24 @@ NAMESPACE_BEGIN(gapi)
  * \brief
  *    Представление аппаратного буфера.
  */
-class IBufferBase {
+class ABuffer : public Resource {
 public:
 	/*!
 	 * \brief
 	 *    Конструктор класса.
+	 * 
+	 * \param[in] desc
+	 *    Описание буфера.
 	 */
-	IBufferBase(const BufferDescriptor & desc) {
+	ABuffer(const BufferDescriptor & desc) {
 		// Empty
 	}
 
 	/*!
 	 * \brief
 	 *    Деструктор класса.
-	 *
-	 *    Освобождает захваченные ресурсы.
 	 */
-	virtual ~IBufferBase() {
+	virtual ~ABuffer() {
 		// Empty
 	}
 
@@ -175,15 +177,9 @@ public:
 	 *    Получает размер структуры данных.
 	 */
 	virtual s32_t getByteStride() const = 0;
-
-	/*!
-	 * \brief
-	 *    Получает идентификатор объекта.
-	 */
-	virtual u32_t getObjectId() const = 0;
 };
 
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
 
-#endif // SWAY_GAPI_BUFFERBASE_H
+#endif // SWAY_GAPI_BUFFER_H

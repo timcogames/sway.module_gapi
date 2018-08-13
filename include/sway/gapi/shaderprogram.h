@@ -1,7 +1,8 @@
 #ifndef SWAY_GAPI_SHADERPROGRAM_H
 #define SWAY_GAPI_SHADERPROGRAM_H
 
-#include <sway/gapi/shaderbase.h>
+#include <sway/gapi/resource.h>
+#include <sway/gapi/shader.h>
 #include <sway/math/vector4.h>
 #include <sway/math/color.h>
 #include <sway/namespacemacros.h>
@@ -16,25 +17,21 @@ NAMESPACE_BEGIN(gapi)
  * \brief
  *    Представление шейдерной программы.
  */
-class IShaderProgramBase {
+class AShaderProgram : public Resource {
 public:
 	/*!
 	 * \brief
 	 *    Конструктор класса.
-	 *
-	 *    Выполняет инициализацию нового экземпляра класса.
 	 */
-	IShaderProgramBase() {
+	AShaderProgram() {
 		// Empty
 	}
 
 	/*!
 	 * \brief
 	 *    Деструктор класса.
-	 *
-	 *    Освобождает захваченные ресурсы.
 	 */
-	virtual ~IShaderProgramBase() {
+	virtual ~AShaderProgram() {
 		// Empty
 	}
 
@@ -48,7 +45,7 @@ public:
 	 * \sa
 	 *    detach(u32_t)
 	 */
-	virtual void attach(IShaderBase * shader) = 0;
+	virtual void attach(AShader * shader) = 0;
 
 	/*!
 	 * \brief
@@ -58,7 +55,7 @@ public:
 	 *    Отвязываемый шейдерный объект.
 	 * 
 	 * \sa
-	 *    attach(IShaderBase *)
+	 *    attach(AShader *)
 	 */
 	virtual void detach(u32_t objectId) = 0;
 	
@@ -152,12 +149,6 @@ public:
 	 *    Значение uniform-переменной.
 	 */
 	virtual void setUniformCol4f(const std::string & uniform, const math::col4f_t & col) = 0;
-
-	/*!
-	 * \brief
-	 *    Получает идентификатор объекта.
-	 */
-	virtual u32_t getObjectId() const = 0;
 };
 
 NAMESPACE_END(gapi)

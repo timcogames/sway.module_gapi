@@ -1,6 +1,7 @@
-#ifndef SWAY_GAPI_SHADERBASE_H
-#define SWAY_GAPI_SHADERBASE_H
+#ifndef SWAY_GAPI_SHADER_H
+#define SWAY_GAPI_SHADER_H
 
+#include <sway/gapi/resource.h>
 #include <sway/gapi/shadertypes.h>
 #include <sway/gapi/shadercreateinfo.h>
 #include <sway/namespacemacros.h>
@@ -11,30 +12,26 @@ NAMESPACE_BEGIN(gapi)
 
 /*!
  * \brief
- *    Представление шейдерного объекта.
+ *    Представление шейдера.
  */
-class IShaderBase {
+class AShader : public Resource {
 public:
 	/*!
 	 * \brief
 	 *    Конструктор класса.
-	 *
-	 *    Выполняет инициализацию нового экземпляра класса.
 	 * 
 	 * \param[in] type
 	 *    Тип создаваемого шейдера.
 	 */
-	IShaderBase(ShaderType_t type) {
+	AShader(ShaderType_t type) {
 		// Empty
 	}
 
 	/*!
 	 * \brief
 	 *    Деструктор класса.
-	 *
-	 *    Освобождает захваченные ресурсы.
 	 */
-	virtual ~IShaderBase() {
+	virtual ~AShader() {
 		// Empty
 	}
 
@@ -64,15 +61,9 @@ public:
 	 *    Тип шейдера.
 	 */
 	virtual ShaderType_t getType() const = 0;
-
-	/*!
-	 * \brief
-	 *    Получает идентификатор объекта.
-	 */
-	virtual u32_t getObjectId() const = 0;
 };
 
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
 
-#endif // SWAY_GAPI_SHADERBASE_H
+#endif // SWAY_GAPI_SHADER_H
