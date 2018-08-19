@@ -1,18 +1,14 @@
 #ifndef SWAY_GAPI_SHADER_H
 #define SWAY_GAPI_SHADER_H
 
-#include <sway/gapi/resource.h>
 #include <sway/gapi/shadertypes.h>
 #include <sway/gapi/shadercreateinfo.h>
+#include <sway/gapi/resource.h>
 #include <sway/namespacemacros.h>
 #include <sway/types.h>
 
-#include <boost/shared_ptr.hpp> // boost::shared_ptr
-
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
-
-typedef std::shared_ptr<class AShader> ShaderRef_t;
 
 /*!
  * \brief

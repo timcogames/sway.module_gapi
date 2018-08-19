@@ -1,11 +1,12 @@
 #ifndef SWAY_GAPI_H
 #define SWAY_GAPI_H
 
-#include <sway/gapi/extensions/extensionhelper.h>
+#include <sway/gapi/typedefs.h>
+#include <sway/gapi/profiletypes.h>
 #include <sway/gapi/shadertypes.h>
 #include <sway/gapi/shadercreateinfo.h>
 #include <sway/gapi/shader.h>
-#include <sway/gapi/program.h>
+#include <sway/gapi/shaderprogram.h>
 #include <sway/gapi/buffertargets.h>
 #include <sway/gapi/bufferusages.h>
 #include <sway/gapi/bufferaccesses.h>
@@ -20,12 +21,14 @@
 #include <sway/gapi/drawcallbase.h>
 #include <sway/gapi/viewportmodes.h>
 #include <sway/gapi/clearflags.h>
-#include <sway/gapi/context.h>
 
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-EXTERN_C IContext * createContext();
+EXTERN_C AShaderProgram * createShaderProgram();
+EXTERN_C AShader * createShader(const ShaderCreateInfo &);
+EXTERN_C ABuffer * createBuffer(const BufferCreateInfo & createInfo);
+EXTERN_C IVertexLayout * createVertexLayout(AShaderProgram *);
 EXTERN_C IDrawCallBase * createDrawCall();
 
 NAMESPACE_END(gapi)

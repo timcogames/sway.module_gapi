@@ -1,17 +1,13 @@
 #ifndef SWAY_GAPI_VERTEXLAYOUT_H
 #define SWAY_GAPI_VERTEXLAYOUT_H
 
-#include <sway/gapi/program.h>
+#include <sway/gapi/shaderprogram.h>
 #include <sway/gapi/vertexattributedescriptor.h>
 #include <sway/namespacemacros.h>
 #include <sway/types.h>
 
-#include <boost/shared_ptr.hpp> // boost::shared_ptr
-
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
-
-typedef std::shared_ptr<class IVertexLayout> VertexLayoutRef_t;
 
 class IVertexLayout {
 public:
@@ -22,7 +18,7 @@ public:
 	 * \param[in] program
 	 *    Указатель на шейдерную программу.
 	 */
-	IVertexLayout(AProgram * program) {
+	IVertexLayout(AShaderProgram * program) {
 		// Empty
 	}
 

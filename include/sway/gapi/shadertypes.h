@@ -19,4 +19,6 @@ enum class ShaderType_t : u32_t {
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
 
+#include <sway/gapi/shadertypes.inl>
+
 #endif // SWAY_GAPI_SHADERTYPES_H
