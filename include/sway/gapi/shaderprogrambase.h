@@ -1,7 +1,7 @@
-#ifndef SWAY_GAPI_SHADERPROGRAM_H
-#define SWAY_GAPI_SHADERPROGRAM_H
+#ifndef SWAY_GAPI_SHADERPROGRAMBASE_H
+#define SWAY_GAPI_SHADERPROGRAMBASE_H
 
-#include <sway/gapi/shader.h>
+#include <sway/gapi/shaderbase.h>
 #include <sway/gapi/resource.h>
 #include <sway/math/vector4.h>
 #include <sway/math/color.h>
@@ -17,13 +17,13 @@ NAMESPACE_BEGIN(gapi)
  * \brief
  *    Представление шейдерной программы.
  */
-class AShaderProgram : public Resource {
+class AShaderProgramBase : public Resource {
 public:
 	/*!
 	 * \brief
 	 *    Конструктор класса.
 	 */
-	AShaderProgram() {
+	AShaderProgramBase() {
 		// Empty
 	}
 
@@ -31,7 +31,7 @@ public:
 	 * \brief
 	 *    Деструктор класса.
 	 */
-	virtual ~AShaderProgram() {
+	virtual ~AShaderProgramBase() {
 		// Empty
 	}
 
@@ -45,7 +45,7 @@ public:
 	 * \sa
 	 *    detach(u32_t)
 	 */
-	virtual void attach(AShader * shader) = 0;
+	virtual void attach(AShaderBase * shader) = 0;
 
 	/*!
 	 * \brief
@@ -55,7 +55,7 @@ public:
 	 *    Отвязываемый шейдерный объект.
 	 * 
 	 * \sa
-	 *    attach(AShader *)
+	 *    attach(AShaderBase *)
 	 */
 	virtual void detach(u32_t objectId) = 0;
 	
@@ -154,4 +154,4 @@ public:
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
 
-#endif // SWAY_GAPI_SHADERPROGRAM_H
+#endif // SWAY_GAPI_SHADERPROGRAMBASE_H

@@ -1,5 +1,5 @@
-#ifndef SWAY_GAPI_BUFFER_H
-#define SWAY_GAPI_BUFFER_H
+#ifndef SWAY_GAPI_BUFFERBASE_H
+#define SWAY_GAPI_BUFFERBASE_H
 
 #include <sway/gapi/resource.h>
 #include <sway/gapi/buffertargets.h>
@@ -16,7 +16,7 @@ NAMESPACE_BEGIN(gapi)
  * \brief
  *    Представление аппаратного буфера.
  */
-class ABuffer : public Resource {
+class ABufferBase : public Resource {
 public:
 	/*!
 	 * \brief
@@ -25,7 +25,7 @@ public:
 	 * \param[in] desc
 	 *    Описание буфера.
 	 */
-	ABuffer(const BufferDescriptor & desc) {
+	ABufferBase(const BufferDescriptor & desc) {
 		// Empty
 	}
 
@@ -33,7 +33,7 @@ public:
 	 * \brief
 	 *    Деструктор класса.
 	 */
-	virtual ~ABuffer() {
+	virtual ~ABufferBase() {
 		// Empty
 	}
 
@@ -182,4 +182,4 @@ public:
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
 
-#endif // SWAY_GAPI_BUFFER_H
+#endif // SWAY_GAPI_BUFFERBASE_H

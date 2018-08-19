@@ -1,5 +1,5 @@
-#ifndef SWAY_GAPI_SHADER_H
-#define SWAY_GAPI_SHADER_H
+#ifndef SWAY_GAPI_SHADERBASE_H
+#define SWAY_GAPI_SHADERBASE_H
 
 #include <sway/gapi/shadertypes.h>
 #include <sway/gapi/shadercreateinfo.h>
@@ -14,7 +14,7 @@ NAMESPACE_BEGIN(gapi)
  * \brief
  *    Представление шейдера.
  */
-class AShader : public Resource {
+class AShaderBase : public Resource {
 public:
 	/*!
 	 * \brief
@@ -23,7 +23,7 @@ public:
 	 * \param[in] type
 	 *    Тип создаваемого шейдера.
 	 */
-	AShader(ShaderType_t type) {
+	AShaderBase(ShaderType_t type) {
 		// Empty
 	}
 
@@ -31,7 +31,7 @@ public:
 	 * \brief
 	 *    Деструктор класса.
 	 */
-	virtual ~AShader() {
+	virtual ~AShaderBase() {
 		// Empty
 	}
 
@@ -66,4 +66,4 @@ public:
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
 
-#endif // SWAY_GAPI_SHADER_H
+#endif // SWAY_GAPI_SHADERBASE_H
