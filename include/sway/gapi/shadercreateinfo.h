@@ -10,7 +10,7 @@ NAMESPACE_BEGIN(gapi)
 
 struct ShaderCreateInfo {
 	ShaderType_t type; /*< Тип шейдера. */
-	std::string source; /*!< Исходный код шейдера. */
+	std::string code; /*!< Исходный код шейдера. */
 };
 
 NAMESPACE_END(gapi)

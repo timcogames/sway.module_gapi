@@ -3,6 +3,7 @@
 
 #include <sway/gapi/shaderprogrambase.h>
 #include <sway/gapi/vertexattributedescriptor.h>
+#include <sway/gapi/typedefs.h>
 #include <sway/namespacemacros.h>
 #include <sway/types.h>
 
@@ -18,7 +19,7 @@ public:
 	 * \param[in] program
 	 *    Указатель на шейдерную программу.
 	 */
-	IVertexLayoutBase(AShaderProgramBase * program) {
+	IVertexLayoutBase(ShaderProgramRef_t program) {
 		// Empty
 	}
 

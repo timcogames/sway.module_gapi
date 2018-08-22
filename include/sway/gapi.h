@@ -27,13 +27,17 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-EXTERN_C ICapabilityBase * createCapability();
-EXTERN_C AShaderProgramBase * createShaderProgram();
-EXTERN_C AShaderBase * createShader(const ShaderCreateInfo &);
-EXTERN_C ABufferBase * createBuffer(const BufferCreateInfo & createInfo);
-EXTERN_C IVertexLayoutBase * createVertexLayout(AShaderProgramBase *);
-EXTERN_C IDrawCallBase * createDrawCall();
-EXTERN_C IViewportBase * createViewport();
+EXTERN_C_BEGIN
+
+DLLAPI_EXPORT CapabilityRef_t createCapability();
+DLLAPI_EXPORT ShaderRef_t createShader(const ShaderCreateInfo &);
+DLLAPI_EXPORT ShaderProgramRef_t createShaderProgram();
+DLLAPI_EXPORT BufferRef_t createBuffer(const BufferCreateInfo &);
+DLLAPI_EXPORT VertexLayoutRef_t createVertexLayout(ShaderProgramRef_t);
+DLLAPI_EXPORT DrawCallRef_t createDrawCall();
+DLLAPI_EXPORT ViewportRef_t createViewport();
+
+EXTERN_C_END
 
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)

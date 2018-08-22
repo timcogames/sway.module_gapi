@@ -45,7 +45,7 @@ public:
 	 * \sa
 	 *    detach(u32_t)
 	 */
-	virtual void attach(AShaderBase * shader) = 0;
+	virtual void attach(ShaderRef_t shader) = 0;
 
 	/*!
 	 * \brief
@@ -55,7 +55,7 @@ public:
 	 *    Отвязываемый шейдерный объект.
 	 * 
 	 * \sa
-	 *    attach(AShaderBase *)
+	 *    attach(ShaderRef_t)
 	 */
 	virtual void detach(u32_t objectId) = 0;
 	
