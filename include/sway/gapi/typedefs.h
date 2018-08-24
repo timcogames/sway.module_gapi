@@ -27,6 +27,8 @@ typedef boost::shared_ptr<class IVertexLayoutBase> VertexLayoutRef_t;
 typedef boost::shared_ptr<class IViewportBase> ViewportRef_t;
 typedef boost::shared_ptr<class IDrawCallBase> DrawCallRef_t;
 
+typedef boost::function<void (BufferRef_t)> DrawCbFunc_t;
+
 typedef boost::unordered_map<std::string, math::vec4f_t> UniformVec4fUmap_t;
 typedef boost::unordered_map<std::string, struct VertexAttributeDescriptor> VertexAttribDescUmap_t;
 

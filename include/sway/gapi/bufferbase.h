@@ -114,33 +114,9 @@ public:
 
 	/*!
 	 * \brief
-	 *    Получает выделенный размер данных.
-	 */
-	virtual s32_t getAllocedSize() const = 0;
-
-	/*!
-	 * \brief
-	 *    Устанавливает целевой тип буфера.
-	 * 
-	 * \param[in] target
-	 *    Целевой тип буфера.
-	 */
-	virtual void setTarget(BufferTarget_t target) = 0;
-
-	/*!
-	 * \brief
 	 *    Получает целевой тип буфера.
 	 */
 	virtual BufferTarget_t getTarget() const = 0;
-
-	/*!
-	 * \brief
-	 *    Устанавливает режим работы с данными.
-	 * 
-	 * \param[in] usage
-	 *    Режим работы.
-	 */
-	virtual void setUsage(BufferUsage_t usage) = 0;
 	
 	/*!
 	* \brief
@@ -150,27 +126,9 @@ public:
 
 	/*!
 	 * \brief
-	 *    Устанавливает количество элементов в массиве.
-	 * 
-	 * \param[in] capacity
-	 *    Количество элементов в массиве.
-	 */
-	virtual void setCapacity(s32_t capacity) = 0;
-
-	/*!
-	 * \brief
 	 *    Получает количество элементов в массиве.
 	 */
 	virtual s32_t getCapacity() const = 0;
-
-	/*!
-	 * \brief
-	 *    Устанавливает размер структуры данных.
-	 * 
-	 * \param[in] stride
-	 *    Размер структуры.
-	 */
-	virtual void setByteStride(s32_t stride) = 0;
 	
 	/*!
 	 * \brief
