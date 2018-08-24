@@ -116,7 +116,7 @@ public:
 	 * \brief
 	 *    Получает выделенный размер данных.
 	 */
-	virtual u32_t getAllocedSize() const = 0;
+	virtual s32_t getAllocedSize() const = 0;
 
 	/*!
 	 * \brief

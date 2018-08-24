@@ -1,8 +1,8 @@
 #ifndef SWAY_GAPI_DRAWCALLBASE_H
 #define SWAY_GAPI_DRAWCALLBASE_H
 
-#include <sway/gapi/bufferbase.h>
 #include <sway/gapi/primitivetypes.h>
+#include <sway/gapi/typedefs.h>
 #include <sway/visibilitymacros.h>
 #include <sway/namespacemacros.h>
 #include <sway/types.h>
@@ -44,7 +44,7 @@ public:
 	 * \param[in] type
 	 *    Тип значений в индексах.
 	 */
-	virtual void execute(PrimitiveType_t topology, s32_t count, ABufferBase * ibo, Type_t type) = 0;
+	virtual void execute(PrimitiveType_t topology, s32_t count, BufferRef_t ibo, Type_t type) = 0;
 };
 
 NAMESPACE_END(gapi)

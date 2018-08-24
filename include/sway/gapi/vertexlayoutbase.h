@@ -1,7 +1,6 @@
 #ifndef SWAY_GAPI_VERTEXLAYOUTBASE_H
 #define SWAY_GAPI_VERTEXLAYOUTBASE_H
 
-#include <sway/gapi/shaderprogrambase.h>
 #include <sway/gapi/vertexattributedescriptor.h>
 #include <sway/gapi/typedefs.h>
 #include <sway/namespacemacros.h>
