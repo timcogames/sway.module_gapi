@@ -13,6 +13,11 @@ struct ShaderCreateInfo {
 	std::string code; /*!< Исходный код шейдера. */
 };
 
+struct ShaderCreateInfoSet {
+	ShaderCreateInfo vs;
+	ShaderCreateInfo fs;
+};
+
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
 

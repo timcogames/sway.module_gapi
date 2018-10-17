@@ -12,6 +12,11 @@ struct BufferCreateInfo {
 	const void * data; /*!< Первоначальный данные. */
 };
 
+struct BufferCreateInfoSet {
+	BufferCreateInfo vb;
+	BufferCreateInfo ib;
+};
+
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
 
