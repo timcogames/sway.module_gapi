@@ -8,6 +8,8 @@
 #include <sway/gapi/shadercreateinfo.h>
 #include <sway/gapi/shaderbase.h>
 #include <sway/gapi/shaderprogrambase.h>
+#include <sway/gapi/texturelayers.h>
+#include <sway/gapi/texturebase.h>
 #include <sway/gapi/buffertargets.h>
 #include <sway/gapi/bufferusages.h>
 #include <sway/gapi/bufferaccesses.h>

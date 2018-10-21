@@ -22,6 +22,7 @@ typedef std::initializer_list<std::pair<lpcstr_t, lpcstr_t>> ExtensionInitList_t
 typedef boost::shared_ptr<class ICapabilityBase> CapabilityRef_t;
 typedef boost::shared_ptr<class AShaderBase> ShaderRef_t;
 typedef boost::shared_ptr<class AShaderProgramBase> ShaderProgramRef_t;
+typedef boost::shared_ptr<class ATextureBase> TextureRef_t;
 typedef boost::shared_ptr<class ABufferBase> BufferRef_t;
 typedef boost::shared_ptr<class IVertexLayoutBase> VertexLayoutRef_t;
 typedef boost::shared_ptr<class IViewportBase> ViewportRef_t;
