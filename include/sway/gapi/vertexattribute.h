@@ -15,9 +15,9 @@ public:
 	static VertexAttributeDescriptor merge(VertexSemantic_t semantic, bool normalized = false, bool enabled = true) {
 		VertexAttributeDescriptor attrib;
 		attrib.semantic = semantic;
-		attrib.format = core::detail::TypeToEnum<typename TYPE::rawtype_t>::value;
-		attrib.numComponents = TYPE::size();
-		attrib.stride = sizeof(typename TYPE::rawtype_t) * TYPE::size();
+		attrib.format = core::detail::TypeToEnum<typename TYPE::type_t>::value;
+		attrib.numComponents = TYPE::size;
+		attrib.stride = sizeof(typename TYPE::type_t) * TYPE::size;
 		attrib.normalized = normalized;
 		attrib.enabled = enabled;
 		return attrib;
