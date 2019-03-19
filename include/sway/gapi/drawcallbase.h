@@ -44,7 +44,7 @@ public:
 	 * \param[in] type
 	 *    Тип значений в индексах.
 	 */
-	virtual void execute(PrimitiveType_t topology, s32_t count, BufferRef_t ibo, Type_t type) = 0;
+	virtual void execute(PrimitiveType_t topology, s32_t count, BufferRef_t ibo, core::detail::DataType_t type) = 0;
 };
 
 NAMESPACE_END(gapi)
