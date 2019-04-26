@@ -29,15 +29,38 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
+typedef core::binding::TFunction<CapabilityRef_t (void)> CreateCapabilityFunc_t;
+typedef core::binding::TFunction<ShaderRef_t (const struct ShaderCreateInfo &)> CreateShaderFunc_t;
+typedef core::binding::TFunction<ShaderProgramRef_t (void)> CreateShaderProgramFunc_t;
+typedef core::binding::TFunction<BufferRef_t (const struct BufferCreateInfo &)> CreateBufferFunc_t;
+typedef core::binding::TFunction<VertexLayoutRef_t (ShaderProgramRef_t)> CreateVertexLayoutFunc_t;
+typedef core::binding::TFunction<DrawCallRef_t (void)> CreateDrawCallFunc_t;
+typedef core::binding::TFunction<ViewportRef_t (void)> CreateViewportFunc_t;
+
+struct ConcreatePluginFunctionSet : public core::PluginFunctionSet {
+	CreateCapabilityFunc_t createCapability;
+	CreateShaderFunc_t createShader;
+	CreateShaderProgramFunc_t createShaderProgram;
+	CreateBufferFunc_t createBuffer;
+	CreateVertexLayoutFunc_t createVertexLayout;
+	CreateDrawCallFunc_t createDrawCall;
+	CreateViewportFunc_t createViewport;
+
+	ConcreatePluginFunctionSet() {
+		createCapability = nullptr;
+		createShader = nullptr;
+		createShaderProgram = nullptr;
+		createBuffer = nullptr;
+		createVertexLayout = nullptr;
+		createDrawCall = nullptr;
+		createViewport = nullptr;
+	}
+};
+
 EXTERN_C_BEGIN
 
-DLLAPI_EXPORT CapabilityRef_t createCapability();
-DLLAPI_EXPORT ShaderRef_t createShader(const ShaderCreateInfo &);
-DLLAPI_EXPORT ShaderProgramRef_t createShaderProgram();
-DLLAPI_EXPORT BufferRef_t createBuffer(const BufferCreateInfo &);
-DLLAPI_EXPORT VertexLayoutRef_t createVertexLayout(ShaderProgramRef_t);
-DLLAPI_EXPORT DrawCallRef_t createDrawCall();
-DLLAPI_EXPORT ViewportRef_t createViewport();
+DLLAPI_EXPORT core::PluginInfo pluginGetInfo();
+DLLAPI_EXPORT void pluginInitialize(core::PluginFunctionSet * functions);
 
 EXTERN_C_END
 
