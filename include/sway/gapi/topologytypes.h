@@ -1,5 +1,5 @@
-#ifndef SWAY_GAPI_PRIMITIVETYPES_H
-#define SWAY_GAPI_PRIMITIVETYPES_H
+#ifndef SWAY_GAPI_TOPOLOGYTYPES_H
+#define SWAY_GAPI_TOPOLOGYTYPES_H
 
 #include <sway/namespacemacros.h>
 #include <sway/types.h>
@@ -9,9 +9,9 @@ NAMESPACE_BEGIN(gapi)
 
 /*!
  * \brief
- *    Перечисление типов примитива.
+ *    Перечисление типов топологии.
  */
-enum class PrimitiveType_t : u32_t {
+enum class TopologyType_t : u32_t {
 	kNone,
 	kPointList, /*!< Список точек. */
 	kLineList, /*!< Список линий. */
@@ -24,4 +24,4 @@ enum class PrimitiveType_t : u32_t {
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
 
-#endif // SWAY_GAPI_PRIMITIVETYPES_H
+#endif // SWAY_GAPI_TOPOLOGYTYPES_H

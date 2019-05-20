@@ -20,7 +20,7 @@
 #include <sway/gapi/vertexattributedescriptor.h>
 #include <sway/gapi/vertexattribute.h>
 #include <sway/gapi/vertexlayoutbase.h>
-#include <sway/gapi/primitivetypes.h>
+#include <sway/gapi/topologytypes.h>
 #include <sway/gapi/drawcallbase.h>
 #include <sway/gapi/viewportmodes.h>
 #include <sway/gapi/viewportbase.h>
