@@ -1,6 +1,7 @@
 #ifndef SWAY_GAPI_DRAWCALLBASE_H
 #define SWAY_GAPI_DRAWCALLBASE_H
 
+#include <sway/gapi/bufferset.h>
 #include <sway/gapi/topologytypes.h>
 #include <sway/gapi/typedefs.h>
 #include <sway/visibilitymacros.h>
@@ -35,16 +36,13 @@ public:
 	 * \param[in] topology
 	 *    Топология примитива.
 	 * 
-	 * \param[in] count
-	 *    Количество отображаемых элементов.
-	 * 
-	 * \param[in] ibo
-	 *    Указатель на буфер индексов.
+	 * \param[in] bufset
+	 *    Набор буферных объектов.
 	 * 
 	 * \param[in] type
 	 *    Тип значений в индексах.
 	 */
-	virtual void execute(TopologyType_t topology, s32_t count, BufferRef_t ibo, core::detail::DataType_t type) = 0;
+	virtual void execute(TopologyType_t topology, BufferSet bufset, core::detail::DataType_t type) = 0;
 };
 
 NAMESPACE_END(gapi)

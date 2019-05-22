@@ -16,6 +16,7 @@
 #include <sway/gapi/bufferdescriptor.h>
 #include <sway/gapi/buffercreateinfo.h>
 #include <sway/gapi/bufferbase.h>
+#include <sway/gapi/bufferset.h>
 #include <sway/gapi/vertexsemantics.h>
 #include <sway/gapi/vertexattributedescriptor.h>
 #include <sway/gapi/vertexattribute.h>

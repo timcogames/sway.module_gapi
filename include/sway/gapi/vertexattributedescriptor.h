@@ -18,7 +18,7 @@ struct VertexAttributeDescriptor {
 	core::detail::DataType_t format; /*!< Формат данных. */
 	s32_t numComponents; /*!< Количество компонентов. */
 	s32_t stride;
-	const void * offset;
+	const void * pointer;
 	bool normalized; /*!< Нормализация входных данных. */
 	bool enabled;
 };
