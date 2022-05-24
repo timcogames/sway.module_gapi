@@ -58,12 +58,12 @@ struct ConcreatePluginFunctionSet : public core::PluginFunctionSet {
   }
 };
 
-EXTERN_C_BEGIN
+// EXTERN_C_BEGIN
 
 DLLAPI_EXPORT core::PluginInfo pluginGetInfo();
 DLLAPI_EXPORT void pluginInitialize(core::PluginFunctionSet *functions);
 
-EXTERN_C_END
+// EXTERN_C_END
 
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
