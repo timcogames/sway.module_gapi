@@ -5,6 +5,7 @@
 #include <sway/gapi/buffertargets.hpp>
 #include <sway/gapi/bufferusages.hpp>
 #include <sway/gapi/resource.hpp>
+#include <sway/keywords.hpp>
 #include <sway/namespacemacros.hpp>
 #include <sway/types.hpp>
 #include <sway/visibilitymacros.hpp>
@@ -33,9 +34,7 @@ public:
    * \brief
    *    Деструктор класса.
    */
-  virtual ~ABufferBase() {
-    // Empty
-  }
+  virtual ~ABufferBase() = default;
 
   /*!
    * \brief
@@ -44,7 +43,7 @@ public:
    * \param[in] data
    *    Первоначальный данные.
    */
-  virtual bool allocate(const void *data) = 0;
+  PURE_VIRTUAL(bool allocate(const void *data));
 
   /*!
    * \brief
@@ -62,7 +61,7 @@ public:
    * \sa
    *    updateSubdata(const void *)
    */
-  virtual void updateSubdata(u32_t offset, u32_t size, const void *source) = 0;
+  PURE_VIRTUAL(void updateSubdata(u32_t offset, u32_t size, const void *source));
 
   /*!
    * \brief
@@ -74,7 +73,7 @@ public:
    * \sa
    *    updateSubdata(u32_t, u32_t, const void *)
    */
-  virtual void updateSubdata(const void *source) = 0;
+  PURE_VIRTUAL(void updateSubdata(const void *source));
 
   /*!
    * \brief
@@ -83,7 +82,7 @@ public:
    * \sa
    *    unmap()
    */
-  virtual void *map() = 0;
+  PURE_VIRTUAL(void *map());
 
   /*!
    * \brief
@@ -92,7 +91,7 @@ public:
    * \sa
    *    map()
    */
-  virtual void unmap() = 0;
+  PURE_VIRTUAL(void unmap());
 
   /*!
    * \brief
@@ -101,7 +100,7 @@ public:
    * \sa
    *    unbind()
    */
-  virtual void bind() = 0;
+  PURE_VIRTUAL(void bind());
 
   /*!
    * \brief
@@ -110,31 +109,31 @@ public:
    * \sa
    *    bind()
    */
-  virtual void unbind() = 0;
+  PURE_VIRTUAL(void unbind());
 
   /*!
    * \brief
    *    Получает целевой тип буфера.
    */
-  virtual BufferTarget_t getTarget() const = 0;
+  PURE_VIRTUAL(BufferTarget_t getTarget() const);
 
   /*!
    * \brief
    *    Получает режим работы с данными.
    */
-  virtual BufferUsage_t getUsage() const = 0;
+  PURE_VIRTUAL(BufferUsage_t getUsage() const);
 
   /*!
    * \brief
    *    Получает количество элементов в массиве.
    */
-  virtual s32_t getCapacity() const = 0;
+  PURE_VIRTUAL(s32_t getCapacity() const);
 
   /*!
    * \brief
    *    Получает размер структуры данных.
    */
-  virtual s32_t getByteStride() const = 0;
+  PURE_VIRTUAL(s32_t getByteStride() const);
 };
 
 NAMESPACE_END(gapi)

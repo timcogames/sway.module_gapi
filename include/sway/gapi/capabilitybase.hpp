@@ -2,6 +2,7 @@
 #define SWAY_GAPI_CAPABILITYBASE_HPP
 
 #include <sway/core/version.hpp>
+#include <sway/keywords.hpp>
 #include <sway/namespacemacros.hpp>
 #include <sway/types.hpp>
 
@@ -14,15 +15,13 @@ public:
     // Empty
   }
 
-  virtual ~ICapabilityBase() {
-    // Empty
-  }
+  virtual ~ICapabilityBase() = default;
 
   /*!
    * \brief
    *    Возвращает версию OpenGL.
    */
-  virtual core::Version getVersion() const = 0;
+  PURE_VIRTUAL(core::Version getVersion() const);
 };
 
 NAMESPACE_END(gapi)

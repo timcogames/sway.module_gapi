@@ -4,6 +4,7 @@
 #include <sway/gapi/resource.hpp>
 #include <sway/gapi/shadercreateinfo.hpp>
 #include <sway/gapi/shadertypes.hpp>
+#include <sway/keywords.hpp>
 #include <sway/namespacemacros.hpp>
 #include <sway/types.hpp>
 
@@ -31,9 +32,7 @@ public:
    * \brief
    *    Деструктор класса.
    */
-  virtual ~AShaderBase() {
-    // Empty
-  }
+  virtual ~AShaderBase() = default;
 
   /*!
    * \brief
@@ -42,7 +41,7 @@ public:
    * \param[in] source
    *    Исходный код шейдера.
    */
-  virtual void compile(lpcstr_t source) = 0;
+  PURE_VIRTUAL(void compile(lpcstr_t source));
 
   /*!
    * \brief
@@ -51,7 +50,7 @@ public:
    * \return
    *    Если компиляция прошла успешно 'true', иначе 'false'.
    */
-  virtual bool isCompiled() const = 0;
+  PURE_VIRTUAL(bool isCompiled() const);
 
   /*!
    * \brief
@@ -60,7 +59,7 @@ public:
    * \return
    *    Тип шейдера.
    */
-  virtual ShaderType_t getType() const = 0;
+  PURE_VIRTUAL(ShaderType_t getType() const);
 };
 
 NAMESPACE_END(gapi)

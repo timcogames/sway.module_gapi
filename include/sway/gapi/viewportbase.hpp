@@ -1,6 +1,7 @@
 #ifndef SWAY_GAPI_VIEWPORTBASE_HPP
 #define SWAY_GAPI_VIEWPORTBASE_HPP
 
+#include <sway/keywords.hpp>
 #include <sway/math/rect.hpp>
 #include <sway/namespacemacros.hpp>
 #include <sway/types.hpp>
@@ -22,9 +23,7 @@ public:
    * \brief
    *    Деструктор класса.
    */
-  virtual ~IViewportBase() {
-    // Empty
-  }
+  virtual ~IViewportBase() = default;
 
   /*!
    * \brief
@@ -42,7 +41,7 @@ public:
    * \param[in] h
    *    Значение высоты.
    */
-  virtual void set(s32_t x, s32_t y, s32_t w, s32_t h) = 0;
+  PURE_VIRTUAL(void set(s32_t x, s32_t y, s32_t w, s32_t h));
 
   /*!
    * \brief
@@ -54,19 +53,19 @@ public:
    * \param[in] h
    *    Значение высоты.
    */
-  virtual void set(s32_t w, s32_t h) = 0;
+  PURE_VIRTUAL(void set(s32_t w, s32_t h));
 
   /*!
    * \brief
    *    Получает размер прямоугольной области.
    */
-  virtual math::rect4i_t get() const = 0;
+  PURE_VIRTUAL(math::rect4i_t get() const);
 
   /*!
    * \brief
    *    Получает соотношение сторон.
    */
-  virtual f32_t aspect() const = 0;
+  PURE_VIRTUAL(f32_t aspect() const);
 };
 
 NAMESPACE_END(gapi)

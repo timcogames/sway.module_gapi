@@ -3,6 +3,7 @@
 
 #include <sway/gapi/typedefs.hpp>
 #include <sway/gapi/vertexattributedescriptor.hpp>
+#include <sway/keywords.hpp>
 #include <sway/namespacemacros.hpp>
 #include <sway/types.hpp>
 
@@ -26,9 +27,7 @@ public:
    * \brief
    *    Деструктор класса.
    */
-  virtual ~IVertexLayoutBase() {
-    // Empty
-  }
+  virtual ~IVertexLayoutBase() = default;
 
   /*!
    * \brief
@@ -37,19 +36,19 @@ public:
    * \param[in] desc
    *    Описание вершинного атрибута.
    */
-  virtual void addAttribute(VertexAttributeDescriptor desc) = 0;
+  PURE_VIRTUAL(void addAttribute(VertexAttributeDescriptor desc));
 
   /*!
    * \brief
    *    Включает чтение атрибутов.
    */
-  virtual void enable() = 0;
+  PURE_VIRTUAL(void enable());
 
   /*!
    * \brief
    *    Отключает чтение атрибутов.
    */
-  virtual void disable() = 0;
+  PURE_VIRTUAL(void disable());
 };
 
 NAMESPACE_END(gapi)

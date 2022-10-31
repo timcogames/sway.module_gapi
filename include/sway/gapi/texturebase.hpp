@@ -22,9 +22,7 @@ public:
    * \brief
    *    Деструктор класса.
    */
-  virtual ~ATextureBase() {
-    // Empty
-  }
+  virtual ~ATextureBase() = default;
 };
 
 NAMESPACE_END(gapi)

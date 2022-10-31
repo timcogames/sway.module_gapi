@@ -3,6 +3,7 @@
 
 #include <sway/gapi/resource.hpp>
 #include <sway/gapi/shaderbase.hpp>
+#include <sway/keywords.hpp>
 #include <sway/math/color.hpp>
 #include <sway/math/vector4.hpp>
 #include <sway/namespacemacros.hpp>
@@ -31,9 +32,7 @@ public:
    * \brief
    *    Деструктор класса.
    */
-  virtual ~AShaderProgramBase() {
-    // Empty
-  }
+  virtual ~AShaderProgramBase() = default;
 
   /*!
    * \brief
@@ -45,7 +44,7 @@ public:
    * \sa
    *    detach(u32_t)
    */
-  virtual void attach(ShaderRef_t shader) = 0;
+  PURE_VIRTUAL(void attach(ShaderRef_t shader));
 
   /*!
    * \brief
@@ -57,7 +56,7 @@ public:
    * \sa
    *    attach(ShaderRef_t)
    */
-  virtual void detach(u32_t objectId) = 0;
+  PURE_VIRTUAL(void detach(u32_t objectId));
 
   /*!
    * \brief
@@ -66,7 +65,7 @@ public:
    * \sa
    *    isLinked() const
    */
-  virtual void link() = 0;
+  PURE_VIRTUAL(void link());
 
   /*!
    * \brief
@@ -75,7 +74,7 @@ public:
    * \sa
    *    link()
    */
-  virtual bool isLinked() const = 0;
+  PURE_VIRTUAL(bool isLinked() const);
 
   /*!
    * \brief
@@ -84,7 +83,7 @@ public:
    * \sa
    *    isValidated() const
    */
-  virtual void validate() = 0;
+  PURE_VIRTUAL(void validate());
 
   /*!
    * \brief
@@ -93,7 +92,7 @@ public:
    * \sa
    *    validate()
    */
-  virtual bool isValidated() const = 0;
+  PURE_VIRTUAL(bool isValidated() const);
 
   /*!
    * \brief
@@ -103,7 +102,7 @@ public:
    *    unuse()
    *    isUsed() const
    */
-  virtual void use() = 0;
+  PURE_VIRTUAL(void use());
 
   /*!
    * \brief
@@ -113,7 +112,7 @@ public:
    *    use()
    *    isUsed() const
    */
-  virtual void unuse() = 0;
+  PURE_VIRTUAL(void unuse());
 
   /*!
    * \brief
@@ -124,7 +123,7 @@ public:
    *    use()
    *    unuse()
    */
-  virtual bool isUsed() const = 0;
+  PURE_VIRTUAL(bool isUsed() const);
 
   /*!
    * \brief
@@ -136,7 +135,7 @@ public:
    * \param[in] vec
    *    Значение uniform-переменной.
    */
-  virtual void setUniformVec4f(const std::string &uniform, const math::vec4f_t &vec) = 0;
+  PURE_VIRTUAL(void setUniformVec4f(const std::string &uniform, const math::vec4f_t &vec));
 
   /*!
    * \brief
@@ -148,7 +147,7 @@ public:
    * \param[in] col
    *    Значение uniform-переменной.
    */
-  virtual void setUniformCol4f(const std::string &uniform, const math::col4f_t &col) = 0;
+  PURE_VIRTUAL(void setUniformCol4f(const std::string &uniform, const math::col4f_t &col));
 };
 
 NAMESPACE_END(gapi)

@@ -4,6 +4,7 @@
 #include <sway/gapi/bufferset.hpp>
 #include <sway/gapi/topologytypes.hpp>
 #include <sway/gapi/typedefs.hpp>
+#include <sway/keywords.hpp>
 #include <sway/namespacemacros.hpp>
 #include <sway/types.hpp>
 #include <sway/visibilitymacros.hpp>
@@ -25,9 +26,7 @@ public:
    * \brief
    *    Деструктор класса.
    */
-  virtual ~IDrawCallBase() {
-    // Empty
-  }
+  virtual ~IDrawCallBase() = default;
 
   /*!
    * \brief
@@ -42,7 +41,7 @@ public:
    * \param[in] type
    *    Тип значений в индексах.
    */
-  virtual void execute(TopologyType_t topology, BufferSet bufset, core::detail::DataType_t type) = 0;
+  PURE_VIRTUAL(void execute(TopologyType_t topology, BufferSet bufset, core::detail::DataType_t type));
 };
 
 NAMESPACE_END(gapi)
