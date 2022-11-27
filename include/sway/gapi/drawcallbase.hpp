@@ -14,37 +14,31 @@ NAMESPACE_BEGIN(gapi)
 
 class IDrawCallBase {
 public:
-  /*!
-   * \brief
-   *    Конструктор класса.
+  /**
+   * @brief Конструктор класса.
+   *
    */
   IDrawCallBase() {
     // Empty
   }
 
-  /*!
-   * \brief
-   *    Деструктор класса.
+  /**
+   * @brief Деструктор класса.
+   *
    */
   virtual ~IDrawCallBase() = default;
 
-  /*!
-   * \brief
-   *    Выполняет отрисовку примитива.
+  /**
+   * @brief Выполняет отрисовку примитива.
    *
-   * \param[in] topology
-   *    Топология примитива.
-   *
-   * \param[in] bufset
-   *    Набор буферных объектов.
-   *
-   * \param[in] type
-   *    Тип значений в индексах.
+   * @param[in] topology Топология примитива.
+   * @param[in] bufset Набор буферных объектов.
+   * @param[in] type Тип значений в индексах.
    */
-  PURE_VIRTUAL(void execute(TopologyType_t topology, BufferSet bufset, core::detail::DataType_t type));
+  PURE_VIRTUAL(void execute(TopologyType_t topology, BufferSet bufset, core::ValueDataType type));
 };
 
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
 
-#endif
+#endif  // SWAY_GAPI_DRAWCALLBASE_HPP

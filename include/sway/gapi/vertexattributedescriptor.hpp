@@ -8,14 +8,14 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-/*!
- * \brief
- *    Структура описания вершинного атрибута.
+/**
+ * @brief Структура описания вершинного атрибута.
+ *
  */
 struct VertexAttributeDescriptor {
   s32_t location;
   VertexSemantic_t semantic;
-  core::detail::DataType_t format; /*!< Формат данных. */
+  core::ValueDataType format; /*!< Формат данных. */
   s32_t numComponents; /*!< Количество компонентов. */
   s32_t stride;
   const void *pointer;
@@ -26,4 +26,4 @@ struct VertexAttributeDescriptor {
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
 
-#endif
+#endif  // SWAY_GAPI_VERTEXATTRIBUTEDESCRIPTOR_HPP

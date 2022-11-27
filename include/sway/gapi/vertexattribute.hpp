@@ -15,7 +15,7 @@ public:
   static VertexAttributeDescriptor merge(VertexSemantic_t semantic, bool normalized = false, bool enabled = true) {
     VertexAttributeDescriptor attrib;
     attrib.semantic = semantic;
-    attrib.format = core::detail::DataTypeToEnum<typename TYPE::type_t>::value;
+    attrib.format = core::detail::ValueDataTypeToEnum<typename TYPE::type_t>::value;
     attrib.numComponents = TYPE::size;
     attrib.stride = sizeof(typename TYPE::type_t) * TYPE::size;
     attrib.normalized = normalized;
@@ -27,4 +27,4 @@ public:
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
 
-#endif
+#endif  // SWAY_GAPI_VERTEXATTRIBUTE_HPP
