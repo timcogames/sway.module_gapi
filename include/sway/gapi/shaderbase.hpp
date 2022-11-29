@@ -11,58 +11,55 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-/*!
- * \brief
- *    Представление шейдера.
+/**
+ * @brief Представление шейдера.
+ *
  */
 class AShaderBase : public Resource {
 public:
-  /*!
-   * \brief
-   *    Конструктор класса.
+  /**
+   * @brief Конструктор класса.
    *
-   * \param[in] type
-   *    Тип создаваемого шейдера.
+   * @param[in] type Тип создаваемого шейдера.
+   *
    */
   AShaderBase(ShaderType_t type) {
     // Empty
   }
 
-  /*!
-   * \brief
-   *    Деструктор класса.
+  /**
+   * @brief Деструктор класса.
+   *
    */
   virtual ~AShaderBase() = default;
 
-  /*!
-   * \brief
-   *    Выполняет компиляцию шейдерного объекта.
+  /**
+   * @brief Выполняет компиляцию шейдерного объекта.
    *
-   * \param[in] source
-   *    Исходный код шейдера.
+   * @param[in] source Исходный код шейдера.
+   *
    */
   PURE_VIRTUAL(void compile(lpcstr_t source));
 
-  /*!
-   * \brief
-   *    Возвращает статус компиляции.
+  /**
+   * @brief Возвращает статус компиляции.
    *
-   * \return
-   *    Если компиляция прошла успешно 'true', иначе 'false'.
+   * @return Если компиляция прошла успешно 'true', иначе 'false'.
+   *
    */
   PURE_VIRTUAL(bool isCompiled() const);
 
-  /*!
-   * \brief
-   *    Получает тип шейдера.
+  /**
+   * @brief Получает тип шейдера.
    *
-   * \return
-   *    Тип шейдера.
+   * @return Тип шейдера.
+   *
    */
-  PURE_VIRTUAL(ShaderType_t getType() const);
+  // clang-format off
+  PURE_VIRTUAL(auto getType() const -> ShaderType_t);  // clang-format on
 };
 
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
 
-#endif
+#endif  // SWAY_GAPI_SHADERBASE_HPP

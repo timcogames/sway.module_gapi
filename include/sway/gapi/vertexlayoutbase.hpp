@@ -12,41 +12,39 @@ NAMESPACE_BEGIN(gapi)
 
 class IVertexLayoutBase {
 public:
-  /*!
-   * \brief
-   *    Конструктор класса.
+  /**
+   * @brief Конструктор класса.
    *
-   * \param[in] program
-   *    Указатель на шейдерную программу.
+   * @param[in] program Указатель на шейдерную программу.
+   *
    */
   IVertexLayoutBase(ShaderProgramRef_t program) {
     // Empty
   }
 
-  /*!
-   * \brief
-   *    Деструктор класса.
+  /**
+   * @brief Деструктор класса.
+   *
    */
   virtual ~IVertexLayoutBase() = default;
 
-  /*!
-   * \brief
-   *    Добавляет вершинный атрибут.
+  /**
+   * @brief Добавляет вершинный атрибут.
    *
-   * \param[in] desc
-   *    Описание вершинного атрибута.
+   * @param[in] desc Описание вершинного атрибута.
+   *
    */
   PURE_VIRTUAL(void addAttribute(VertexAttributeDescriptor desc));
 
-  /*!
-   * \brief
-   *    Включает чтение атрибутов.
+  /**
+   * @brief Включает чтение атрибутов.
+   *
    */
   PURE_VIRTUAL(void enable());
 
-  /*!
-   * \brief
-   *    Отключает чтение атрибутов.
+  /**
+   * @brief Отключает чтение атрибутов.
+   *
    */
   PURE_VIRTUAL(void disable());
 };
@@ -54,4 +52,4 @@ public:
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
 
-#endif
+#endif  // SWAY_GAPI_VERTEXLAYOUTBASE_HPP

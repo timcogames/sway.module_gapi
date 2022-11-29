@@ -15,4 +15,4 @@ struct BufferSet {
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
 
-#endif
+#endif  // SWAY_GAPI_BUFFERSET_HPP

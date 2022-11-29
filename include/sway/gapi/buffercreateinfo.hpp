@@ -20,4 +20,4 @@ struct BufferCreateInfoSet {
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
 
-#endif
+#endif  // SWAY_GAPI_BUFFERCREATEINFO_HPP

@@ -13,130 +13,121 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-/*!
- * \brief
- *    Представление аппаратного буфера.
+/**
+ * @brief Представление аппаратного буфера.
+ *
  */
 class ABufferBase : public Resource {
 public:
-  /*!
-   * \brief
-   *    Конструктор класса.
+  /**
+   * @brief Конструктор класса.
    *
-   * \param[in] desc
-   *    Описание буфера.
+   * @param[in] desc Описание буфера.
+   *
    */
   ABufferBase(const BufferDescriptor &desc) {
     // Empty
   }
 
-  /*!
-   * \brief
+  /**
+   * @brief
    *    Деструктор класса.
    */
   virtual ~ABufferBase() = default;
 
-  /*!
-   * \brief
-   *    Устанавливает данные в аппаратный буфер.
+  /**
+   * @brief Устанавливает данные в аппаратный буфер.
    *
-   * \param[in] data
-   *    Первоначальный данные.
+   * @param[in] data Первоначальный данные.
+   *
    */
   PURE_VIRTUAL(bool allocate(const void *data));
 
-  /*!
-   * \brief
-   *    Изменяет данные в уже существующем буфере.
+  /**
+   * @brief Изменяет данные в уже существующем буфере.
    *
-   * \param[in] offset
-   *    Начало изменяемого блока данных.
+   * @param[in] offset Начало изменяемого блока данных.
+   * @param[in] size Размер изменяемого блока данных.
+   * @param[in] source Область памяти, содержащая новые значения.
    *
-   * \param[in] size
-   *    Размер изменяемого блока данных.
+   * @sa updateSubdata(const void *)
    *
-   * \param[in] source
-   *    Область памяти, содержащая новые значения.
-   *
-   * \sa
-   *    updateSubdata(const void *)
    */
   PURE_VIRTUAL(void updateSubdata(u32_t offset, u32_t size, const void *source));
 
-  /*!
-   * \brief
-   *    Изменяет данные в уже существующем буфере.
+  /**
+   * @brief Изменяет данные в уже существующем буфере.
    *
-   * \param[in] source
-   *    Область памяти, содержащая новые значения.
+   * @param[in] source Область памяти, содержащая новые значения.
    *
-   * \sa
-   *    updateSubdata(u32_t, u32_t, const void *)
+   * @sa updateSubdata(u32_t, u32_t, const void *)
+   *
    */
   PURE_VIRTUAL(void updateSubdata(const void *source));
 
-  /*!
-   * \brief
-   *    Получает указатель на область памяти, в которой находятся данные буфера.
+  /**
+   * @brief Получает указатель на область памяти, в которой находятся данные буфера.
    *
-   * \sa
-   *    unmap()
+   * @sa unmap()
+   *
    */
-  PURE_VIRTUAL(void *map());
+  // clang-format off
+  PURE_VIRTUAL(auto map() -> void *);  // clang-format on
 
-  /*!
-   * \brief
-   *    Возвращает данные буфера в память.
+  /**
+   * @brief Возвращает данные буфера в память.
    *
-   * \sa
-   *    map()
+   * @sa map()
+   *
    */
   PURE_VIRTUAL(void unmap());
 
-  /*!
-   * \brief
-   *    Делает буфер текущим.
+  /**
+   * @brief Делает буфер текущим.
    *
-   * \sa
-   *    unbind()
+   * @sa unbind()
+   *
    */
   PURE_VIRTUAL(void bind());
 
-  /*!
-   * \brief
-   *    Делает текущим пустой буфер.
+  /**
+   * @brief Делает текущим пустой буфер.
    *
-   * \sa
-   *    bind()
+   * @sa bind()
+   *
    */
   PURE_VIRTUAL(void unbind());
 
-  /*!
-   * \brief
-   *    Получает целевой тип буфера.
+  /**
+   * @brief Получает целевой тип буфера.
+   *
    */
-  PURE_VIRTUAL(BufferTarget_t getTarget() const);
+  // clang-format off
+  PURE_VIRTUAL(auto getTarget() const -> BufferTarget_t);  // clang-format on
 
-  /*!
-   * \brief
-   *    Получает режим работы с данными.
+  /**
+   * @brief Получает режим работы с данными.
+   *
    */
-  PURE_VIRTUAL(BufferUsage_t getUsage() const);
+  // clang-format off
+  PURE_VIRTUAL(auto getUsage() const -> BufferUsage_t);  // clang-format on
 
-  /*!
-   * \brief
-   *    Получает количество элементов в массиве.
+  /**
+   * @brief Получает количество элементов в массиве.
+   *
    */
-  PURE_VIRTUAL(s32_t getCapacity() const);
+  // clang-format off
+  PURE_VIRTUAL(auto getCapacity() const -> s32_t);  // clang-format on
 
-  /*!
-   * \brief
-   *    Получает размер структуры данных.
+  /**
+   * @brief Получает размер структуры данных.
+   *
    */
-  PURE_VIRTUAL(s32_t getByteStride() const);
+  // clang-format off
+  PURE_VIRTUAL(auto getByteStride() const -> s32_t);  // clang-format on
 };
 
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
 
-#endif
+#endif  // SWAY_GAPI_BUFFERBASE_HPP

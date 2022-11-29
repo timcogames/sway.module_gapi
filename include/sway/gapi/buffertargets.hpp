@@ -12,4 +12,4 @@ enum class BufferTarget_t : u32_t { kNone, kArray, kElementArray, kUniform, kTex
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
 
-#endif
+#endif  // SWAY_GAPI_BUFFERTARGETS_HPP

@@ -7,13 +7,13 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-/*!
- * \brief
- *    Перечисление поведения окна просмотра.
+/**
+ * @brief Перечисление поведения окна просмотра.
+ *
  */
 enum class ViewportMode_t : u32_t { kEnabled, kDisabled, kRenderToTexture };
 
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
 
-#endif
+#endif  // SWAY_GAPI_VIEWPORTMODES_HPP

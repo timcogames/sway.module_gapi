@@ -17,14 +17,15 @@ public:
 
   virtual ~ICapabilityBase() = default;
 
-  /*!
-   * \brief
-   *    Возвращает версию OpenGL.
+  /**
+   * @brief Возвращает версию OpenGL.
+   *
    */
-  PURE_VIRTUAL(core::Version getVersion() const);
+  // clang-format off
+  PURE_VIRTUAL(auto getVersion() const -> core::Version);  // clang-format on
 };
 
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
 
-#endif
+#endif  // SWAY_GAPI_CAPABILITYBASE_HPP

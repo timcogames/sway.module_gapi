@@ -30,4 +30,4 @@ NAMESPACE_END(sway)
 
 #include <sway/gapi/vertexsemantics.inl>
 
-#endif
+#endif  // SWAY_GAPI_VERTEXSEMANTICS_HPP

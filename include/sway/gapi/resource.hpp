@@ -9,17 +9,17 @@ NAMESPACE_BEGIN(gapi)
 
 class Resource {
 public:
-  /*!
-   * \brief
-   *    Получает идентификатор объекта.
+  /**
+   * @brief Получает идентификатор объекта.
+   *
    */
-  u32_t getObjectId() const { return _objectId; }
+  auto getObjectId() const -> u32_t { return objectId_; }
 
 protected:
-  u32_t _objectId; /*!< Идентификатор объекта. */
+  u32_t objectId_; /*!< Идентификатор объекта. */
 };
 
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
 
-#endif
+#endif  // SWAY_GAPI_RESOURCE_HPP

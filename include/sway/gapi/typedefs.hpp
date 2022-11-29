@@ -36,4 +36,4 @@ typedef std::unordered_map<std::string, struct VertexAttributeDescriptor> Vertex
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
 
-#endif
+#endif  // SWAY_GAPI_TYPEDEFS_HPP

@@ -7,9 +7,9 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-/*!
- * \brief
- *    Перечисление типов топологии.
+/**
+ * @brief Перечисление типов топологии.
+ *
  */
 enum class TopologyType_t : u32_t {
   kNone,
@@ -24,4 +24,4 @@ enum class TopologyType_t : u32_t {
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
 
-#endif
+#endif  // SWAY_GAPI_TOPOLOGYTYPES_HPP

@@ -12,4 +12,4 @@ enum class ProfileType_t : u32_t { kCore, kCompatibility };
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
 
-#endif
+#endif  // SWAY_GAPI_PROFILETYPES_HPP

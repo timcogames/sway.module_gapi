@@ -7,9 +7,9 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-/*!
- * \brief
- *    Перечисление типов шейдера.
+/**
+ * @brief Перечисление типов шейдера.
+ *
  */
 enum class ShaderType_t : u32_t {
   kVertex, /*!< Вершинный шейдер. */
@@ -21,4 +21,4 @@ NAMESPACE_END(sway)
 
 #include <sway/gapi/shadertypes.inl>
 
-#endif
+#endif  // SWAY_GAPI_SHADERTYPES_HPP

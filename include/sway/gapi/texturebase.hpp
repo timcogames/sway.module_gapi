@@ -10,17 +10,17 @@ NAMESPACE_BEGIN(gapi)
 
 class ATextureBase : public Resource {
 public:
-  /*!
-   * \brief
-   *    Конструктор класса.
+  /**
+   * @brief Конструктор класса.
+   *
    */
   ATextureBase() {
     // Empty
   }
 
-  /*!
-   * \brief
-   *    Деструктор класса.
+  /**
+   * @brief Деструктор класса.
+   *
    */
   virtual ~ATextureBase() = default;
 };
@@ -28,4 +28,4 @@ public:
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
 
-#endif
+#endif  // SWAY_GAPI_TEXTUREBASE_HPP

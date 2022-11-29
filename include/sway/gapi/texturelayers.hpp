@@ -13,4 +13,4 @@ enum class TextureLayer_t : u32_t { kDiffuse, kSpecular, kEmissive, kNormal, kLa
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
 
-#endif
+#endif  // SWAY_GAPI_TEXTURELAYERS_HPP

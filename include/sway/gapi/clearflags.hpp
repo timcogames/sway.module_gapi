@@ -13,4 +13,4 @@ enum class ClearFlag_t : u8_t { kColor = ENUM_BITMASK(0), kDepth = ENUM_BITMASK(
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
 
-#endif
+#endif  // SWAY_GAPI_CLEARFLAGS_HPP
