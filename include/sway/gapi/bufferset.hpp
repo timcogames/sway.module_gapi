@@ -8,8 +8,8 @@ NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
 struct BufferSet {
-  BufferRef_t vbo; /*!< Буфер вершин. */
-  BufferRef_t ibo; /*!< Буфер индексов. */
+  BufferRef_t vbo;  // Буфер вершин.
+  BufferRef_t ibo;  // Буфер индексов.
 };
 
 NAMESPACE_END(gapi)

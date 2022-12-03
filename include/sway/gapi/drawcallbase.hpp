@@ -16,7 +16,6 @@ class IDrawCallBase {
 public:
   /**
    * @brief Конструктор класса.
-   *
    */
   IDrawCallBase() {
     // Empty
@@ -24,17 +23,14 @@ public:
 
   /**
    * @brief Деструктор класса.
-   *
    */
   virtual ~IDrawCallBase() = default;
 
   /**
    * @brief Выполняет отрисовку примитива.
-   *
    * @param[in] topology Топология примитива.
    * @param[in] bufset Набор буферных объектов.
    * @param[in] type Тип значений в индексах.
-   *
    */
   PURE_VIRTUAL(void execute(TopologyType_t topology, BufferSet bufset, core::ValueDataType type));
 };

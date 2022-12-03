@@ -9,7 +9,7 @@ NAMESPACE_BEGIN(gapi)
 
 struct BufferCreateInfo {
   BufferDescriptor desc;
-  const void *data; /*!< Первоначальный данные. */
+  const void *data;  // Первоначальный данные.
 };
 
 struct BufferCreateInfoSet {

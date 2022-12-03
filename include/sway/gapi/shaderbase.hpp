@@ -13,15 +13,12 @@ NAMESPACE_BEGIN(gapi)
 
 /**
  * @brief Представление шейдера.
- *
  */
 class AShaderBase : public Resource {
 public:
   /**
    * @brief Конструктор класса.
-   *
    * @param[in] type Тип создаваемого шейдера.
-   *
    */
   AShaderBase(ShaderType_t type) {
     // Empty
@@ -29,31 +26,25 @@ public:
 
   /**
    * @brief Деструктор класса.
-   *
    */
   virtual ~AShaderBase() = default;
 
   /**
    * @brief Выполняет компиляцию шейдерного объекта.
-   *
    * @param[in] source Исходный код шейдера.
-   *
    */
   PURE_VIRTUAL(void compile(lpcstr_t source));
 
   /**
    * @brief Возвращает статус компиляции.
-   *
    * @return Если компиляция прошла успешно 'true', иначе 'false'.
-   *
    */
-  PURE_VIRTUAL(bool isCompiled() const);
+  // clang-format off
+  PURE_VIRTUAL(auto isCompiled() const -> bool);  // clang-format on
 
   /**
    * @brief Получает тип шейдера.
-   *
    * @return Тип шейдера.
-   *
    */
   // clang-format off
   PURE_VIRTUAL(auto getType() const -> ShaderType_t);  // clang-format on

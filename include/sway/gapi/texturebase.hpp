@@ -12,7 +12,6 @@ class ATextureBase : public Resource {
 public:
   /**
    * @brief Конструктор класса.
-   *
    */
   ATextureBase() {
     // Empty
@@ -20,7 +19,6 @@ public:
 
   /**
    * @brief Деструктор класса.
-   *
    */
   virtual ~ATextureBase() = default;
 };

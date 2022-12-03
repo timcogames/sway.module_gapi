@@ -11,12 +11,11 @@ class Resource {
 public:
   /**
    * @brief Получает идентификатор объекта.
-   *
    */
   auto getObjectId() const -> u32_t { return objectId_; }
 
 protected:
-  u32_t objectId_; /*!< Идентификатор объекта. */
+  u32_t objectId_;  // Идентификатор объекта.
 };
 
 NAMESPACE_END(gapi)

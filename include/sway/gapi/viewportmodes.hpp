@@ -9,7 +9,6 @@ NAMESPACE_BEGIN(gapi)
 
 /**
  * @brief Перечисление поведения окна просмотра.
- *
  */
 enum class ViewportMode_t : u32_t { kEnabled, kDisabled, kRenderToTexture };
 

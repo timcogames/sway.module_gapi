@@ -13,7 +13,7 @@ struct BufferDescriptor {
   BufferTarget_t target;
   BufferUsage_t usage;
   s32_t byteStride;
-  s32_t capacity; /*!< Количество элементов в массиве. */
+  s32_t capacity;  // Количество элементов в массиве.
 };
 
 NAMESPACE_END(gapi)
