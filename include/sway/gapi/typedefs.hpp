@@ -1,6 +1,7 @@
 #ifndef SWAY_GAPI_TYPEDEFS_HPP
 #define SWAY_GAPI_TYPEDEFS_HPP
 
+#include <sway/math/matrix4.hpp>
 #include <sway/math/vector4.hpp>
 #include <sway/namespacemacros.hpp>
 #include <sway/types.hpp>
@@ -31,6 +32,7 @@ typedef std::shared_ptr<class IDrawCallBase> DrawCallRef_t;
 typedef std::function<void(BufferRef_t)> DrawCbFunc_t;
 
 typedef std::unordered_map<std::string, math::vec4f_t> UniformVec4fUmap_t;
+typedef std::unordered_map<std::string, math::mat4f_t> UniformMat4fUmap_t;
 typedef std::unordered_map<std::string, struct VertexAttributeDescriptor> VertexAttribDescUmap_t;
 
 NAMESPACE_END(gapi)

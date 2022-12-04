@@ -5,6 +5,7 @@
 #include <sway/gapi/shaderbase.hpp>
 #include <sway/keywords.hpp>
 #include <sway/math/color.hpp>
+#include <sway/math/matrix4.hpp>
 #include <sway/math/vector4.hpp>
 #include <sway/namespacemacros.hpp>
 #include <sway/types.hpp>
@@ -107,6 +108,8 @@ public:
    * @param[in] col Значение uniform-переменной.
    */
   PURE_VIRTUAL(void setUniformCol4f(const std::string &uniform, const math::col4f_t &col));
+
+  PURE_VIRTUAL(void setUniformMat4f(const std::string &uniform, const math::mat4f_t &mat));
 };
 
 NAMESPACE_END(gapi)
