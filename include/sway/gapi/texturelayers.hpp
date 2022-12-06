@@ -6,9 +6,9 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-enum class TextureLayer_t : u32_t { kDiffuse, kSpecular, kEmissive, kNormal, kLast };
+enum class TextureLayer_t : u32_t { Diffuse, Specular, Emissive, Normal, Last };
 
-#define TEXTURE_LAYER_COUNT (core::detail::toUnderlying(TextureLayer_t::kLast))
+#define TEXTURE_LAYER_COUNT (core::detail::toUnderlying(TextureLayer_t::Last))
 
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)

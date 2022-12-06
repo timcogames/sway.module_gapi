@@ -8,21 +8,21 @@ NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
 enum class VertexSemantic_t : u32_t {
-  kPosition,
-  kColor,
-  kTexCoord_0,
-  kTexCoord_1,
-  kTexCoord_2,
-  kTexCoord_3,
-  kTexCoord_4,
-  kTexCoord_5,
-  kTexCoord_6,
-  kTexCoord_7,
-  kNormal,
-  kTangent,
-  kBinormal,
-  kBlendWeights,
-  kBlendIndices
+  Position,
+  Color,
+  TexCoord_0,
+  TexCoord_1,
+  TexCoord_2,
+  TexCoord_3,
+  TexCoord_4,
+  TexCoord_5,
+  TexCoord_6,
+  TexCoord_7,
+  Normal,
+  Tangent,
+  Binormal,
+  BlendWeights,
+  BlendIndices
 };
 
 NAMESPACE_END(gapi)

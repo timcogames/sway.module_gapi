@@ -11,13 +11,13 @@ NAMESPACE_BEGIN(gapi)
  * @brief Перечисление типов топологии.
  */
 enum class TopologyType_t : u32_t {
-  kNone,
-  kPointList,  // Список точек.
-  kLineList,  // Список линий.
-  kLineStrip,
-  kTriangleList,  // Список треугольников.
-  kTriangleStrip,
-  kTriangleFan
+  None,
+  PointList,  // Список точек.
+  LineList,  // Список линий.
+  LineStrip,
+  TriangleList,  // Список треугольников.
+  TriangleStrip,
+  TriangleFan
 };
 
 NAMESPACE_END(gapi)

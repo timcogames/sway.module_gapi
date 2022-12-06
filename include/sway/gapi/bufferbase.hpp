@@ -20,6 +20,7 @@ class ABufferBase : public Resource {
 public:
   /**
    * @brief Конструктор класса.
+   *
    * @param[in] desc Описание буфера.
    */
   ABufferBase(const BufferDescriptor &desc) {
@@ -33,12 +34,14 @@ public:
 
   /**
    * @brief Устанавливает данные в аппаратный буфер.
+   *
    * @param[in] data Первоначальный данные.
    */
   PURE_VIRTUAL(bool allocate(const void *data));
 
   /**
    * @brief Изменяет данные в уже существующем буфере.
+   *
    * @param[in] offset Начало изменяемого блока данных.
    * @param[in] size Размер изменяемого блока данных.
    * @param[in] source Область памяти, содержащая новые значения.
@@ -48,6 +51,7 @@ public:
 
   /**
    * @brief Изменяет данные в уже существующем буфере.
+   *
    * @param[in] source Область памяти, содержащая новые значения.
    * @sa updateSubdata(u32_t, u32_t, const void *)
    */
@@ -55,6 +59,7 @@ public:
 
   /**
    * @brief Получает указатель на область памяти, в которой находятся данные буфера.
+   *
    * @sa unmap()
    */
   // clang-format off
@@ -62,18 +67,21 @@ public:
 
   /**
    * @brief Возвращает данные буфера в память.
+   *
    * @sa map()
    */
   PURE_VIRTUAL(void unmap());
 
   /**
    * @brief Делает буфер текущим.
+   *
    * @sa unbind()
    */
   PURE_VIRTUAL(void bind());
 
   /**
    * @brief Делает текущим пустой буфер.
+   *
    * @sa bind()
    */
   PURE_VIRTUAL(void unbind());

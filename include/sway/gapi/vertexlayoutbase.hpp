@@ -14,6 +14,7 @@ class IVertexLayoutBase {
 public:
   /**
    * @brief Конструктор класса.
+   *
    * @param[in] program Указатель на шейдерную программу.
    */
   IVertexLayoutBase(ShaderProgramRef_t program) {
@@ -27,6 +28,7 @@ public:
 
   /**
    * @brief Добавляет вершинный атрибут.
+   *
    * @param[in] desc Описание вершинного атрибута.
    */
   PURE_VIRTUAL(void addAttribute(VertexAttributeDescriptor desc));

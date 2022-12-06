@@ -18,6 +18,7 @@ class AShaderBase : public Resource {
 public:
   /**
    * @brief Конструктор класса.
+   *
    * @param[in] type Тип создаваемого шейдера.
    */
   AShaderBase(ShaderType_t type) {
@@ -31,12 +32,14 @@ public:
 
   /**
    * @brief Выполняет компиляцию шейдерного объекта.
+   *
    * @param[in] source Исходный код шейдера.
    */
   PURE_VIRTUAL(void compile(lpcstr_t source));
 
   /**
    * @brief Возвращает статус компиляции.
+   *
    * @return Если компиляция прошла успешно 'true', иначе 'false'.
    */
   // clang-format off
@@ -44,6 +47,7 @@ public:
 
   /**
    * @brief Получает тип шейдера.
+   *
    * @return Тип шейдера.
    */
   // clang-format off

@@ -7,7 +7,7 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-enum class BufferTarget_t : u32_t { kNone, kArray, kElementArray, kUniform, kTexture };
+enum class BufferTarget_t : u32_t { None, Array, ElementArray, Uniform, Texture };
 
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
