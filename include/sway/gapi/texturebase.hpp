@@ -1,26 +1,25 @@
 #ifndef SWAY_GAPI_TEXTUREBASE_HPP
 #define SWAY_GAPI_TEXTUREBASE_HPP
 
-#include <sway/gapi/resource.hpp>
+#include <sway/core/foundation/uniqueable.hpp>
 #include <sway/namespacemacros.hpp>
 #include <sway/types.hpp>
 
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-class ATextureBase : public Resource {
+class TextureBase : public core::foundation::Uniqueable<u32_t> {
 public:
   /**
    * @brief Конструктор класса.
    */
-  ATextureBase() {
-    // Empty
-  }
+  TextureBase()
+      : core::foundation::Uniqueable<u32_t>(std::nullopt) {}
 
   /**
    * @brief Деструктор класса.
    */
-  virtual ~ATextureBase() = default;
+  virtual ~TextureBase() = default;
 };
 
 NAMESPACE_END(gapi)

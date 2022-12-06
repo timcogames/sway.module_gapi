@@ -1,10 +1,10 @@
 #ifndef SWAY_GAPI_BUFFERBASE_HPP
 #define SWAY_GAPI_BUFFERBASE_HPP
 
+#include <sway/core/foundation/uniqueable.hpp>
 #include <sway/gapi/bufferdescriptor.hpp>
 #include <sway/gapi/buffertargets.hpp>
 #include <sway/gapi/bufferusages.hpp>
-#include <sway/gapi/resource.hpp>
 #include <sway/keywords.hpp>
 #include <sway/namespacemacros.hpp>
 #include <sway/types.hpp>
@@ -16,21 +16,20 @@ NAMESPACE_BEGIN(gapi)
 /**
  * @brief Представление аппаратного буфера.
  */
-class ABufferBase : public Resource {
+class BufferBase : public core::foundation::Uniqueable<u32_t> {
 public:
   /**
    * @brief Конструктор класса.
    *
    * @param[in] desc Описание буфера.
    */
-  ABufferBase(const BufferDescriptor &desc) {
-    // Empty
-  }
+  BufferBase(const BufferDescriptor &desc)
+      : core::foundation::Uniqueable<u32_t>(std::nullopt) {}
 
   /**
    * @brief Деструктор класса.
    */
-  virtual ~ABufferBase() = default;
+  virtual ~BufferBase() = default;
 
   /**
    * @brief Устанавливает данные в аппаратный буфер.

@@ -21,10 +21,10 @@ typedef std::set<u32_t> ShaderObjectIdSet_t;
 typedef std::initializer_list<std::pair<lpcstr_t, lpcstr_t>> ExtensionInitList_t;
 
 typedef std::shared_ptr<class ICapabilityBase> CapabilityRef_t;
-typedef std::shared_ptr<class AShaderBase> ShaderRef_t;
-typedef std::shared_ptr<class AShaderProgramBase> ShaderProgramRef_t;
-typedef std::shared_ptr<class ATextureBase> TextureRef_t;
-typedef std::shared_ptr<class ABufferBase> BufferRef_t;
+typedef std::shared_ptr<class ShaderBase> ShaderRef_t;
+typedef std::shared_ptr<class ShaderProgramBase> ShaderProgramRef_t;
+typedef std::shared_ptr<class TextureBase> TextureRef_t;
+typedef std::shared_ptr<class BufferBase> BufferRef_t;
 typedef std::shared_ptr<class IVertexLayoutBase> VertexLayoutRef_t;
 typedef std::shared_ptr<class IViewportBase> ViewportRef_t;
 typedef std::shared_ptr<class IDrawCallBase> DrawCallRef_t;
