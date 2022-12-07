@@ -17,23 +17,24 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-typedef std::set<u32_t> ShaderObjectIdSet_t;
-typedef std::initializer_list<std::pair<lpcstr_t, lpcstr_t>> ExtensionInitList_t;
+using ShaderObjectIdSet_t = std::set<u32_t>;
+using ExtensionInitList_t = std::initializer_list<std::pair<lpcstr_t, lpcstr_t>>;
 
-typedef std::shared_ptr<class ICapabilityBase> CapabilityRef_t;
-typedef std::shared_ptr<class ShaderBase> ShaderRef_t;
-typedef std::shared_ptr<class ShaderProgramBase> ShaderProgramRef_t;
-typedef std::shared_ptr<class TextureBase> TextureRef_t;
-typedef std::shared_ptr<class BufferBase> BufferRef_t;
-typedef std::shared_ptr<class IVertexLayoutBase> VertexLayoutRef_t;
-typedef std::shared_ptr<class IViewportBase> ViewportRef_t;
-typedef std::shared_ptr<class IDrawCallBase> DrawCallRef_t;
+using CapabilityRef_t = std::shared_ptr<class ICapabilityBase>;
+using ShaderRef_t = std::shared_ptr<class ShaderBase>;
+using ShaderProgramRef_t = std::shared_ptr<class ShaderProgramBase>;
+using TextureRef_t = std::shared_ptr<class TextureBase>;
+using BufferIdQueueRef_t = std::shared_ptr<class BufferIdQueue>;
+using BufferRef_t = std::shared_ptr<class BufferBase>;
+using VertexLayoutRef_t = std::shared_ptr<class IVertexLayoutBase>;
+using ViewportRef_t = std::shared_ptr<class IViewportBase>;
+using DrawCallRef_t = std::shared_ptr<class IDrawCallBase>;
 
-typedef std::function<void(BufferRef_t)> DrawCbFunc_t;
+using DrawCbFunc_t = std::function<void(BufferRef_t)>;
 
-typedef std::unordered_map<std::string, math::vec4f_t> UniformVec4fUmap_t;
-typedef std::unordered_map<std::string, math::mat4f_t> UniformMat4fUmap_t;
-typedef std::unordered_map<std::string, struct VertexAttributeDescriptor> VertexAttribDescUmap_t;
+using UniformVec4fUmap_t = std::unordered_map<std::string, math::vec4f_t>;
+using UniformMat4fUmap_t = std::unordered_map<std::string, math::mat4f_t>;
+using VertexAttribDescUmap_t = std::unordered_map<std::string, struct VertexAttributeDescriptor>;
 
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)

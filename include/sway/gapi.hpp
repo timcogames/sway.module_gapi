@@ -33,7 +33,8 @@ NAMESPACE_BEGIN(gapi)
 using CreateCapabilityFunc_t = core::binding::TFunction<CapabilityRef_t(void)>;
 using CreateShaderFunc_t = core::binding::TFunction<ShaderRef_t(const struct ShaderCreateInfo &)>;
 using CreateShaderProgramFunc_t = core::binding::TFunction<ShaderProgramRef_t(void)>;
-using CreateBufferFunc_t = core::binding::TFunction<BufferRef_t(const struct BufferCreateInfo &)>;
+using CreateBufferIdQueueFunc_t = core::binding::TFunction<BufferIdQueueRef_t()>;
+using CreateBufferFunc_t = core::binding::TFunction<BufferRef_t(BufferIdQueueRef_t, const struct BufferCreateInfo &)>;
 using CreateVertexLayoutFunc_t = core::binding::TFunction<VertexLayoutRef_t(ShaderProgramRef_t)>;
 using CreateDrawCallFunc_t = core::binding::TFunction<DrawCallRef_t(void)>;
 using CreateViewportFunc_t = core::binding::TFunction<ViewportRef_t(void)>;
@@ -42,6 +43,7 @@ struct ConcreatePluginFunctionSet : public core::PluginFunctionSet {
   CreateCapabilityFunc_t createCapability;
   CreateShaderFunc_t createShader;
   CreateShaderProgramFunc_t createShaderProgram;
+  CreateBufferIdQueueFunc_t createBufferIdQueue;
   CreateBufferFunc_t createBuffer;
   CreateVertexLayoutFunc_t createVertexLayout;
   CreateDrawCallFunc_t createDrawCall;
