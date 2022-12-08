@@ -7,7 +7,7 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-enum class BufferUsage_t : u32_t { None, Static, Dynamic, Stream };
+enum class BufferUsage_t : u32_t { Static, Dynamic, Stream };
 
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
