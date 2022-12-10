@@ -20,9 +20,9 @@
 #include <sway/gapi/texturelayers.hpp>
 #include <sway/gapi/topologytypes.hpp>
 #include <sway/gapi/typedefs.hpp>
+#include <sway/gapi/vertexattriblayout.hpp>
 #include <sway/gapi/vertexattribute.hpp>
 #include <sway/gapi/vertexattributedescriptor.hpp>
-#include <sway/gapi/vertexlayoutbase.hpp>
 #include <sway/gapi/vertexsemantics.hpp>
 #include <sway/gapi/viewportbase.hpp>
 #include <sway/gapi/viewportmodes.hpp>
@@ -35,7 +35,7 @@ using CreateShaderFunc_t = core::binding::TFunction<ShaderRef_t(const struct Sha
 using CreateShaderProgramFunc_t = core::binding::TFunction<ShaderProgramRef_t(void)>;
 using CreateBufferIdQueueFunc_t = core::binding::TFunction<BufferIdQueueRef_t()>;
 using CreateBufferFunc_t = core::binding::TFunction<BufferRef_t(BufferIdQueueRef_t, const struct BufferCreateInfo &)>;
-using CreateVertexLayoutFunc_t = core::binding::TFunction<VertexLayoutRef_t(ShaderProgramRef_t)>;
+using CreateVertexAttribLayoutFunc_t = core::binding::TFunction<VertexAttribLayoutPtr_t(ShaderProgramRef_t)>;
 using CreateDrawCallFunc_t = core::binding::TFunction<DrawCallRef_t(void)>;
 using CreateViewportFunc_t = core::binding::TFunction<ViewportRef_t(void)>;
 
@@ -45,7 +45,7 @@ struct ConcreatePluginFunctionSet : public core::PluginFunctionSet {
   CreateShaderProgramFunc_t createShaderProgram;
   CreateBufferIdQueueFunc_t createBufferIdQueue;
   CreateBufferFunc_t createBuffer;
-  CreateVertexLayoutFunc_t createVertexLayout;
+  CreateVertexAttribLayoutFunc_t createVertexAttribLayout;
   CreateDrawCallFunc_t createDrawCall;
   CreateViewportFunc_t createViewport;
 
@@ -54,7 +54,7 @@ struct ConcreatePluginFunctionSet : public core::PluginFunctionSet {
     createShader = nullptr;
     createShaderProgram = nullptr;
     createBuffer = nullptr;
-    createVertexLayout = nullptr;
+    createVertexAttribLayout = nullptr;
     createDrawCall = nullptr;
     createViewport = nullptr;
   }

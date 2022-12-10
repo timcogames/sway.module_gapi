@@ -26,7 +26,7 @@ using ShaderProgramRef_t = std::shared_ptr<class ShaderProgramBase>;
 using TextureRef_t = std::shared_ptr<class TextureBase>;
 using BufferIdQueueRef_t = std::shared_ptr<class BufferIdQueue>;
 using BufferRef_t = std::shared_ptr<class BufferBase>;
-using VertexLayoutRef_t = std::shared_ptr<class IVertexLayoutBase>;
+using VertexAttribLayoutPtr_t = std::shared_ptr<class VertexAttribLayout>;
 using ViewportRef_t = std::shared_ptr<class IViewportBase>;
 using DrawCallRef_t = std::shared_ptr<class IDrawCallBase>;
 
