@@ -13,7 +13,7 @@ using BufferIdType = u32_t;
 class BufferIdQueue {
 public:
   // clang-format off
-  PURE_VIRTUAL(auto getBufferId() -> BufferIdType);  // clang-format on
+  PURE_VIRTUAL(auto newGuid() -> BufferIdType);  // clang-format on
 };
 
 NAMESPACE_END(gapi)

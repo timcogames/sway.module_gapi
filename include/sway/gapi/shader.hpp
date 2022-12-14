@@ -1,5 +1,5 @@
-#ifndef SWAY_GAPI_SHADERBASE_HPP
-#define SWAY_GAPI_SHADERBASE_HPP
+#ifndef SWAY_GAPI_SHADER_HPP
+#define SWAY_GAPI_SHADER_HPP
 
 #include <sway/core/foundation/uniqueable.hpp>
 #include <sway/gapi/shadercreateinfo.hpp>
@@ -14,20 +14,20 @@ NAMESPACE_BEGIN(gapi)
 /**
  * @brief Представление шейдера.
  */
-class ShaderBase : public core::foundation::Uniqueable<u32_t> {
+class Shader : public core::foundation::Uniqueable<u32_t> {
 public:
   /**
    * @brief Конструктор класса.
    *
    * @param[in] type Тип создаваемого шейдера.
    */
-  ShaderBase(ShaderType_t type)
+  Shader(ShaderType_t type)
       : core::foundation::Uniqueable<u32_t>(std::nullopt) {}
 
   /**
    * @brief Деструктор класса.
    */
-  virtual ~ShaderBase() = default;
+  virtual ~Shader() = default;
 
   /**
    * @brief Выполняет компиляцию шейдерного объекта.
@@ -56,4 +56,4 @@ public:
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
 
-#endif  // SWAY_GAPI_SHADERBASE_HPP
+#endif  // SWAY_GAPI_SHADER_HPP

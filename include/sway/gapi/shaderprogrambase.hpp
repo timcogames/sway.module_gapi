@@ -2,7 +2,7 @@
 #define SWAY_GAPI_SHADERPROGRAMBASE_HPP
 
 #include <sway/core/foundation/uniqueable.hpp>
-#include <sway/gapi/shaderbase.hpp>
+#include <sway/gapi/shader.hpp>
 #include <sway/keywords.hpp>
 #include <sway/math/color.hpp>
 #include <sway/math/matrix4.hpp>

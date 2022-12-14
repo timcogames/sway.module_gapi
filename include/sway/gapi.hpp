@@ -1,8 +1,8 @@
 #ifndef SWAY_GAPI_HPP
 #define SWAY_GAPI_HPP
 
+#include <sway/gapi/buffer.hpp>
 #include <sway/gapi/bufferaccesses.hpp>
-#include <sway/gapi/bufferbase.hpp>
 #include <sway/gapi/buffercreateinfo.hpp>
 #include <sway/gapi/bufferdescriptor.hpp>
 #include <sway/gapi/bufferset.hpp>
@@ -12,7 +12,7 @@
 #include <sway/gapi/clearflags.hpp>
 #include <sway/gapi/drawcallbase.hpp>
 #include <sway/gapi/profiletypes.hpp>
-#include <sway/gapi/shaderbase.hpp>
+#include <sway/gapi/shader.hpp>
 #include <sway/gapi/shadercreateinfo.hpp>
 #include <sway/gapi/shaderprogrambase.hpp>
 #include <sway/gapi/shadertypes.hpp>

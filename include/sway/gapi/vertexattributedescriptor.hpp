@@ -1,6 +1,7 @@
 #ifndef SWAY_GAPI_VERTEXATTRIBUTEDESCRIPTOR_HPP
 #define SWAY_GAPI_VERTEXATTRIBUTEDESCRIPTOR_HPP
 
+#include <sway/core/detail/valuedatatypes.hpp>
 #include <sway/gapi/vertexsemantics.hpp>
 #include <sway/namespacemacros.hpp>
 #include <sway/types.hpp>

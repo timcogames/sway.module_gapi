@@ -1,5 +1,5 @@
-#ifndef SWAY_GAPI_BUFFERBASE_HPP
-#define SWAY_GAPI_BUFFERBASE_HPP
+#ifndef SWAY_GAPI_BUFFER_HPP
+#define SWAY_GAPI_BUFFER_HPP
 
 #include <sway/core/foundation/uniqueable.hpp>
 #include <sway/gapi/bufferdescriptor.hpp>
@@ -16,20 +16,17 @@ NAMESPACE_BEGIN(gapi)
 /**
  * @brief Представление аппаратного буфера.
  */
-class BufferBase : public core::foundation::Uniqueable<u32_t> {
+class Buffer : public core::foundation::Uniqueable<u32_t> {
 public:
   /**
    * @brief Конструктор класса.
    *
    * @param[in] desc Описание буфера.
    */
-  BufferBase(const BufferDescriptor &desc)
+  Buffer(const BufferDescriptor &desc)
       : core::foundation::Uniqueable<u32_t>(std::nullopt) {}
 
-  /**
-   * @brief Деструктор класса.
-   */
-  virtual ~BufferBase() = default;
+  virtual ~Buffer() = default;
 
   /**
    * @brief Устанавливает данные в аппаратный буфер.
@@ -55,21 +52,6 @@ public:
    * @sa updateSubdata(u32_t, u32_t, const void *)
    */
   PURE_VIRTUAL(void updateSubdata(const void *source));
-
-  /**
-   * @brief Получает указатель на область памяти, в которой находятся данные буфера.
-   *
-   * @sa unmap()
-   */
-  // clang-format off
-  PURE_VIRTUAL(auto map() -> void *);  // clang-format on
-
-  /**
-   * @brief Возвращает данные буфера в память.
-   *
-   * @sa map()
-   */
-  PURE_VIRTUAL(void unmap());
 
   /**
    * @brief Делает буфер текущим.
@@ -113,4 +95,4 @@ public:
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
 
-#endif  // SWAY_GAPI_BUFFERBASE_HPP
+#endif  // SWAY_GAPI_BUFFER_HPP

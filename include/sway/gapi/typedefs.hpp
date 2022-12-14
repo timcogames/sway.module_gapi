@@ -21,11 +21,11 @@ using ShaderObjectIdSet_t = std::set<u32_t>;
 using ExtensionInitList_t = std::initializer_list<std::pair<lpcstr_t, lpcstr_t>>;
 
 using CapabilityRef_t = std::shared_ptr<class ICapabilityBase>;
-using ShaderRef_t = std::shared_ptr<class ShaderBase>;
+using ShaderRef_t = std::shared_ptr<class Shader>;
 using ShaderProgramRef_t = std::shared_ptr<class ShaderProgramBase>;
 using TextureRef_t = std::shared_ptr<class TextureBase>;
 using BufferIdQueueRef_t = std::shared_ptr<class BufferIdQueue>;
-using BufferRef_t = std::shared_ptr<class BufferBase>;
+using BufferRef_t = std::shared_ptr<class Buffer>;
 using VertexAttribLayoutPtr_t = std::shared_ptr<class VertexAttribLayout>;
 using ViewportRef_t = std::shared_ptr<class IViewportBase>;
 using DrawCallRef_t = std::shared_ptr<class IDrawCallBase>;
