@@ -28,11 +28,12 @@ public:
 
   /**
    * @brief Выполняет отрисовку примитива.
+   *
    * @param[in] topology Топология примитива.
    * @param[in] bufset Набор буферных объектов.
    * @param[in] type Тип значений в индексах.
    */
-  PURE_VIRTUAL(void execute(TopologyType_t topology, BufferSet bufset, core::ValueDataType type));
+  PURE_VIRTUAL(void execute(TopologyType topology, BufferSet bufset, core::ValueDataType type));
 };
 
 NAMESPACE_END(gapi)

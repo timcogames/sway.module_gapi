@@ -10,7 +10,7 @@ NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
 struct ShaderCreateInfo {
-  ShaderType_t type;  // Тип шейдера.
+  ShaderType type;  // Тип шейдера.
   std::string code;  // Исходный код шейдера.
 };
 

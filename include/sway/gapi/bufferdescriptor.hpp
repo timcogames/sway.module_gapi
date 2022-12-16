@@ -10,8 +10,8 @@ NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
 struct BufferDescriptor {
-  BufferTarget_t target;
-  BufferUsage_t usage;
+  BufferTarget target;
+  BufferUsage usage;
   s32_t byteStride;
   s32_t capacity;  // Количество элементов в массиве.
 };

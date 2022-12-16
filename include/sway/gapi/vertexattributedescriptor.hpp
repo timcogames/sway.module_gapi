@@ -21,6 +21,18 @@ struct VertexAttributeDescriptor {
   const void *pointer;
   bool normalized;  // Нормализация входных данных.
   bool enabled;
+
+  template <typename TAttributeFormatType>
+  static auto merge(VertexSemantic_t semantic, bool normalized, bool enabled) -> VertexAttributeDescriptor {
+    VertexAttributeDescriptor attrib;
+    attrib.semantic = semantic;
+    attrib.format = core::detail::ValueDataTypeToEnum<typename TAttributeFormatType::type_t>::value;
+    attrib.numComponents = TAttributeFormatType::size;
+    attrib.stride = sizeof(typename TAttributeFormatType::type_t) * TAttributeFormatType::size;
+    attrib.normalized = normalized;
+    attrib.enabled = enabled;
+    return attrib;
+  }
 };
 
 NAMESPACE_END(gapi)

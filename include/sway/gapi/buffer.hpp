@@ -71,13 +71,13 @@ public:
    * @brief Получает целевой тип буфера.
    */
   // clang-format off
-  PURE_VIRTUAL(auto getTarget() const -> BufferTarget_t);  // clang-format on
+  PURE_VIRTUAL(auto getTarget() const -> BufferTarget);  // clang-format on
 
   /**
    * @brief Получает режим работы с данными.
    */
   // clang-format off
-  PURE_VIRTUAL(auto getUsage() const -> BufferUsage_t);  // clang-format on
+  PURE_VIRTUAL(auto getUsage() const -> BufferUsage);  // clang-format on
 
   /**
    * @brief Получает количество элементов в массиве.

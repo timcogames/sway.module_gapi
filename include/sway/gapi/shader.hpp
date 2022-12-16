@@ -21,7 +21,7 @@ public:
    *
    * @param[in] type Тип создаваемого шейдера.
    */
-  Shader(ShaderType_t type)
+  Shader(ShaderType type)
       : core::foundation::Uniqueable<u32_t>(std::nullopt) {}
 
   /**
@@ -50,7 +50,7 @@ public:
    * @return Тип шейдера.
    */
   // clang-format off
-  PURE_VIRTUAL(auto getType() const -> ShaderType_t);  // clang-format on
+  PURE_VIRTUAL(auto getType() const -> ShaderType);  // clang-format on
 };
 
 NAMESPACE_END(gapi)

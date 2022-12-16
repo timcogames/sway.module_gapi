@@ -7,7 +7,7 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-enum class BufferAccess_t : u32_t { Read, Write, ReadWrite };
+enum class BufferAccess : u32_t { Read, Write, ReadWrite };
 
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
