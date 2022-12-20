@@ -14,7 +14,7 @@ NAMESPACE_BEGIN(gapi)
  */
 struct VertexAttributeDescriptor {
   s32_t location;
-  VertexSemantic_t semantic;
+  VertexSemantic semantic;
   core::ValueDataType format;  // Формат данных.
   s32_t numComponents;  // Количество компонентов.
   s32_t stride;
@@ -23,7 +23,7 @@ struct VertexAttributeDescriptor {
   bool enabled;
 
   template <typename TAttributeFormatType>
-  static auto merge(VertexSemantic_t semantic, bool normalized, bool enabled) -> VertexAttributeDescriptor {
+  static auto merge(VertexSemantic semantic, bool normalized, bool enabled) -> VertexAttributeDescriptor {
     VertexAttributeDescriptor attrib;
     attrib.semantic = semantic;
     attrib.format = core::detail::ValueDataTypeToEnum<typename TAttributeFormatType::type_t>::value;

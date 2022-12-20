@@ -4,76 +4,76 @@
 
 template <typename Type = char, typename Traits = std::char_traits<Type>>
 inline std::basic_ostream<Type, Traits> &operator<<(
-    std::basic_ostream<Type, Traits> &stream, sway::gapi::VertexSemantic_t value) {
+    std::basic_ostream<Type, Traits> &stream, sway::gapi::VertexSemantic value) {
   switch (value) {
-    case sway::gapi::VertexSemantic_t::Position:
-      return stream << "attr_position";
-    case sway::gapi::VertexSemantic_t::Color:
-      return stream << "attr_color";
-    case sway::gapi::VertexSemantic_t::TexCoord_0:
-      return stream << "attr_texcoord_0";
-    case sway::gapi::VertexSemantic_t::TexCoord_1:
-      return stream << "attr_texcoord_1";
-    case sway::gapi::VertexSemantic_t::TexCoord_2:
-      return stream << "attr_texcoord_2";
-    case sway::gapi::VertexSemantic_t::TexCoord_3:
-      return stream << "attr_texcoord_3";
-    case sway::gapi::VertexSemantic_t::TexCoord_4:
-      return stream << "attr_texcoord_4";
-    case sway::gapi::VertexSemantic_t::TexCoord_5:
-      return stream << "attr_texcoord_5";
-    case sway::gapi::VertexSemantic_t::TexCoord_6:
-      return stream << "attr_texcoord_6";
-    case sway::gapi::VertexSemantic_t::TexCoord_7:
-      return stream << "attr_texcoord_7";
-    case sway::gapi::VertexSemantic_t::Normal:
-      return stream << "attr_normal";
-    case sway::gapi::VertexSemantic_t::Tangent:
-      return stream << "attr_tangent";
-    case sway::gapi::VertexSemantic_t::Binormal:
-      return stream << "attr_binormal";
-    case sway::gapi::VertexSemantic_t::BlendWeights:
-      return stream << "attr_blend_weights";
-    case sway::gapi::VertexSemantic_t::BlendIndices:
-      return stream << "attr_blend_indices";
+    case sway::gapi::VertexSemantic::POS:
+      return stream << "attrib_pos";
+    case sway::gapi::VertexSemantic::COL:
+      return stream << "attrib_col";
+    case sway::gapi::VertexSemantic::TEX_COORD_0:
+      return stream << "attrib_tex_coord_0";
+    case sway::gapi::VertexSemantic::TEX_COORD_1:
+      return stream << "attrib_tex_coord_1";
+    case sway::gapi::VertexSemantic::TEX_COORD_2:
+      return stream << "attrib_tex_coord_2";
+    case sway::gapi::VertexSemantic::TEX_COORD_3:
+      return stream << "attrib_tex_coord_3";
+    case sway::gapi::VertexSemantic::TEX_COORD_4:
+      return stream << "attrib_tex_coord_4";
+    case sway::gapi::VertexSemantic::TEX_COORD_5:
+      return stream << "attrib_tex_coord_5";
+    case sway::gapi::VertexSemantic::TEX_COORD_6:
+      return stream << "attrib_tex_coord_6";
+    case sway::gapi::VertexSemantic::TEX_COORD_7:
+      return stream << "attrib_tex_coord_7";
+    case sway::gapi::VertexSemantic::NORMAL:
+      return stream << "attrib_normal";
+    case sway::gapi::VertexSemantic::TANGENT:
+      return stream << "attrib_tangent";
+    case sway::gapi::VertexSemantic::BINORM:
+      return stream << "attrib_binorm";
+    case sway::gapi::VertexSemantic::BLEND_INDICES:
+      return stream << "attrib_blend_weights";
+    case sway::gapi::VertexSemantic::BLEND_INDICES:
+      return stream << "attrib_blend_indices";
     default:
       return stream << "unknown";
   }
 }
 
 template <typename Type = char, typename Traits = std::char_traits<Type>, typename Alloc = std::allocator<Type>>
-inline std::basic_string<Type, Traits, Alloc> stringize(sway::gapi::VertexSemantic_t value) {
+inline std::basic_string<Type, Traits, Alloc> stringize(sway::gapi::VertexSemantic value) {
   switch (value) {
-    case sway::gapi::VertexSemantic_t::Position:
-      return "attr_position";
-    case sway::gapi::VertexSemantic_t::Color:
-      return "attr_color";
-    case sway::gapi::VertexSemantic_t::TexCoord_0:
-      return "attr_texcoord_0";
-    case sway::gapi::VertexSemantic_t::TexCoord_1:
-      return "attr_texcoord_1";
-    case sway::gapi::VertexSemantic_t::TexCoord_2:
-      return "attr_texcoord_2";
-    case sway::gapi::VertexSemantic_t::TexCoord_3:
-      return "attr_texcoord_3";
-    case sway::gapi::VertexSemantic_t::TexCoord_4:
-      return "attr_texcoord_4";
-    case sway::gapi::VertexSemantic_t::TexCoord_5:
-      return "attr_texcoord_5";
-    case sway::gapi::VertexSemantic_t::TexCoord_6:
-      return "attr_texcoord_6";
-    case sway::gapi::VertexSemantic_t::TexCoord_7:
-      return "attr_texcoord_7";
-    case sway::gapi::VertexSemantic_t::Normal:
-      return "attr_normal";
-    case sway::gapi::VertexSemantic_t::Tangent:
-      return "attr_tangent";
-    case sway::gapi::VertexSemantic_t::Binormal:
-      return "attr_binormal";
-    case sway::gapi::VertexSemantic_t::BlendWeights:
-      return "attr_blend_weights";
-    case sway::gapi::VertexSemantic_t::BlendIndices:
-      return "attr_blend_indices";
+    case sway::gapi::VertexSemantic::POS:
+      return "attrib_pos";
+    case sway::gapi::VertexSemantic::COL:
+      return "attrib_col";
+    case sway::gapi::VertexSemantic::TEX_COORD_0:
+      return "attrib_tex_coord_0";
+    case sway::gapi::VertexSemantic::TEX_COORD_1:
+      return "attrib_tex_coord_1";
+    case sway::gapi::VertexSemantic::TEX_COORD_2:
+      return "attrib_tex_coord_2";
+    case sway::gapi::VertexSemantic::TEX_COORD_3:
+      return "attrib_tex_coord_3";
+    case sway::gapi::VertexSemantic::TEX_COORD_4:
+      return "attrib_tex_coord_4";
+    case sway::gapi::VertexSemantic::TEX_COORD_5:
+      return "attrib_tex_coord_5";
+    case sway::gapi::VertexSemantic::TEX_COORD_6:
+      return "attrib_tex_coord_6";
+    case sway::gapi::VertexSemantic::TEX_COORD_7:
+      return "attrib_tex_coord_7";
+    case sway::gapi::VertexSemantic::NORMAL:
+      return "attrib_normal";
+    case sway::gapi::VertexSemantic::TANGENT:
+      return "attrib_tangent";
+    case sway::gapi::VertexSemantic::BINORM:
+      return "attrib_binorm";
+    case sway::gapi::VertexSemantic::BLEND_WEIGHTS:
+      return "attrib_blend_weights";
+    case sway::gapi::VertexSemantic::BlendIndices:
+      return "attrib_blend_indices";
     default:
       return "unknown";
   }

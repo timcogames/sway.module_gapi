@@ -14,16 +14,8 @@ NAMESPACE_BEGIN(gapi)
 
 class IDrawCallBase {
 public:
-  /**
-   * @brief Конструктор класса.
-   */
-  IDrawCallBase() {
-    // Empty
-  }
+  IDrawCallBase() {}
 
-  /**
-   * @brief Деструктор класса.
-   */
   virtual ~IDrawCallBase() = default;
 
   /**

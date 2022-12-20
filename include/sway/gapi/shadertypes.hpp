@@ -11,8 +11,8 @@ NAMESPACE_BEGIN(gapi)
  * @brief Перечисление типов шейдера.
  */
 enum class ShaderType : u32_t {
-  VERTEX,  // Вершинный шейдер.
-  FRAGMENT  // Фрагментный шейдер.
+  VERT,  // Вершинный шейдер.
+  FRAG  // Фрагментный шейдер.
 };
 
 NAMESPACE_END(gapi)

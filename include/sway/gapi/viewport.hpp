@@ -1,5 +1,5 @@
-#ifndef SWAY_GAPI_VIEWPORTBASE_HPP
-#define SWAY_GAPI_VIEWPORTBASE_HPP
+#ifndef SWAY_GAPI_VIEWPORT_HPP
+#define SWAY_GAPI_VIEWPORT_HPP
 
 #include <sway/keywords.hpp>
 #include <sway/math/rect.hpp>
@@ -9,19 +9,11 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-class IViewportBase {
+class Viewport {
 public:
-  /**
-   * @brief Конструктор класса.
-   */
-  IViewportBase() {
-    // Empty
-  }
+  Viewport() {}
 
-  /**
-   * @brief Деструктор класса.
-   */
-  virtual ~IViewportBase() = default;
+  virtual ~Viewport() = default;
 
   /**
    * @brief Устанавливает новые значения прямоугольной области.
@@ -57,4 +49,4 @@ public:
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
 
-#endif  // SWAY_GAPI_VIEWPORTBASE_HPP
+#endif  // SWAY_GAPI_VIEWPORT_HPP

@@ -1,5 +1,5 @@
-#ifndef SWAY_GAPI_SHADERPROGRAMBASE_HPP
-#define SWAY_GAPI_SHADERPROGRAMBASE_HPP
+#ifndef SWAY_GAPI_SHADERPROGRAM_HPP
+#define SWAY_GAPI_SHADERPROGRAM_HPP
 
 #include <sway/core/foundation/uniqueable.hpp>
 #include <sway/gapi/shader.hpp>
@@ -18,18 +18,12 @@ NAMESPACE_BEGIN(gapi)
 /**
  * @brief Представление шейдерной программы.
  */
-class ShaderProgramBase : public core::foundation::Uniqueable<u32_t> {
+class ShaderProgram : public core::foundation::Uniqueable<u32_t> {
 public:
-  /**
-   * @brief Конструктор класса.
-   */
-  ShaderProgramBase()
+  ShaderProgram()
       : core::foundation::Uniqueable<u32_t>(std::nullopt) {}
 
-  /**
-   * @brief Деструктор класса.
-   */
-  virtual ~ShaderProgramBase() = default;
+  virtual ~ShaderProgram() = default;
 
   /**
    * @brief Связывает шейдерный объект с программным объектом.
@@ -125,4 +119,4 @@ public:
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
 
-#endif  // SWAY_GAPI_SHADERPROGRAMBASE_HPP
+#endif  // SWAY_GAPI_SHADERPROGRAM_HPP

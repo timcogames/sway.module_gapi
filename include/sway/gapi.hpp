@@ -8,22 +8,22 @@
 #include <sway/gapi/bufferset.hpp>
 #include <sway/gapi/buffertargets.hpp>
 #include <sway/gapi/bufferusages.hpp>
-#include <sway/gapi/capabilitybase.hpp>
+#include <sway/gapi/capability.hpp>
 #include <sway/gapi/clearflags.hpp>
 #include <sway/gapi/drawcallbase.hpp>
 #include <sway/gapi/profiletypes.hpp>
 #include <sway/gapi/shader.hpp>
 #include <sway/gapi/shadercreateinfo.hpp>
-#include <sway/gapi/shaderprogrambase.hpp>
+#include <sway/gapi/shaderprogram.hpp>
 #include <sway/gapi/shadertypes.hpp>
-#include <sway/gapi/texturebase.hpp>
+#include <sway/gapi/texture.hpp>
 #include <sway/gapi/texturelayers.hpp>
 #include <sway/gapi/topologytypes.hpp>
 #include <sway/gapi/typedefs.hpp>
 #include <sway/gapi/vertexattriblayout.hpp>
 #include <sway/gapi/vertexattributedescriptor.hpp>
 #include <sway/gapi/vertexsemantics.hpp>
-#include <sway/gapi/viewportbase.hpp>
+#include <sway/gapi/viewport.hpp>
 #include <sway/gapi/viewportmodes.hpp>
 
 NAMESPACE_BEGIN(sway)

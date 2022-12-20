@@ -24,9 +24,6 @@ public:
   Shader(ShaderType type)
       : core::foundation::Uniqueable<u32_t>(std::nullopt) {}
 
-  /**
-   * @brief Деструктор класса.
-   */
   virtual ~Shader() = default;
 
   /**

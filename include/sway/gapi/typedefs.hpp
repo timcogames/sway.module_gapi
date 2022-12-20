@@ -20,14 +20,14 @@ NAMESPACE_BEGIN(gapi)
 using ShaderObjectIdSet_t = std::set<u32_t>;
 using ExtensionInitList_t = std::initializer_list<std::pair<lpcstr_t, lpcstr_t>>;
 
-using CapabilityRef_t = std::shared_ptr<class ICapabilityBase>;
+using CapabilityRef_t = std::shared_ptr<class Capability>;
 using ShaderRef_t = std::shared_ptr<class Shader>;
-using ShaderProgramRef_t = std::shared_ptr<class ShaderProgramBase>;
-using TextureRef_t = std::shared_ptr<class TextureBase>;
+using ShaderProgramRef_t = std::shared_ptr<class ShaderProgram>;
+using TextureRef_t = std::shared_ptr<class Texture>;
 using IdGeneratorRef_t = std::shared_ptr<class IdGenerator>;
 using BufferRef_t = std::shared_ptr<class Buffer>;
 using VertexAttribLayoutPtr_t = std::shared_ptr<class VertexAttribLayout>;
-using ViewportRef_t = std::shared_ptr<class IViewportBase>;
+using ViewportRef_t = std::shared_ptr<class Viewport>;
 using DrawCallRef_t = std::shared_ptr<class IDrawCallBase>;
 
 using DrawCbFunc_t = std::function<void(BufferRef_t)>;

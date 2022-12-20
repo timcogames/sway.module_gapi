@@ -1,5 +1,5 @@
-#ifndef SWAY_GAPI_CAPABILITYBASE_HPP
-#define SWAY_GAPI_CAPABILITYBASE_HPP
+#ifndef SWAY_GAPI_CAPABILITY_HPP
+#define SWAY_GAPI_CAPABILITY_HPP
 
 #include <sway/core/version.hpp>
 #include <sway/keywords.hpp>
@@ -9,13 +9,11 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-class ICapabilityBase {
+class Capability {
 public:
-  ICapabilityBase() {
-    // Empty
-  }
+  Capability() {}
 
-  virtual ~ICapabilityBase() = default;
+  virtual ~Capability() = default;
 
   /**
    * @brief Возвращает версию OpenGL.
@@ -27,4 +25,4 @@ public:
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
 
-#endif  // SWAY_GAPI_CAPABILITYBASE_HPP
+#endif  // SWAY_GAPI_CAPABILITY_HPP
