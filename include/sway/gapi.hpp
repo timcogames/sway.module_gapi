@@ -10,7 +10,7 @@
 #include <sway/gapi/bufferusages.hpp>
 #include <sway/gapi/capability.hpp>
 #include <sway/gapi/clearflags.hpp>
-#include <sway/gapi/drawcallbase.hpp>
+#include <sway/gapi/drawcall.hpp>
 #include <sway/gapi/profiletypes.hpp>
 #include <sway/gapi/shader.hpp>
 #include <sway/gapi/shadercreateinfo.hpp>

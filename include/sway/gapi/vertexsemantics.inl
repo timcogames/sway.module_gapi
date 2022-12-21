@@ -32,7 +32,7 @@ inline std::basic_ostream<Type, Traits> &operator<<(
       return stream << "attrib_tangent";
     case sway::gapi::VertexSemantic::BINORM:
       return stream << "attrib_binorm";
-    case sway::gapi::VertexSemantic::BLEND_INDICES:
+    case sway::gapi::VertexSemantic::BLEND_WEIGHTS:
       return stream << "attrib_blend_weights";
     case sway::gapi::VertexSemantic::BLEND_INDICES:
       return stream << "attrib_blend_indices";
@@ -72,7 +72,7 @@ inline std::basic_string<Type, Traits, Alloc> stringize(sway::gapi::VertexSemant
       return "attrib_binorm";
     case sway::gapi::VertexSemantic::BLEND_WEIGHTS:
       return "attrib_blend_weights";
-    case sway::gapi::VertexSemantic::BlendIndices:
+    case sway::gapi::VertexSemantic::BLEND_INDICES:
       return "attrib_blend_indices";
     default:
       return "unknown";

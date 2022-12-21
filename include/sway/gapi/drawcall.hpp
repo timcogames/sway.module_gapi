@@ -1,5 +1,5 @@
-#ifndef SWAY_GAPI_DRAWCALLBASE_HPP
-#define SWAY_GAPI_DRAWCALLBASE_HPP
+#ifndef SWAY_GAPI_DRAWCALL_HPP
+#define SWAY_GAPI_DRAWCALL_HPP
 
 #include <sway/gapi/bufferset.hpp>
 #include <sway/gapi/topologytypes.hpp>
@@ -12,11 +12,11 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-class IDrawCallBase {
+class DrawCall {
 public:
-  IDrawCallBase() {}
+  DrawCall() {}
 
-  virtual ~IDrawCallBase() = default;
+  virtual ~DrawCall() = default;
 
   /**
    * @brief Выполняет отрисовку примитива.
@@ -31,4 +31,4 @@ public:
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
 
-#endif  // SWAY_GAPI_DRAWCALLBASE_HPP
+#endif  // SWAY_GAPI_DRAWCALL_HPP
