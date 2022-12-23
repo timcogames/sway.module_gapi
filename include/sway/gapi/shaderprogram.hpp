@@ -37,9 +37,10 @@ public:
    * @brief Отсоединяет шейдерный объект от программного объекта.
    *
    * @param[in] pair Отвязываемый шейдерный объект.
+   * @param[in] erasing Убрать из коллекции?.
    * @sa attach(ShaderRef_t)
    */
-  PURE_VIRTUAL(void detach(std::pair<ShaderType, ShaderRef_t> pair));
+  PURE_VIRTUAL(void detach(std::pair<ShaderType, ShaderRef_t> pair, bool erasing));
 
   // clang-format off
   PURE_VIRTUAL(auto getShader(ShaderType type) -> ShaderRef_t);  // clang-format on
