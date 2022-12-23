@@ -17,7 +17,6 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-using ShaderObjectIdSet_t = std::set<u32_t>;
 using ExtensionInitList_t = std::initializer_list<std::pair<lpcstr_t, lpcstr_t>>;
 
 using CapabilityRef_t = std::shared_ptr<class Capability>;
@@ -34,7 +33,7 @@ using DrawCbFunc_t = std::function<void(BufferRef_t)>;
 
 using UniformVec4fUmap_t = std::unordered_map<std::string, math::vec4f_t>;
 using UniformMat4fUmap_t = std::unordered_map<std::string, math::mat4f_t>;
-using VertexAttribDescUmap_t = std::unordered_map<std::string, struct VertexAttributeDescriptor>;
+using VertexAttribDescUmap_t = std::unordered_map<std::string, struct VertexAttribDescriptor>;
 
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)

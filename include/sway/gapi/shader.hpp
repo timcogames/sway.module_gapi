@@ -8,6 +8,8 @@
 #include <sway/namespacemacros.hpp>
 #include <sway/types.hpp>
 
+#include <optional>  // std::optional, std::nullopt
+
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
@@ -34,12 +36,21 @@ public:
   PURE_VIRTUAL(void compile(lpcstr_t source));
 
   /**
-   * @brief Возвращает статус компиляции.
+   * @brief Получает статус компиляции.
    *
    * @return Если компиляция прошла успешно 'true', иначе 'false'.
    */
   // clang-format off
   PURE_VIRTUAL(auto isCompiled() const -> bool);  // clang-format on
+
+  /**
+   * @brief Получает ссылку на идентификатор атрибута вершинного шейдера.
+   *
+   * @param[in] name Имя атрибута.
+   * @return Ссылка на идентификатор атрибута.
+   */
+  // clang-format off
+  PURE_VIRTUAL(auto getAttribLocation(std::optional<u32_t> progId, lpcstr_t name) -> s32_t);  // clang-format on
 
   /**
    * @brief Получает тип шейдера.

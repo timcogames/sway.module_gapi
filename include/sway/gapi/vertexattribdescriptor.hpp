@@ -1,5 +1,5 @@
-#ifndef SWAY_GAPI_VERTEXATTRIBUTEDESCRIPTOR_HPP
-#define SWAY_GAPI_VERTEXATTRIBUTEDESCRIPTOR_HPP
+#ifndef SWAY_GAPI_VERTEXATTRIBDESCRIPTOR_HPP
+#define SWAY_GAPI_VERTEXATTRIBDESCRIPTOR_HPP
 
 #include <sway/core/detail/valuedatatypes.hpp>
 #include <sway/gapi/vertexsemantics.hpp>
@@ -12,23 +12,24 @@ NAMESPACE_BEGIN(gapi)
 /**
  * @brief Структура описания вершинного атрибута.
  */
-struct VertexAttributeDescriptor {
+struct VertexAttribDescriptor {
   s32_t location;
+  const void *pointer;
+
   VertexSemantic semantic;
   core::ValueDataType format;  // Формат данных.
   s32_t numComponents;  // Количество компонентов.
   s32_t stride;
-  const void *pointer;
   bool normalized;  // Нормализация входных данных.
   bool enabled;
 
-  template <typename TAttributeFormatType>
-  static auto merge(VertexSemantic semantic, bool normalized, bool enabled) -> VertexAttributeDescriptor {
-    VertexAttributeDescriptor attrib;
+  template <typename TAttribFormatType>
+  static auto merge(VertexSemantic semantic, bool normalized, bool enabled) -> VertexAttribDescriptor {
+    VertexAttribDescriptor attrib;
     attrib.semantic = semantic;
-    attrib.format = core::detail::ValueDataTypeToEnum<typename TAttributeFormatType::type_t>::value;
-    attrib.numComponents = TAttributeFormatType::size;
-    attrib.stride = sizeof(typename TAttributeFormatType::type_t) * TAttributeFormatType::size;
+    attrib.format = core::detail::ValueDataTypeToEnum<typename TAttribFormatType::type_t>::value;
+    attrib.numComponents = TAttribFormatType::size;
+    attrib.stride = sizeof(typename TAttribFormatType::type_t) * TAttribFormatType::size;
     attrib.normalized = normalized;
     attrib.enabled = enabled;
     return attrib;
@@ -38,4 +39,4 @@ struct VertexAttributeDescriptor {
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
 
-#endif  // SWAY_GAPI_VERTEXATTRIBUTEDESCRIPTOR_HPP
+#endif  // SWAY_GAPI_VERTEXATTRIBDESCRIPTOR_HPP

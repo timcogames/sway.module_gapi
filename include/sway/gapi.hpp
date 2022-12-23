@@ -20,8 +20,8 @@
 #include <sway/gapi/texturelayers.hpp>
 #include <sway/gapi/topologytypes.hpp>
 #include <sway/gapi/typedefs.hpp>
+#include <sway/gapi/vertexattribdescriptor.hpp>
 #include <sway/gapi/vertexattriblayout.hpp>
-#include <sway/gapi/vertexattributedescriptor.hpp>
 #include <sway/gapi/vertexsemantics.hpp>
 #include <sway/gapi/viewport.hpp>
 #include <sway/gapi/viewportmodes.hpp>
