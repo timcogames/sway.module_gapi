@@ -10,22 +10,22 @@ inline std::basic_ostream<Type, Traits> &operator<<(
       return stream << "attrib_pos";
     case sway::gapi::VertexSemantic::COL:
       return stream << "attrib_col";
-    case sway::gapi::VertexSemantic::TEX_COORD_0:
-      return stream << "attrib_tex_coord_0";
-    case sway::gapi::VertexSemantic::TEX_COORD_1:
-      return stream << "attrib_tex_coord_1";
-    case sway::gapi::VertexSemantic::TEX_COORD_2:
-      return stream << "attrib_tex_coord_2";
-    case sway::gapi::VertexSemantic::TEX_COORD_3:
-      return stream << "attrib_tex_coord_3";
-    case sway::gapi::VertexSemantic::TEX_COORD_4:
-      return stream << "attrib_tex_coord_4";
-    case sway::gapi::VertexSemantic::TEX_COORD_5:
-      return stream << "attrib_tex_coord_5";
-    case sway::gapi::VertexSemantic::TEX_COORD_6:
-      return stream << "attrib_tex_coord_6";
-    case sway::gapi::VertexSemantic::TEX_COORD_7:
-      return stream << "attrib_tex_coord_7";
+    case sway::gapi::VertexSemantic::TEXCOORD_0:
+      return stream << "attrib_texcoord_0";
+    case sway::gapi::VertexSemantic::TEXCOORD_1:
+      return stream << "attrib_texcoord_1";
+    case sway::gapi::VertexSemantic::TEXCOORD_2:
+      return stream << "attrib_texcoord_2";
+    case sway::gapi::VertexSemantic::TEXCOORD_3:
+      return stream << "attrib_texcoord_3";
+    case sway::gapi::VertexSemantic::TEXCOORD_4:
+      return stream << "attrib_texcoord_4";
+    case sway::gapi::VertexSemantic::TEXCOORD_5:
+      return stream << "attrib_texcoord_5";
+    case sway::gapi::VertexSemantic::TEXCOORD_6:
+      return stream << "attrib_texcoord_6";
+    case sway::gapi::VertexSemantic::TEXCOORD_7:
+      return stream << "attrib_texcoord_7";
     case sway::gapi::VertexSemantic::NORMAL:
       return stream << "attrib_normal";
     case sway::gapi::VertexSemantic::TANGENT:
@@ -48,22 +48,22 @@ inline std::basic_string<Type, Traits, Alloc> stringize(sway::gapi::VertexSemant
       return "attrib_pos";
     case sway::gapi::VertexSemantic::COL:
       return "attrib_col";
-    case sway::gapi::VertexSemantic::TEX_COORD_0:
-      return "attrib_tex_coord_0";
-    case sway::gapi::VertexSemantic::TEX_COORD_1:
-      return "attrib_tex_coord_1";
-    case sway::gapi::VertexSemantic::TEX_COORD_2:
-      return "attrib_tex_coord_2";
-    case sway::gapi::VertexSemantic::TEX_COORD_3:
-      return "attrib_tex_coord_3";
-    case sway::gapi::VertexSemantic::TEX_COORD_4:
-      return "attrib_tex_coord_4";
-    case sway::gapi::VertexSemantic::TEX_COORD_5:
-      return "attrib_tex_coord_5";
-    case sway::gapi::VertexSemantic::TEX_COORD_6:
-      return "attrib_tex_coord_6";
-    case sway::gapi::VertexSemantic::TEX_COORD_7:
-      return "attrib_tex_coord_7";
+    case sway::gapi::VertexSemantic::TEXCOORD_0:
+      return "attrib_texcoord_0";
+    case sway::gapi::VertexSemantic::TEXCOORD_1:
+      return "attrib_texcoord_1";
+    case sway::gapi::VertexSemantic::TEXCOORD_2:
+      return "attrib_texcoord_2";
+    case sway::gapi::VertexSemantic::TEXCOORD_3:
+      return "attrib_texcoord_3";
+    case sway::gapi::VertexSemantic::TEXCOORD_4:
+      return "attrib_texcoord_4";
+    case sway::gapi::VertexSemantic::TEXCOORD_5:
+      return "attrib_texcoord_5";
+    case sway::gapi::VertexSemantic::TEXCOORD_6:
+      return "attrib_texcoord_6";
+    case sway::gapi::VertexSemantic::TEXCOORD_7:
+      return "attrib_texcoord_7";
     case sway::gapi::VertexSemantic::NORMAL:
       return "attrib_normal";
     case sway::gapi::VertexSemantic::TANGENT:

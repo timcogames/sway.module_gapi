@@ -14,6 +14,10 @@ public:
       : core::foundation::Uniqueable<u32_t>(std::nullopt) {}
 
   virtual ~Texture() = default;
+
+  PURE_VIRTUAL(void bind());
+
+  PURE_VIRTUAL(void unbind());
 };
 
 NAMESPACE_END(gapi)

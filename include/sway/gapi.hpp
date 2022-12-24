@@ -35,6 +35,7 @@ using CreateShaderProgramFunc_t = core::binding::TFunction<ShaderProgramRef_t(vo
 using CreateIdGeneratorFunc_t = core::binding::TFunction<IdGeneratorRef_t()>;
 using CreateBufferFunc_t = core::binding::TFunction<BufferRef_t(IdGeneratorRef_t, const struct BufferCreateInfo &)>;
 using CreateVertexAttribLayoutFunc_t = core::binding::TFunction<VertexAttribLayoutPtr_t(ShaderProgramRef_t)>;
+using CreateTextureFunc_t = core::binding::TFunction<TextureRef_t(void)>;
 using CreateDrawCallFunc_t = core::binding::TFunction<DrawCallRef_t(void)>;
 using CreateViewportFunc_t = core::binding::TFunction<ViewportRef_t(void)>;
 
@@ -45,6 +46,7 @@ struct ConcreatePluginFunctionSet : public core::PluginFunctionSet {
   CreateIdGeneratorFunc_t createIdGenerator;
   CreateBufferFunc_t createBuffer;
   CreateVertexAttribLayoutFunc_t createVertexAttribLayout;
+  CreateTextureFunc_t createTexture;
   CreateDrawCallFunc_t createDrawCall;
   CreateViewportFunc_t createViewport;
 
@@ -54,6 +56,7 @@ struct ConcreatePluginFunctionSet : public core::PluginFunctionSet {
     createShaderProgram = nullptr;
     createBuffer = nullptr;
     createVertexAttribLayout = nullptr;
+    createTexture = nullptr;
     createDrawCall = nullptr;
     createViewport = nullptr;
   }
