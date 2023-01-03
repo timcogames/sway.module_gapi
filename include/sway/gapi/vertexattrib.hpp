@@ -2,6 +2,7 @@
 #define SWAY_GAPI_VERTEXATTRIB_HPP
 
 #include <sway/gapi/vertexattribdescriptor.hpp>
+#include <sway/keywords.hpp>
 #include <sway/namespacemacros.hpp>
 #include <sway/types.hpp>
 
