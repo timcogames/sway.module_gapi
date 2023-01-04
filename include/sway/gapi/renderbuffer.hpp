@@ -2,6 +2,7 @@
 #define SWAY_GAPI_RENDERBUFFER_HPP
 
 #include <sway/core/foundation/uniqueable.hpp>
+#include <sway/keywords.hpp>
 #include <sway/namespacemacros.hpp>
 #include <sway/types.hpp>
 
