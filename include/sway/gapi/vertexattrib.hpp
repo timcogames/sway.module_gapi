@@ -11,11 +11,13 @@ NAMESPACE_BEGIN(gapi)
 
 class VertexAttrib {
 public:
-  // clang-format off
-  PURE_VIRTUAL(auto getDescriptor() -> VertexAttribDescriptor);  // clang-format on
+  PURE_VIRTUAL(void updateSubRawdata(void *data, s32_t offset, s32_t vtx));
 
   // clang-format off
-  PURE_VIRTUAL(auto getData(u32_t idx) const -> void *);  // clang-format on
+  PURE_VIRTUAL(auto getComponent(u32_t idx) const -> void *);  // clang-format on
+
+  // clang-format off
+  PURE_VIRTUAL(auto getDescriptor() -> VertexAttribDescriptor);  // clang-format on
 };
 
 NAMESPACE_END(gapi)
