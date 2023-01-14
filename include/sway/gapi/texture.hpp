@@ -18,6 +18,8 @@ public:
 
   PURE_VIRTUAL(void create(void *data, int width, int height));
 
+  PURE_VIRTUAL(void setActive(s32_t slot));
+
   PURE_VIRTUAL(void bind());
 
   PURE_VIRTUAL(void unbind());
