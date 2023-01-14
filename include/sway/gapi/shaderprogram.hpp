@@ -120,6 +120,8 @@ public:
   PURE_VIRTUAL(void setUniformMat4f(const std::string &uniform, const math::mat4f_t &mat));
 
   PURE_VIRTUAL(void setUniform1i(const std::string &uniform, s32_t val));
+
+  PURE_VIRTUAL(void setUniform1f(const std::string &uniform, f32_t val));
 };
 
 NAMESPACE_END(gapi)
