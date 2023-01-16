@@ -23,6 +23,7 @@ using CapabilityRef_t = std::shared_ptr<class Capability>;
 using ShaderRef_t = std::shared_ptr<class Shader>;
 using ShaderProgramRef_t = std::shared_ptr<class ShaderProgram>;
 using TextureRef_t = std::shared_ptr<class Texture>;
+using TextureSamplerRef_t = std::shared_ptr<class TextureSampler>;
 using IdGeneratorRef_t = std::shared_ptr<class IdGenerator>;
 using BufferRef_t = std::shared_ptr<class Buffer>;
 using VertexAttribLayoutPtr_t = std::shared_ptr<class VertexAttribLayout>;

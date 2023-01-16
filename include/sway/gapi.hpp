@@ -17,7 +17,10 @@
 #include <sway/gapi/shaderprogram.hpp>
 #include <sway/gapi/shadertypes.hpp>
 #include <sway/gapi/texture.hpp>
+#include <sway/gapi/texturefilters.hpp>
 #include <sway/gapi/texturelayers.hpp>
+#include <sway/gapi/texturesampler.hpp>
+#include <sway/gapi/texturewraps.hpp>
 #include <sway/gapi/topologytypes.hpp>
 #include <sway/gapi/typedefs.hpp>
 #include <sway/gapi/vertexattribdescriptor.hpp>
@@ -36,6 +39,7 @@ using CreateIdGeneratorFunc_t = core::binding::TFunction<IdGeneratorRef_t()>;
 using CreateBufferFunc_t = core::binding::TFunction<BufferRef_t(IdGeneratorRef_t, const struct BufferCreateInfo &)>;
 using CreateVertexAttribLayoutFunc_t = core::binding::TFunction<VertexAttribLayoutPtr_t(ShaderProgramRef_t)>;
 using CreateTextureFunc_t = core::binding::TFunction<TextureRef_t(void)>;
+using CreateTextureSamplerFunc_t = core::binding::TFunction<TextureSamplerRef_t(void)>;
 using CreateDrawCallFunc_t = core::binding::TFunction<DrawCallRef_t(void)>;
 using CreateViewportFunc_t = core::binding::TFunction<ViewportRef_t(void)>;
 
@@ -47,6 +51,7 @@ struct ConcreatePluginFunctionSet : public core::PluginFunctionSet {
   CreateBufferFunc_t createBuffer;
   CreateVertexAttribLayoutFunc_t createVertexAttribLayout;
   CreateTextureFunc_t createTexture;
+  CreateTextureSamplerFunc_t createTextureSampler;
   CreateDrawCallFunc_t createDrawCall;
   CreateViewportFunc_t createViewport;
 
@@ -57,6 +62,7 @@ struct ConcreatePluginFunctionSet : public core::PluginFunctionSet {
     createBuffer = nullptr;
     createVertexAttribLayout = nullptr;
     createTexture = nullptr;
+    createTextureSampler = nullptr;
     createDrawCall = nullptr;
     createViewport = nullptr;
   }
