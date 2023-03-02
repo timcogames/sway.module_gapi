@@ -74,7 +74,8 @@ EXTERN_C_BEGIN
 EMSCRIPTEN_KEEPALIVE
 #else
 DLLAPI_EXPORT
-#endif core::PluginInfo pluginGetInfo();
+#endif
+core::PluginInfo pluginGetInfo();
 
 #ifdef _EMSCRIPTEN
 EMSCRIPTEN_KEEPALIVE
