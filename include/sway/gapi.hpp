@@ -29,6 +29,10 @@
 #include <sway/gapi/viewport.hpp>
 #include <sway/gapi/viewportmodes.hpp>
 
+#ifdef EMSCRIPTEN_PLATFORM
+#  include <emscripten.h>
+#endif
+
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
@@ -70,14 +74,14 @@ struct ConcreatePluginFunctionSet : public core::PluginFunctionSet {
 
 EXTERN_C_BEGIN
 
-#ifdef _EMSCRIPTEN
+#ifdef EMSCRIPTEN_PLATFORM
 EMSCRIPTEN_KEEPALIVE
 #else
 DLLAPI_EXPORT
 #endif
 core::PluginInfo pluginGetInfo();
 
-#ifdef _EMSCRIPTEN
+#ifdef EMSCRIPTEN_PLATFORM
 EMSCRIPTEN_KEEPALIVE
 #else
 DLLAPI_EXPORT
