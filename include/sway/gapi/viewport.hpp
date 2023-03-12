@@ -44,6 +44,8 @@ public:
    */
   // clang-format off
   PURE_VIRTUAL(auto aspect() const -> f32_t);  // clang-format on
+
+  PURE_VIRTUAL(void clear());
 };
 
 NAMESPACE_END(gapi)
