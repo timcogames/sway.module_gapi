@@ -18,6 +18,7 @@
 #include <sway/gapi/shadercreateinfo.hpp>
 #include <sway/gapi/shaderprogram.hpp>
 #include <sway/gapi/shadertypes.hpp>
+#include <sway/gapi/state.hpp>
 #include <sway/gapi/texture.hpp>
 #include <sway/gapi/texturefilters.hpp>
 #include <sway/gapi/texturelayers.hpp>
@@ -48,6 +49,7 @@ using CreateTextureFunc_t = core::binding::TFunction<TextureRef_t(void)>;
 using CreateTextureSamplerFunc_t = core::binding::TFunction<TextureSamplerRef_t(void)>;
 using CreateDrawCallFunc_t = core::binding::TFunction<DrawCallRef_t(void)>;
 using CreateViewportFunc_t = core::binding::TFunction<ViewportRef_t(void)>;
+using CreateStateFunc_t = core::binding::TFunction<StateRef_t(void)>;
 
 struct ConcreatePluginFunctionSet : public core::PluginFunctionSet {
   CreateCapabilityFunc_t createCapability;
@@ -60,6 +62,7 @@ struct ConcreatePluginFunctionSet : public core::PluginFunctionSet {
   CreateTextureSamplerFunc_t createTextureSampler;
   CreateDrawCallFunc_t createDrawCall;
   CreateViewportFunc_t createViewport;
+  CreateStateFunc_t createState;
 
   ConcreatePluginFunctionSet() {
     createCapability = nullptr;
@@ -71,6 +74,7 @@ struct ConcreatePluginFunctionSet : public core::PluginFunctionSet {
     createTextureSampler = nullptr;
     createDrawCall = nullptr;
     createViewport = nullptr;
+    createState = nullptr;
   }
 };
 

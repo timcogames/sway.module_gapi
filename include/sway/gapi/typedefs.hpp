@@ -29,6 +29,7 @@ using BufferRef_t = std::shared_ptr<class Buffer>;
 using VertexAttribLayoutPtr_t = std::shared_ptr<class VertexAttribLayout>;
 using ViewportRef_t = std::shared_ptr<class Viewport>;
 using DrawCallRef_t = std::shared_ptr<class DrawCall>;
+using StateRef_t = std::shared_ptr<class State>;
 
 using DrawCbFunc_t = std::function<void(BufferRef_t)>;
 
