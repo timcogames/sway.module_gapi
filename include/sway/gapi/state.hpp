@@ -14,7 +14,7 @@ public:
 
   virtual ~State() = default;
 
-  PURE_VIRTUAL(void setBlend());
+  PURE_VIRTUAL(void apply());
 };
 
 NAMESPACE_END(gapi)
