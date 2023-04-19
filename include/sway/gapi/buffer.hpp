@@ -53,6 +53,14 @@ public:
    */
   PURE_VIRTUAL(void updateSubdata(const void *source));
 
+  // clang-format off
+  PURE_VIRTUAL(auto map() -> void *);  // clang-format on
+
+  // clang-format off
+  PURE_VIRTUAL(auto mapRange(s32_t offset, s32_t length, u32_t flags) -> void *);  // clang-format on
+
+  PURE_VIRTUAL(void unmap());
+
   /**
    * @brief Делает буфер текущим.
    *

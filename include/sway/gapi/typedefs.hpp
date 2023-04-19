@@ -37,6 +37,7 @@ using UniformVec4fUmap_t = std::unordered_map<std::string, math::vec4f_t>;
 using UniformMat4fUmap_t = std::unordered_map<std::string, math::mat4f_t>;
 using Uniform1iUmap_t = std::unordered_map<std::string, s32_t>;
 using Uniform1fUmap_t = std::unordered_map<std::string, f32_t>;
+using UniformRef_t = std::shared_ptr<struct Uniform>;
 
 using VertexAttribDescUmap_t = std::unordered_map<std::string, struct VertexAttribDescriptor>;
 

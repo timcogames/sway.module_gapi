@@ -29,6 +29,7 @@
 #include <sway/gapi/texturewraps.hpp>
 #include <sway/gapi/topologytypes.hpp>
 #include <sway/gapi/typedefs.hpp>
+#include <sway/gapi/uniform.hpp>
 #include <sway/gapi/vertexattribdescriptor.hpp>
 #include <sway/gapi/vertexattriblayout.hpp>
 #include <sway/gapi/vertexsemantics.hpp>
