@@ -2,6 +2,7 @@
 #define SWAY_GAPI_BUFFER_HPP
 
 #include <sway/core/foundation/uniqueable.hpp>
+#include <sway/gapi/bufferaccesses.hpp>
 #include <sway/gapi/bufferdescriptor.hpp>
 #include <sway/gapi/buffertargets.hpp>
 #include <sway/gapi/bufferusages.hpp>
