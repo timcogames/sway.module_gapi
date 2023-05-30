@@ -25,6 +25,9 @@ public:
   PURE_VIRTUAL(void use());
 
   // clang-format off
+  PURE_VIRTUAL(auto getCapacity() -> s32_t);  // clang-format on
+
+  // clang-format off
   PURE_VIRTUAL(auto isEnabled() const -> bool);  // clang-format on
 };
 
