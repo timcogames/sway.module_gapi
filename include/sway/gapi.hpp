@@ -88,19 +88,9 @@ struct ConcreatePluginFunctionSet : public core::PluginFunctionSet {
 
 EXTERN_C_BEGIN
 
-#ifdef EMSCRIPTEN_PLATFORM
-EMSCRIPTEN_KEEPALIVE
-#else
-DLLAPI_EXPORT
-#endif
-core::PluginInfo pluginGetInfo();
+EXPORT_API core::PluginInfo pluginGetInfo();
 
-#ifdef EMSCRIPTEN_PLATFORM
-EMSCRIPTEN_KEEPALIVE
-#else
-DLLAPI_EXPORT
-#endif
-void pluginInitialize(core::PluginFunctionSet *functions);
+EXPORT_API void pluginInitialize(core::PluginFunctionSet *functions);
 
 EXTERN_C_END
 
