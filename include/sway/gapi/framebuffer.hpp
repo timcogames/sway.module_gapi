@@ -1,12 +1,12 @@
 #ifndef SWAY_GAPI_FRAMEBUFFER_HPP
 #define SWAY_GAPI_FRAMEBUFFER_HPP
 
-#include <sway/core/foundation/uniqueable.hpp>
+#include <sway/core.hpp>
 #include <sway/gapi/framebufferattachments.hpp>
 #include <sway/gapi/renderbuffer.hpp>
 #include <sway/gapi/texture.hpp>
-#include <sway/namespacemacros.hpp>
-#include <sway/types.hpp>
+
+#include <memory>  // shared_ptr
 
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
