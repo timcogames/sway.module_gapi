@@ -22,7 +22,6 @@
 #include <sway/gapi/shaderprogram.hpp>
 #include <sway/gapi/shadertypes.hpp>
 #include <sway/gapi/state.hpp>
-#include <sway/gapi/stencilfunctions.hpp>
 #include <sway/gapi/stenciloperations.hpp>
 #include <sway/gapi/texture.hpp>
 #include <sway/gapi/texturefilters.hpp>
