@@ -8,6 +8,7 @@ NAMESPACE_BEGIN(gapi)
 
 // clang-format off
 enum class FrontFace {
+  UNDEF,
   CLOCK_WISE,
   COUNTER_CLOCK_WISE
 };

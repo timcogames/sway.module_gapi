@@ -8,6 +8,7 @@ NAMESPACE_BEGIN(gapi)
 
 // clang-format off
 enum class TextureLayer : u32_t {
+  UNDEF,
   DIFFUSE,
   SPECULAR,
   EMISSIVE,

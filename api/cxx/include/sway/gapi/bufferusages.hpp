@@ -8,6 +8,7 @@ NAMESPACE_BEGIN(gapi)
 
 // clang-format off
 enum class BufferUsage : u32_t {
+  UNDEF,
   STATIC,
   DYNAMIC,
   STREAM

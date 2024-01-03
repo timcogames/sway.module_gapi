@@ -7,6 +7,7 @@ NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
 enum class TextureFilter : u32_t {
+  UNDEF,
   NEAREST,
   NEAREST_MIPMAP_NEAREST,
   NEAREST_MIPMAP_LINEAR,

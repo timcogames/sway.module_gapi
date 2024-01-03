@@ -8,6 +8,7 @@ NAMESPACE_BEGIN(gapi)
 
 // clang-format off
 enum class BlendEquation : u32_t {
+  UNDEF,
   ADD,
   SUBTRACT,
   REVERSE_SUBTRACT,

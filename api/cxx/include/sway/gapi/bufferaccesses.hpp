@@ -8,6 +8,7 @@ NAMESPACE_BEGIN(gapi)
 
 // clang-format off
 enum class BufferAccess : u32_t {
+  UNDEF,
   READ,
   WRITE,
   READ_WRITE

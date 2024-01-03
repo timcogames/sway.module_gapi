@@ -7,6 +7,7 @@ NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
 enum class VertexSemantic : u32_t {
+  UNDEF,
   POS,
   COL,
   TEXCOORD_0,

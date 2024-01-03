@@ -8,6 +8,7 @@ NAMESPACE_BEGIN(gapi)
 
 // clang-format off
 enum class BufferTarget : u32_t {
+  UNDEF,
   ARRAY,
   ELEMENT_ARRAY,
   UNIFORM,

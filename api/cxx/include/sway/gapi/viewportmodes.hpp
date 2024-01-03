@@ -11,6 +11,7 @@ NAMESPACE_BEGIN(gapi)
  */
 // clang-format off
 enum class ViewportMode : u32_t {
+  UNDEF,
   ENABLED,
   DISABLED,
   RENDER_TO_TEXTURE

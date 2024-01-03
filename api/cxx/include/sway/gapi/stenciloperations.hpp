@@ -7,6 +7,7 @@ NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
 enum class StencilOperation : u32_t {
+  UNDEF,
   KEEP,
   ZERO,
   REPLACE,

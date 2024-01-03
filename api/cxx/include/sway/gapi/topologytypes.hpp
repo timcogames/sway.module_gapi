@@ -10,6 +10,7 @@ NAMESPACE_BEGIN(gapi)
  * @brief Перечисление типов топологии.
  */
 enum class TopologyType : u32_t {
+  UNDEF,
   POINT_LIST,  // Список точек.
   LINE_LIST,  // Список линий.
   LINE_STRIP,

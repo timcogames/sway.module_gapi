@@ -8,6 +8,7 @@ NAMESPACE_BEGIN(gapi)
 
 // clang-format off
 enum class FramebufferAttachment : u32_t {
+  UNDEF,
   DEPTH_STENCIL,
   DEPTH,
   STENCIL,

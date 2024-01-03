@@ -8,6 +8,7 @@ NAMESPACE_BEGIN(gapi)
 
 // clang-format off
 enum class CompareFunction : u32_t {
+  UNDEF,
   ALWAYS,
   NEVER,
   EQUAL,
