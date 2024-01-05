@@ -17,6 +17,7 @@
 #include <sway/gapi/drawcall.hpp>
 #include <sway/gapi/frontfaces.hpp>
 #include <sway/gapi/profiletypes.hpp>
+#include <sway/gapi/rasterizerdescriptor.hpp>
 #include <sway/gapi/shader.hpp>
 #include <sway/gapi/shadercreateinfo.hpp>
 #include <sway/gapi/shaderprogram.hpp>
