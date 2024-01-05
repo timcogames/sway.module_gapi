@@ -6,19 +6,7 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-// clang-format off
-enum class CompareFunction : u32_t {
-  UNDEF,
-  ALWAYS,
-  NEVER,
-  EQUAL,
-  NOT_EQUAL,
-  LESS,
-  LESS_OR_EQUAL,
-  GREATER,
-  GREATER_OR_EQUAL
-};
-// clang-format on
+enum class CompareFn : u32_t { UNDEF, ALWAYS, NEVER, EQUAL, NOT_EQUAL, LESS, LESS_OR_EQUAL, GREATER, GREATER_OR_EQUAL };
 
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)

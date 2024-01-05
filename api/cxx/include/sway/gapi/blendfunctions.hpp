@@ -6,7 +6,7 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-enum class BlendFunction : u32_t {
+enum class BlendFn : u32_t {
   UNDEF,
   ZERO,
   ONE,

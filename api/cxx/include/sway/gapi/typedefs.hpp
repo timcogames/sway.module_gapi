@@ -28,7 +28,7 @@ using VertexArrayPtr_t = std::shared_ptr<class VertexArray>;
 using VertexAttribLayoutPtr_t = std::shared_ptr<class VertexAttribLayout>;
 using ViewportRef_t = std::shared_ptr<class Viewport>;
 using DrawCallRef_t = std::shared_ptr<class DrawCall>;
-using StateRef_t = std::shared_ptr<class State>;
+using StateContextRef_t = std::shared_ptr<class StateContext>;
 using UniformRef_t = std::shared_ptr<struct Uniform>;
 
 using DrawCbFunc_t = std::function<void(BufferRef_t)>;

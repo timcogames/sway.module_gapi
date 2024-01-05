@@ -2,20 +2,20 @@
 #define SWAY_GAPI_STATEENABLEABLE_HPP
 
 #include <sway/core.hpp>
-#include <sway/gapi/statetypes.hpp>
+#include <sway/gapi/statecapabilities.hpp>
 
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-class State;
+class StateContext;
 
 struct StateDescriptorBase {};
 
-template <StateType T>
+template <StateCapability T>
 struct StateDescriptor : StateDescriptorBase {};
 
 template <>
-struct StateDescriptor<StateType::RASTERIZER> : StateDescriptorBase {};
+struct StateDescriptor<StateCapability::RASTERIZER> : StateDescriptorBase {};
 
 template <typename TConcreteData>
 class StateEnableable {
@@ -23,7 +23,7 @@ public:
   // clang-format off
   PURE_VIRTUAL(auto capture() -> TConcreteData);  // clang-format on
 
-  PURE_VIRTUAL(void apply(State *state, const TConcreteData &data));
+  PURE_VIRTUAL(void apply(StateContext *state, const TConcreteData &data));
 };
 
 NAMESPACE_END(gapi)

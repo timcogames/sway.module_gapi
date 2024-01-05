@@ -14,6 +14,7 @@
 #include <sway/gapi/clearflags.hpp>
 #include <sway/gapi/comparefunctions.hpp>
 #include <sway/gapi/cullfaces.hpp>
+#include <sway/gapi/depthdescriptor.hpp>
 #include <sway/gapi/drawcall.hpp>
 #include <sway/gapi/frontfaces.hpp>
 #include <sway/gapi/profiletypes.hpp>
@@ -22,10 +23,12 @@
 #include <sway/gapi/shadercreateinfo.hpp>
 #include <sway/gapi/shaderprogram.hpp>
 #include <sway/gapi/shadertypes.hpp>
-#include <sway/gapi/state.hpp>
+#include <sway/gapi/statecapabilities.hpp>
+#include <sway/gapi/statecontext.hpp>
 #include <sway/gapi/stateenableable.hpp>
 #include <sway/gapi/stateenableabledata.hpp>
-#include <sway/gapi/statetypes.hpp>
+#include <sway/gapi/stencildescriptor.hpp>
+#include <sway/gapi/stencilfacedescriptor.hpp>
 #include <sway/gapi/stenciloperations.hpp>
 #include <sway/gapi/texture.hpp>
 #include <sway/gapi/texturefilters.hpp>
@@ -60,7 +63,7 @@ using CreateTextureFunc_t = core::binding::TFunction<TextureRef_t(void)>;
 using CreateTextureSamplerFunc_t = core::binding::TFunction<TextureSamplerRef_t(void)>;
 using CreateDrawCallFunc_t = core::binding::TFunction<DrawCallRef_t(void)>;
 using CreateViewportFunc_t = core::binding::TFunction<ViewportRef_t(void)>;
-using CreateStateFunc_t = core::binding::TFunction<StateRef_t(void)>;
+using CreateStateContextFunc_t = core::binding::TFunction<StateContextRef_t(void)>;
 
 struct ConcreatePluginFunctionSet : public core::PluginFunctionSet {
   CreateCapabilityFunc_t createCapability;
@@ -74,7 +77,7 @@ struct ConcreatePluginFunctionSet : public core::PluginFunctionSet {
   CreateTextureSamplerFunc_t createTextureSampler;
   CreateDrawCallFunc_t createDrawCall;
   CreateViewportFunc_t createViewport;
-  CreateStateFunc_t createState;
+  CreateStateContextFunc_t createStateContext;
 
   ConcreatePluginFunctionSet() {
     createCapability = nullptr;
@@ -87,7 +90,7 @@ struct ConcreatePluginFunctionSet : public core::PluginFunctionSet {
     createTextureSampler = nullptr;
     createDrawCall = nullptr;
     createViewport = nullptr;
-    createState = nullptr;
+    createStateContext = nullptr;
   }
 };
 
