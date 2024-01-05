@@ -13,11 +13,11 @@ enum class TextureLayer : u32_t {
   SPECULAR,
   EMISSIVE,
   NORMAL,
-  LATEST
+  Latest
 };
 // clang-format on
 
-#define TEXTURE_LAYER_COUNT (core::detail::toUnderlying(TextureLayer::LATEST))
+#define NUM_TEXTURE_LAYERS (core::detail::toUnderlying(TextureLayer::Latest))
 
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)

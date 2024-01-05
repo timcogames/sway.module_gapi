@@ -8,13 +8,10 @@ NAMESPACE_BEGIN(gapi)
 
 class Capability {
 public:
-  Capability() {}
+  Capability() = default;
 
   virtual ~Capability() = default;
 
-  /**
-   * @brief Возвращает версию OpenGL.
-   */
   // clang-format off
   PURE_VIRTUAL(auto getVersion() const -> core::Version);  // clang-format on
 };

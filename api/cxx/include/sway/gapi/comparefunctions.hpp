@@ -14,9 +14,9 @@ enum class CompareFunction : u32_t {
   EQUAL,
   NOT_EQUAL,
   LESS,
-  LESS_EQUAL,
+  LESS_OR_EQUAL,
   GREATER,
-  GREATER_EQUAL
+  GREATER_OR_EQUAL
 };
 // clang-format on
 
