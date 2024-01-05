@@ -6,13 +6,7 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-// clang-format off
-enum class CullFace {
-  UNDEF,
-  BACK,
-  FRONT
-};
-// clang-format on
+enum class CullFace : u32_t { DISABLED = 0, BACK, FRONT, Latest };
 
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
