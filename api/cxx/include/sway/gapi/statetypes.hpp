@@ -8,6 +8,7 @@ NAMESPACE_BEGIN(gapi)
 
 enum class StateType : u32_t {
   BLEND = 0,  // GL_BLEND
+  RASTERIZER,
   CULL_FACE,  // GL_CULL_FACE
   DEPTH_TEST,  // GL_DEPTH_TEST
   SCISSOR_TEST,  // GL_SCISSOR_TEST

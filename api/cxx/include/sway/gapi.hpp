@@ -25,6 +25,7 @@
 #include <sway/gapi/state.hpp>
 #include <sway/gapi/stateenableable.hpp>
 #include <sway/gapi/stateenableabledata.hpp>
+#include <sway/gapi/statetypes.hpp>
 #include <sway/gapi/stenciloperations.hpp>
 #include <sway/gapi/texture.hpp>
 #include <sway/gapi/texturefilters.hpp>
