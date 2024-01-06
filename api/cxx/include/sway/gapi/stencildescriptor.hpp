@@ -8,6 +8,7 @@ NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
 struct StencilDescriptor {
+  bool enabled;
   StencilFaceDescriptor front;
   StencilFaceDescriptor back;
 };
