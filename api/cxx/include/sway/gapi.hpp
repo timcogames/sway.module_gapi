@@ -17,7 +17,6 @@
 #include <sway/gapi/depthdescriptor.hpp>
 #include <sway/gapi/drawcall.hpp>
 #include <sway/gapi/frontfaces.hpp>
-#include <sway/gapi/gapimacros.hpp>
 #include <sway/gapi/profiletypes.hpp>
 #include <sway/gapi/rasterizerdescriptor.hpp>
 #include <sway/gapi/shader.hpp>
@@ -45,6 +44,7 @@
 #include <sway/gapi/vertexsemantics.hpp>
 #include <sway/gapi/viewport.hpp>
 #include <sway/gapi/viewportmodes.hpp>
+#include <sway/gapimacros.hpp>
 
 #ifdef EMSCRIPTEN_PLATFORM
 #  include <emscripten.h>
