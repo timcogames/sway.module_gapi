@@ -1,0 +1,18 @@
+#ifndef SWAY_GAPIMACROS_HPP
+#define SWAY_GAPIMACROS_HPP
+
+#include <sway/core.hpp>
+
+#undef MODULE_GAPI_INTERFACE_EXPORT_API
+#ifdef MODULE_GAPI_INTERFACE_EXPORT
+#  if defined(EMSCRIPTEN_PLATFORM)
+#    include <emscripten.h>
+#    define MODULE_GAPI_INTERFACE_EXPORT_API EMSCRIPTEN_KEEPALIVE
+#  else
+#    define MODULE_GAPI_INTERFACE_EXPORT_API PUBLIC_ATTRIB
+#  endif
+#else
+#  define MODULE_GAPI_INTERFACE_EXPORT_API
+#endif
+
+#endif  // SWAY_GAPIMACROS_HPP

@@ -16,6 +16,7 @@
 #include <sway/gapi/cullfaces.hpp>
 #include <sway/gapi/depthdescriptor.hpp>
 #include <sway/gapi/drawcall.hpp>
+#include <sway/gapi/exportmacros.hpp>
 #include <sway/gapi/frontfaces.hpp>
 #include <sway/gapi/profiletypes.hpp>
 #include <sway/gapi/rasterizerdescriptor.hpp>
@@ -96,9 +97,9 @@ struct ConcreatePluginFunctionSet : public core::PluginFunctionSet {
 
 EXTERN_C_BEGIN
 
-EXPORT_API core::PluginInfo pluginGetInfo();
+MODULE_GAPI_INTERFACE_EXPORT_API core::PluginInfo pluginGetInfo();
 
-EXPORT_API void pluginInitialize(core::PluginFunctionSet *functions);
+MODULE_GAPI_INTERFACE_EXPORT_API void pluginInitialize(core::PluginFunctionSet *functions);
 
 EXTERN_C_END
 
