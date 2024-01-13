@@ -16,8 +16,8 @@
 #include <sway/gapi/cullfaces.hpp>
 #include <sway/gapi/depthdescriptor.hpp>
 #include <sway/gapi/drawcall.hpp>
-#include <sway/gapi/exportmacros.hpp>
 #include <sway/gapi/frontfaces.hpp>
+#include <sway/gapi/gapimacros.hpp>
 #include <sway/gapi/profiletypes.hpp>
 #include <sway/gapi/rasterizerdescriptor.hpp>
 #include <sway/gapi/shader.hpp>
