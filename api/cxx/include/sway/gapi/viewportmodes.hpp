@@ -9,14 +9,7 @@ NAMESPACE_BEGIN(gapi)
 /**
  * @brief Перечисление поведения окна просмотра.
  */
-// clang-format off
-enum class ViewportMode : u32_t {
-  UNDEF,
-  ENABLED,
-  DISABLED,
-  RENDER_TO_TEXTURE
-};
-// clang-format on
+enum class ViewportMode : u32_t { UNDEF, ENABLED, DISABLED, RENDER_TO_TEXTURE };
 
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)

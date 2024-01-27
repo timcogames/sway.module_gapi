@@ -25,9 +25,9 @@ struct VertexAttribDescriptor {
   static auto merge(VertexSemantic semantic, bool normalized, bool enabled) -> VertexAttribDescriptor {
     VertexAttribDescriptor attrib;
     attrib.semantic = semantic;
-    attrib.format = core::detail::ValueDataTypeToEnum<typename TAttribFormatType::type_t>::value;
-    attrib.numComponents = TAttribFormatType::size;
-    attrib.stride = sizeof(typename TAttribFormatType::type_t) * TAttribFormatType::size;
+    attrib.format = core::detail::ValueDataTypeToEnum<typename TAttribFormatType::DataElementType_t>::value;
+    attrib.numComponents = TAttribFormatType::DataElementCount_t;
+    attrib.stride = TAttribFormatType::DataSize_t;
     attrib.normalized = normalized;
     attrib.enabled = enabled;
     return attrib;

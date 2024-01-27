@@ -6,13 +6,7 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-// clang-format off
-enum class ProfileType : u32_t {
-  UNDEF,
-  CORE,
-  COMPATIBILITY
-};
-// clang-format on
+enum class ProfileType : u32_t { UNDEF, CORE, COMPATIBILITY };
 
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)

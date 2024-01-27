@@ -6,13 +6,7 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-// clang-format off
-enum class TextureWrap : u32_t {
-  UNDEF,
-  REPEAT,
-  CLAMP
-};
-// clang-format on
+enum class TextureWrap : u32_t { UNDEF, REPEAT, CLAMP };
 
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)

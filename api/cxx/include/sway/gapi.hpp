@@ -97,9 +97,9 @@ struct ConcreatePluginFunctionSet : public core::PluginFunctionSet {
 
 EXTERN_C_BEGIN
 
-MODULE_GAPI_INTERFACE_EXPORT_API core::PluginInfo pluginGetInfo();
+D_MODULE_GAPI_INTERFACE_EXPORT_API core::PluginInfo pluginGetInfo();
 
-MODULE_GAPI_INTERFACE_EXPORT_API void pluginInitialize(core::PluginFunctionSet *functions);
+D_MODULE_GAPI_INTERFACE_EXPORT_API void pluginInitialize(core::PluginFunctionSet *functions);
 
 EXTERN_C_END
 

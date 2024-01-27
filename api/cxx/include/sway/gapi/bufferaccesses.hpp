@@ -6,14 +6,7 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-// clang-format off
-enum class BufferAccess : u32_t {
-  UNDEF,
-  READ,
-  WRITE,
-  READ_WRITE
-};
-// clang-format on
+enum class BufferAccess : u32_t { UNDEF, READ, WRITE, READ_WRITE };
 
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)

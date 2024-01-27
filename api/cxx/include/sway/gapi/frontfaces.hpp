@@ -6,13 +6,7 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-// clang-format off
-enum class FrontFace {
-  UNDEF,
-  CLOCK_WISE,
-  COUNTER_CLOCK_WISE
-};
-// clang-format on
+enum class FrontFace { UNDEF, CLOCK_WISE, COUNTER_CLOCK_WISE };
 
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)

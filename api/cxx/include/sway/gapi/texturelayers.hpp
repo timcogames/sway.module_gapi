@@ -14,8 +14,7 @@ enum class TextureLayer : u32_t {
   EMISSIVE,
   NORMAL,
   Latest
-};
-// clang-format on
+};  // clang-format on
 
 #define NUM_TEXTURE_LAYERS (core::detail::toUnderlying(TextureLayer::Latest))
 

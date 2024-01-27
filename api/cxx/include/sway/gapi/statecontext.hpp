@@ -12,7 +12,7 @@ NAMESPACE_BEGIN(gapi)
 
 class StateContext {
 public:
-  DFLT_DTOR_VIRTUAL(StateContext);
+  virtual ~StateContext() = default;
 
   PURE_VIRTUAL(void setCapabilityEnable(StateCapability cap, bool enable));
 
