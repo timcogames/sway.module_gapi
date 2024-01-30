@@ -2,6 +2,8 @@
 #define SWAY_GAPI_TEXTURE_HPP
 
 #include <sway/core.hpp>
+#include <sway/gapi/texturecreateinfo.hpp>
+#include <sway/math.hpp>
 
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
@@ -13,7 +15,7 @@ public:
 
   virtual ~Texture() = default;
 
-  PURE_VIRTUAL(void create(void *data, int width, int height));
+  PURE_VIRTUAL(void create(const TextureCreateInfo &createInfo));
 
   PURE_VIRTUAL(void setActive(s32_t slot));
 

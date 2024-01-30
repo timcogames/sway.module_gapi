@@ -17,6 +17,7 @@
 #include <sway/gapi/depthdescriptor.hpp>
 #include <sway/gapi/drawcall.hpp>
 #include <sway/gapi/frontfaces.hpp>
+#include <sway/gapi/pixelformats.hpp>
 #include <sway/gapi/profiletypes.hpp>
 #include <sway/gapi/rasterizerdescriptor.hpp>
 #include <sway/gapi/shader.hpp>
@@ -31,9 +32,11 @@
 #include <sway/gapi/stencilfacedescriptor.hpp>
 #include <sway/gapi/stenciloperations.hpp>
 #include <sway/gapi/texture.hpp>
+#include <sway/gapi/texturecreateinfo.hpp>
 #include <sway/gapi/texturefilters.hpp>
 #include <sway/gapi/texturelayers.hpp>
 #include <sway/gapi/texturesampler.hpp>
+#include <sway/gapi/texturetargets.hpp>
 #include <sway/gapi/texturewraps.hpp>
 #include <sway/gapi/topologytypes.hpp>
 #include <sway/gapi/typedefs.hpp>
