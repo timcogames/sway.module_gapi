@@ -18,6 +18,9 @@ enum class PixelFormat : u32_t {
   HDR,  // or RGBA32F
   DEPTH,
 
+  LUMINANCE,
+  LUMINANCE_ALPHA,
+
   BGR,
   BGRA,
   RGB8,
