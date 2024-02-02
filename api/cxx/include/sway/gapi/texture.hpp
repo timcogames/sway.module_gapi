@@ -17,6 +17,8 @@ public:
 
   PURE_VIRTUAL(void create(const TextureCreateInfo &createInfo));
 
+  PURE_VIRTUAL(void setUnpackAlignement(u32_t param));
+
   PURE_VIRTUAL(void setActive(s32_t slot));
 
   PURE_VIRTUAL(void bind());
