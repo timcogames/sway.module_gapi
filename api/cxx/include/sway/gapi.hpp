@@ -8,8 +8,8 @@
 #include <sway/gapi/buffercreateinfo.hpp>
 #include <sway/gapi/bufferdescriptor.hpp>
 #include <sway/gapi/bufferset.hpp>
+#include <sway/gapi/buffersubdatadescriptor.hpp>
 #include <sway/gapi/buffertargets.hpp>
-#include <sway/gapi/bufferupdatesubdatainfo.hpp>
 #include <sway/gapi/bufferusages.hpp>
 #include <sway/gapi/capability.hpp>
 #include <sway/gapi/clearflags.hpp>
