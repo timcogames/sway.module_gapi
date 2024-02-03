@@ -23,15 +23,15 @@ using ShaderProgramRef_t = std::shared_ptr<class ShaderProgram>;
 using TextureRef_t = std::shared_ptr<class Texture>;
 using TextureSamplerRef_t = std::shared_ptr<class TextureSampler>;
 using IdGeneratorRef_t = std::shared_ptr<class IdGenerator>;
-using BufferRef_t = std::shared_ptr<class Buffer>;
 using VertexArrayPtr_t = std::shared_ptr<class VertexArray>;
+using BufferPtr_t = std::shared_ptr<class Buffer>;
 using VertexAttribLayoutPtr_t = std::shared_ptr<class VertexAttribLayout>;
 using ViewportRef_t = std::shared_ptr<class Viewport>;
 using DrawCallRef_t = std::shared_ptr<class DrawCall>;
 using StateContextRef_t = std::shared_ptr<class StateContext>;
 using UniformRef_t = std::shared_ptr<struct Uniform>;
 
-using DrawCbFunc_t = std::function<void(BufferRef_t)>;
+using DrawCbFunc_t = std::function<void(BufferPtr_t)>;
 
 using UniformVec4fUmap_t = std::unordered_map<std::string, math::vec4f_t>;
 using UniformMat4fUmap_t = std::unordered_map<std::string, math::mat4f_t>;

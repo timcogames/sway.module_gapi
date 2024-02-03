@@ -9,6 +9,7 @@
 #include <sway/gapi/bufferdescriptor.hpp>
 #include <sway/gapi/bufferset.hpp>
 #include <sway/gapi/buffertargets.hpp>
+#include <sway/gapi/bufferupdatesubdatainfo.hpp>
 #include <sway/gapi/bufferusages.hpp>
 #include <sway/gapi/capability.hpp>
 #include <sway/gapi/clearflags.hpp>
@@ -60,7 +61,7 @@ using CreateCapabilityFunc_t = core::binding::TFunction<CapabilityRef_t(void)>;
 using CreateShaderFunc_t = core::binding::TFunction<ShaderRef_t(const struct ShaderCreateInfo &)>;
 using CreateShaderProgramFunc_t = core::binding::TFunction<ShaderProgramRef_t(void)>;
 using CreateIdGeneratorFunc_t = core::binding::TFunction<IdGeneratorRef_t()>;
-using CreateBufferFunc_t = core::binding::TFunction<BufferRef_t(IdGeneratorRef_t, const struct BufferCreateInfo &)>;
+using CreateBufferFunc_t = core::binding::TFunction<BufferPtr_t(IdGeneratorRef_t, const struct BufferCreateInfo &)>;
 using CreateVertexArrayFunc_t = core::binding::TFunction<VertexArrayPtr_t(void)>;
 using CreateVertexAttribLayoutFunc_t = core::binding::TFunction<VertexAttribLayoutPtr_t(ShaderProgramRef_t)>;
 using CreateTextureFunc_t = core::binding::TFunction<TextureRef_t(const struct TextureCreateInfo &)>;
