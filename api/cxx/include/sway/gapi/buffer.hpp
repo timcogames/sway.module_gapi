@@ -35,18 +35,16 @@ public:
   /**
    * @brief Изменяет данные в уже существующем буфере.
    *
-   * @param[in] offset Начало изменяемого блока данных.
-   * @param[in] size Размер изменяемого блока данных.
-   * @param[in] src Область памяти, содержащая новые значения.
+   * @param[in] desc Описание конкретной заполняемой области.
    * @sa updateSubdata(const void *)
    */
-  PURE_VIRTUAL(void updateSubdata(u32_t offset, u32_t size, const void *src));
+  PURE_VIRTUAL(void updateSubdata(BufferSubdataDescriptor desc));
 
   /**
    * @brief Изменяет данные в уже существующем буфере.
    *
    * @param[in] src Область памяти, содержащая новые значения.
-   * @sa updateSubdata(u32_t, u32_t, const void *)
+   * @sa updateSubdata(BufferSubdataDescriptor)
    */
   PURE_VIRTUAL(void updateSubdata(const void *src));
 
