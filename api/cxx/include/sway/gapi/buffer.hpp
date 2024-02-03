@@ -4,6 +4,7 @@
 #include <sway/core.hpp>
 #include <sway/gapi/bufferaccesses.hpp>
 #include <sway/gapi/bufferdescriptor.hpp>
+#include <sway/gapi/buffersubdatadescriptor.hpp>
 #include <sway/gapi/buffertargets.hpp>
 #include <sway/gapi/bufferusages.hpp>
 
