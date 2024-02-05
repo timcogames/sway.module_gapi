@@ -3,6 +3,7 @@
 
 #include <sway/core.hpp>
 #include <sway/gapi/texturecreateinfo.hpp>
+#include <sway/gapi/texturesubdatadescriptor.hpp>
 #include <sway/math.hpp>
 
 NAMESPACE_BEGIN(sway)
@@ -16,6 +17,8 @@ public:
   virtual ~Texture() = default;
 
   PURE_VIRTUAL(void create(const TextureCreateInfo &createInfo));
+
+  PURE_VIRTUAL(void updateSubdata(TextureSubdataDescriptor desc));
 
   PURE_VIRTUAL(void setUnpackAlignement(u32_t param));
 

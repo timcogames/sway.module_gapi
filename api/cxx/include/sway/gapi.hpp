@@ -37,6 +37,7 @@
 #include <sway/gapi/texturefilters.hpp>
 #include <sway/gapi/texturelayers.hpp>
 #include <sway/gapi/texturesampler.hpp>
+#include <sway/gapi/texturesubdatadescriptor.hpp>
 #include <sway/gapi/texturetargets.hpp>
 #include <sway/gapi/texturewraps.hpp>
 #include <sway/gapi/topologytypes.hpp>
