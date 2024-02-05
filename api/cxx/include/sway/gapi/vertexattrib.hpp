@@ -12,7 +12,7 @@ public:
   PURE_VIRTUAL(void importRawdata(void *data, s32_t offset, s32_t vtx));
 
   // TODO: temp
-  PURE_VIRTUAL(void importRawdata2(void *data, s32_t offset, float *vertices));
+  PURE_VIRTUAL(void importRawdata2(void *data, s32_t offset, void *vertices));
 
   // clang-format off
   PURE_VIRTUAL(auto getComponent(u32_t idx) const -> void *);  // clang-format on
