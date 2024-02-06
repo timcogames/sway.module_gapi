@@ -27,6 +27,9 @@ public:
   PURE_VIRTUAL(void bind());
 
   PURE_VIRTUAL(void unbind());
+
+  // clang-format off
+  PURE_VIRTUAL(auto getTarget() -> TextureTarget);  // clang-format on
 };
 
 NAMESPACE_END(gapi)

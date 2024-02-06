@@ -6,7 +6,17 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-enum class TextureTarget : u32_t { UNKNOWN, TEX_2D, TEX_2D_ARRAY, MULTISAMPLE, MULTISAMPLE_ARRAY, RECT, CUBE_MAP };
+enum class TextureTarget : u32_t {
+  TEX_2D,
+  TEX_2D_ARRAY,
+  MULTISAMPLE,
+  MULTISAMPLE_ARRAY,
+  RECT,
+  CUBE_MAP,
+
+  Unknown,
+  Latest
+};
 
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
