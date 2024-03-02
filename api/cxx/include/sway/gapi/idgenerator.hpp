@@ -8,6 +8,8 @@ NAMESPACE_BEGIN(gapi)
 
 class IdGenerator {
 public:
+  virtual ~IdGenerator() = default;
+
   // clang-format off
   PURE_VIRTUAL(auto newGuid() -> u32_t);  // clang-format on
 };

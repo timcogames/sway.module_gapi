@@ -58,18 +58,18 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-using CreateCapabilityFunc_t = core::binding::TFunction<CapabilityRef_t(void)>;
-using CreateShaderFunc_t = core::binding::TFunction<ShaderRef_t(const struct ShaderCreateInfo &)>;
-using CreateShaderProgramFunc_t = core::binding::TFunction<ShaderProgramRef_t(void)>;
-using CreateIdGeneratorFunc_t = core::binding::TFunction<IdGeneratorRef_t()>;
-using CreateBufferFunc_t = core::binding::TFunction<BufferPtr_t(IdGeneratorRef_t, const struct BufferCreateInfo &)>;
+using CreateCapabilityFunc_t = core::binding::TFunction<CapabilityPtr_t(void)>;
+using CreateShaderFunc_t = core::binding::TFunction<ShaderPtr_t(const struct ShaderCreateInfo &)>;
+using CreateShaderProgramFunc_t = core::binding::TFunction<ShaderProgramPtr_t(void)>;
+using CreateIdGeneratorFunc_t = core::binding::TFunction<IdGeneratorPtr_t()>;
+using CreateBufferFunc_t = core::binding::TFunction<BufferPtr_t(IdGeneratorPtr_t, const struct BufferCreateInfo &)>;
 using CreateVertexArrayFunc_t = core::binding::TFunction<VertexArrayPtr_t(void)>;
-using CreateVertexAttribLayoutFunc_t = core::binding::TFunction<VertexAttribLayoutPtr_t(ShaderProgramRef_t)>;
-using CreateTextureFunc_t = core::binding::TFunction<TextureRef_t(const struct TextureCreateInfo &)>;
-using CreateTextureSamplerFunc_t = core::binding::TFunction<TextureSamplerRef_t(TextureRef_t)>;
-using CreateDrawCallFunc_t = core::binding::TFunction<DrawCallRef_t(void)>;
-using CreateViewportFunc_t = core::binding::TFunction<ViewportRef_t(void)>;
-using CreateStateContextFunc_t = core::binding::TFunction<StateContextRef_t(void)>;
+using CreateVertexAttribLayoutFunc_t = core::binding::TFunction<VertexAttribLayoutPtr_t(ShaderProgramPtr_t)>;
+using CreateTextureFunc_t = core::binding::TFunction<TexturePtr_t(const struct TextureCreateInfo &)>;
+using CreateTextureSamplerFunc_t = core::binding::TFunction<TextureSamplerPtr_t(TexturePtr_t)>;
+using CreateDrawCallFunc_t = core::binding::TFunction<DrawCallPtr_t(void)>;
+using CreateViewportFunc_t = core::binding::TFunction<ViewportPtr_t(void)>;
+using CreateStateContextFunc_t = core::binding::TFunction<StateContextPtr_t(void)>;
 
 struct ConcreatePluginFunctionSet : public core::PluginFunctionSet {
   CreateCapabilityFunc_t createCapability;

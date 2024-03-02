@@ -17,19 +17,19 @@ NAMESPACE_BEGIN(gapi)
 
 using ExtensionInitList_t = std::initializer_list<std::pair<lpcstr_t, lpcstr_t>>;
 
-using CapabilityRef_t = std::shared_ptr<class Capability>;
-using ShaderRef_t = std::shared_ptr<class Shader>;
-using ShaderProgramRef_t = std::shared_ptr<class ShaderProgram>;
-using TextureRef_t = std::shared_ptr<class Texture>;
-using TextureSamplerRef_t = std::shared_ptr<class TextureSampler>;
-using IdGeneratorRef_t = std::shared_ptr<class IdGenerator>;
-using VertexArrayPtr_t = std::shared_ptr<class VertexArray>;
-using BufferPtr_t = std::shared_ptr<class Buffer>;
-using VertexAttribLayoutPtr_t = std::shared_ptr<class VertexAttribLayout>;
-using ViewportRef_t = std::shared_ptr<class Viewport>;
-using DrawCallRef_t = std::shared_ptr<class DrawCall>;
-using StateContextRef_t = std::shared_ptr<class StateContext>;
-using UniformRef_t = std::shared_ptr<struct Uniform>;
+using CapabilityPtr_t = class Capability *;
+using ShaderPtr_t = class Shader *;
+using ShaderProgramPtr_t = class ShaderProgram *;
+using TexturePtr_t = class Texture *;
+using TextureSamplerPtr_t = class TextureSampler *;
+using IdGeneratorPtr_t = class IdGenerator *;
+using VertexArrayPtr_t = class VertexArray *;
+using BufferPtr_t = class Buffer *;
+using VertexAttribLayoutPtr_t = class VertexAttribLayout *;
+using ViewportPtr_t = class Viewport *;
+using DrawCallPtr_t = class DrawCall *;
+using StateContextPtr_t = class StateContext *;
+using UniformPtr_t = struct Uniform *;
 
 using DrawCbFunc_t = std::function<void(BufferPtr_t)>;
 

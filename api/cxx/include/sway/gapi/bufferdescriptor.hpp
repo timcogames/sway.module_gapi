@@ -13,6 +13,12 @@ struct BufferDescriptor {
   BufferUsage usage;
   s32_t byteStride;
   s32_t capacity;  // Количество элементов в массиве.
+
+  BufferDescriptor()
+      : target(BufferTarget::UNDEF)
+      , usage(BufferUsage::UNDEF)
+      , byteStride(0)
+      , capacity(0) {}
 };
 
 NAMESPACE_END(gapi)

@@ -24,21 +24,21 @@ public:
    * @brief Связывает шейдерный объект с программным объектом.
    *
    * @param[in] shader Указатель на связываемый шейдерный объект.
-   * @sa detach(std::pair<ShaderType, ShaderRef_t>)
+   * @sa detach(std::pair<ShaderType, ShaderPtr_t>)
    */
-  PURE_VIRTUAL(void attach(ShaderRef_t shader));
+  PURE_VIRTUAL(void attach(ShaderPtr_t shader));
 
   /**
    * @brief Отсоединяет шейдерный объект от программного объекта.
    *
    * @param[in] pair Отвязываемый шейдерный объект.
    * @param[in] erasing Убрать из коллекции?.
-   * @sa attach(ShaderRef_t)
+   * @sa attach(ShaderPtr_t)
    */
-  PURE_VIRTUAL(void detach(std::pair<ShaderType, ShaderRef_t> pair, bool erasing));
+  PURE_VIRTUAL(void detach(std::pair<ShaderType, ShaderPtr_t> pair, bool erasing));
 
   // clang-format off
-  PURE_VIRTUAL(auto getShader(ShaderType type) -> ShaderRef_t);  // clang-format on
+  PURE_VIRTUAL(auto getShader(ShaderType type) -> ShaderPtr_t);  // clang-format on
 
   /**
    * @brief Компонует программный объект.
