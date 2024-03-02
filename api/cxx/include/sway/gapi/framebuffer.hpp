@@ -5,6 +5,7 @@
 #include <sway/gapi/framebufferattachments.hpp>
 #include <sway/gapi/renderbuffer.hpp>
 #include <sway/gapi/texture.hpp>
+#include <sway/gapi/typedefs.hpp>
 
 #include <memory>  // shared_ptr
 
@@ -18,9 +19,9 @@ public:
 
   virtual ~Framebuffer() = default;
 
-  PURE_VIRTUAL(void attach(FramebufferAttachment attachment, std::shared_ptr<Texture> texture, int mipLevels));
+  PURE_VIRTUAL(void attach(FramebufferAttachment attachment, TexturePtr_t texture, int mipLevels));
 
-  PURE_VIRTUAL(void attach(FramebufferAttachment attachment, std::shared_ptr<Renderbuffer> renderbuffer));
+  PURE_VIRTUAL(void attach(FramebufferAttachment attachment, RenderbufferPtr_t renderbuffer));
 
   PURE_VIRTUAL(void bind());
 
