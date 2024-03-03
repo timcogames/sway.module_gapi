@@ -7,6 +7,7 @@
 #include <sway/gapi/buffersubdatadescriptor.hpp>
 #include <sway/gapi/buffertargets.hpp>
 #include <sway/gapi/bufferusages.hpp>
+#include <sway/gapi/typedefs.hpp>
 
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
@@ -16,6 +17,14 @@ NAMESPACE_BEGIN(gapi)
  */
 class Buffer : public core::foundation::Uniqueable<u32_t> {
 public:
+  struct BindFunctor {
+    void operator()(BufferPtr_t buf) { buf->bind(); }
+  };
+
+  struct UnbindFunctor {
+    void operator()(BufferPtr_t buf) { buf->unbind(); }
+  };
+
   /**
    * @brief Конструктор класса.
    *
