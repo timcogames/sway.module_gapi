@@ -10,6 +10,8 @@ NAMESPACE_BEGIN(gapi)
 
 class VertexAttribLayout {
 public:
+  virtual ~VertexAttribLayout() = default;
+
   /**
    * @brief Добавляет вершинный атрибут.
    *
