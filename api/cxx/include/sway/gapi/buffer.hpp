@@ -63,7 +63,7 @@ public:
   PURE_VIRTUAL(auto map(BufferMapAccess flags) -> void *);  // clang-format on
 
   // clang-format off
-  PURE_VIRTUAL(auto mapRange(s32_t offset, s32_t length, BufferMapRangeAccess flags) -> void *);  // clang-format on
+  PURE_VIRTUAL(auto mapRange(s32_t offset, s32_t length, core::detail::EnumClassBitset<BufferMapRangeAccess> bitset) -> void *);  // clang-format on
 
   PURE_VIRTUAL(void unmap());
 
