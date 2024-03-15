@@ -67,7 +67,7 @@ public:
 
   PURE_VIRTUAL(void unmap());
 
-  PURE_VIRTUAL(void bindRange(u32_t index, u32_t buffer, ptrdiff_t offset, ptrdiff_t size));
+  PURE_VIRTUAL(void bindRange(u32_t buffer, ptrdiff_t offset, ptrdiff_t size));
 
   /**
    * @brief Делает буфер текущим.
