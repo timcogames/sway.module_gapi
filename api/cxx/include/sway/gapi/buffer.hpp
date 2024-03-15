@@ -2,8 +2,9 @@
 #define SWAY_GAPI_BUFFER_HPP
 
 #include <sway/core.hpp>
-#include <sway/gapi/bufferaccesses.hpp>
 #include <sway/gapi/bufferdescriptor.hpp>
+#include <sway/gapi/buffermapaccesses.hpp>
+#include <sway/gapi/buffermaprangeaccesses.hpp>
 #include <sway/gapi/buffersubdatadescriptor.hpp>
 #include <sway/gapi/buffertargets.hpp>
 #include <sway/gapi/bufferusages.hpp>
@@ -59,10 +60,10 @@ public:
   PURE_VIRTUAL(void updateSubdata(const void *src));
 
   // clang-format off
-  PURE_VIRTUAL(auto map() -> void *);  // clang-format on
+  PURE_VIRTUAL(auto map(BufferMapAccess flags) -> void *);  // clang-format on
 
   // clang-format off
-  PURE_VIRTUAL(auto mapRange(s32_t offset, s32_t length, BufferAccess flags) -> void *);  // clang-format on
+  PURE_VIRTUAL(auto mapRange(s32_t offset, s32_t length, BufferMapRangeAccess flags) -> void *);  // clang-format on
 
   PURE_VIRTUAL(void unmap());
 
