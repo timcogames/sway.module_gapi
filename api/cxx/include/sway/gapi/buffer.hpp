@@ -59,6 +59,8 @@ public:
    */
   PURE_VIRTUAL(void updateSubdata(const void *src));
 
+  PURE_VIRTUAL(void flush(s32_t offset, s32_t length));
+
   // clang-format off
   PURE_VIRTUAL(auto map(BufferMapAccess flags) -> void *);  // clang-format on
 
