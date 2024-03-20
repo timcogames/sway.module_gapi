@@ -4,9 +4,10 @@
 #include <sway/gapi/blendequations.hpp>
 #include <sway/gapi/blendfunctions.hpp>
 #include <sway/gapi/buffer.hpp>
-#include <sway/gapi/bufferaccesses.hpp>
 #include <sway/gapi/buffercreateinfo.hpp>
 #include <sway/gapi/bufferdescriptor.hpp>
+#include <sway/gapi/buffermapaccesses.hpp>
+#include <sway/gapi/buffermaprangeaccesses.hpp>
 #include <sway/gapi/bufferset.hpp>
 #include <sway/gapi/buffersubdatadescriptor.hpp>
 #include <sway/gapi/buffertargets.hpp>
