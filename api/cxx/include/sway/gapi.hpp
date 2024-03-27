@@ -20,6 +20,7 @@
 #include <sway/gapi/drawcall.hpp>
 #include <sway/gapi/frontfaces.hpp>
 #include <sway/gapi/pixelformats.hpp>
+#include <sway/gapi/pixelstoragemodes.hpp>
 #include <sway/gapi/profiletypes.hpp>
 #include <sway/gapi/rasterizerdescriptor.hpp>
 #include <sway/gapi/shader.hpp>

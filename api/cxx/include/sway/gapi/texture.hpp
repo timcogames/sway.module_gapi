@@ -2,6 +2,7 @@
 #define SWAY_GAPI_TEXTURE_HPP
 
 #include <sway/core.hpp>
+#include <sway/gapi/pixelstoragemodes.hpp>
 #include <sway/gapi/texturecreateinfo.hpp>
 #include <sway/gapi/texturesubdatadescriptor.hpp>
 #include <sway/math.hpp>
@@ -20,7 +21,7 @@ public:
 
   PURE_VIRTUAL(void updateSubdata(TextureSubdataDescriptor desc));
 
-  PURE_VIRTUAL(void setUnpackAlignement(u32_t param));
+  PURE_VIRTUAL(void setPixelStorage(PixelStorageMode mode, u32_t param));
 
   PURE_VIRTUAL(void setActive(s32_t slot));
 
