@@ -2,6 +2,7 @@
 #define SWAY_GAPI_SHADERCREATEINFO_HPP
 
 #include <sway/core.hpp>
+#include <sway/gapi/shaderpreprocessor.hpp>
 #include <sway/gapi/shadertypes.hpp>
 
 #include <string>
@@ -12,6 +13,7 @@ NAMESPACE_BEGIN(gapi)
 struct ShaderCreateInfo {
   ShaderType type;  // Тип шейдера.
   std::string code;  // Исходный код шейдера.
+  ShaderPreprocessor::Ptr_t preprocessor;
 };
 
 struct ShaderCreateInfoSet {

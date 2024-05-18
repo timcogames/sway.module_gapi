@@ -21,10 +21,12 @@
 #include <sway/gapi/frontfaces.hpp>
 #include <sway/gapi/pixelformats.hpp>
 #include <sway/gapi/pixelstoragemodes.hpp>
+#include <sway/gapi/precisionqualifiers.hpp>
 #include <sway/gapi/profiletypes.hpp>
 #include <sway/gapi/rasterizerdescriptor.hpp>
 #include <sway/gapi/shader.hpp>
 #include <sway/gapi/shadercreateinfo.hpp>
+#include <sway/gapi/shaderpreprocessor.hpp>
 #include <sway/gapi/shaderprogram.hpp>
 #include <sway/gapi/shadertypes.hpp>
 #include <sway/gapi/statecapabilities.hpp>
@@ -63,6 +65,7 @@ NAMESPACE_BEGIN(gapi)
 using CreateCapabilityFunc_t = core::binding::TFunction<CapabilityPtr_t(void)>;
 using CreateShaderFunc_t = core::binding::TFunction<ShaderPtr_t(const struct ShaderCreateInfo &)>;
 using CreateShaderProgramFunc_t = core::binding::TFunction<ShaderProgramPtr_t(void)>;
+using CreateShaderPreprocessorFunc_t = core::binding::TFunction<ShaderPreprocessor::Ptr_t(const core::Version &)>;
 using CreateIdGeneratorFunc_t = core::binding::TFunction<IdGeneratorPtr_t()>;
 using CreateBufferFunc_t = core::binding::TFunction<BufferPtr_t(IdGeneratorPtr_t, const struct BufferCreateInfo &)>;
 using CreateVertexArrayFunc_t = core::binding::TFunction<VertexArrayPtr_t(void)>;
@@ -77,6 +80,7 @@ struct ConcreatePluginFunctionSet : public core::PluginFunctionSet {
   CreateCapabilityFunc_t createCapability;
   CreateShaderFunc_t createShader;
   CreateShaderProgramFunc_t createShaderProgram;
+  CreateShaderPreprocessorFunc_t createShaderPreprocessor;
   CreateIdGeneratorFunc_t createIdGenerator;
   CreateBufferFunc_t createBuffer;
   CreateVertexArrayFunc_t createVertexArray;
@@ -91,6 +95,7 @@ struct ConcreatePluginFunctionSet : public core::PluginFunctionSet {
     createCapability = nullptr;
     createShader = nullptr;
     createShaderProgram = nullptr;
+    createShaderPreprocessor = nullptr;
     createBuffer = nullptr;
     createVertexArray = nullptr;
     createVertexAttribLayout = nullptr;
