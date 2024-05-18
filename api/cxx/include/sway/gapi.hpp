@@ -65,7 +65,7 @@ NAMESPACE_BEGIN(gapi)
 using CreateCapabilityFunc_t = core::binding::TFunction<CapabilityPtr_t(void)>;
 using CreateShaderFunc_t = core::binding::TFunction<ShaderPtr_t(const struct ShaderCreateInfo &)>;
 using CreateShaderProgramFunc_t = core::binding::TFunction<ShaderProgramPtr_t(void)>;
-using CreateShaderPreprocessorFunc_t = core::binding::TFunction<ShaderPreprocessor::Ptr_t(const core::Version &)>;
+using CreateShaderPreprocessorFunc_t = core::binding::TFunction<ShaderPreprocessor::Ptr_t(u32_t, lpcstr_t)>;
 using CreateIdGeneratorFunc_t = core::binding::TFunction<IdGeneratorPtr_t()>;
 using CreateBufferFunc_t = core::binding::TFunction<BufferPtr_t(IdGeneratorPtr_t, const struct BufferCreateInfo &)>;
 using CreateVertexArrayFunc_t = core::binding::TFunction<VertexArrayPtr_t(void)>;
