@@ -7,7 +7,7 @@ NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
 enum class BlendFn : u32_t {
-  UNDEF,
+  NONE = 0,
   ZERO,
   ONE,
   SRC_COLOR,
@@ -18,7 +18,8 @@ enum class BlendFn : u32_t {
   ONE_MINUS_SRC_ALPHA,
   DST_ALPHA,
   ONE_MINUS_DST_ALPHA,
-  SRC_ALPHA_SATURATE
+  SRC_ALPHA_SATURATE,
+  Latest
 };
 
 NAMESPACE_END(gapi)

@@ -6,9 +6,8 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-// clang-format off
 enum class FramebufferAttachment : u32_t {
-  UNDEF,
+  NONE = 0,
   DEPTH_STENCIL,
   DEPTH,
   STENCIL,
@@ -16,9 +15,9 @@ enum class FramebufferAttachment : u32_t {
   COL_2,
   COL_3,
   COL_4,
-  COL_5
+  COL_5,
+  Latest
 };
-// clang-format on
 
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)

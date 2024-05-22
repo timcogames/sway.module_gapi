@@ -7,7 +7,7 @@ NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
 enum class BufferMapRangeAccess : u32_t {
-  UNDEF = 0,
+  NONE = 0,
   READ,
   WRITE,
   INVALIDATE_RANGE,

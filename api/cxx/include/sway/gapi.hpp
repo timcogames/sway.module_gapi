@@ -21,6 +21,7 @@
 #include <sway/gapi/frontfaces.hpp>
 #include <sway/gapi/pixelformats.hpp>
 #include <sway/gapi/pixelstoragemodes.hpp>
+#include <sway/gapi/polygonmodes.hpp>
 #include <sway/gapi/precisionqualifiers.hpp>
 #include <sway/gapi/profiletypes.hpp>
 #include <sway/gapi/rasterizerdescriptor.hpp>

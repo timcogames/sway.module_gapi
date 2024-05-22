@@ -6,7 +6,7 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-enum class PixelStorageMode : u32_t { UNDEF, UNPACK_ALIGNMENT, UNPACK_ROW_LENGTH };
+enum class PixelStorageMode : u32_t { NONE = 0, UNPACK_ALIGNMENT, UNPACK_ROW_LENGTH, Latest };
 
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)

@@ -7,7 +7,7 @@ NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
 enum class CompareFn : u32_t {
-  UNDEF = 0,
+  NONE = 0,
   ALWAYS,
   NEVER,
   EQUAL,
@@ -15,7 +15,8 @@ enum class CompareFn : u32_t {
   LESS,
   LESS_OR_EQUAL,
   GREATER,
-  GREATER_OR_EQUAL
+  GREATER_OR_EQUAL,
+  Latest
 };
 
 NAMESPACE_END(gapi)

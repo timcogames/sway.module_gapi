@@ -6,7 +6,7 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-enum class BlendEq : u32_t { UNDEF, ADD, SUBTRACT, REVERSE_SUBTRACT, MIN, MAX };
+enum class BlendEq : u32_t { NONE = 0, ADD, SUBTRACT, REVERSE_SUBTRACT, MIN, MAX, Latest };
 
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)

@@ -6,7 +6,7 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-enum class TextureWrap : u32_t { UNDEF, REPEAT, CLAMP };
+enum class TextureWrap : u32_t { NONE = 0, REPEAT, CLAMP, Latest };
 
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)

@@ -6,15 +6,7 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-// clang-format off
-enum class TextureLayer : u32_t {
-  UNDEF,
-  DIFFUSE,
-  SPECULAR,
-  EMISSIVE,
-  NORMAL,
-  Latest
-};  // clang-format on
+enum class TextureLayer : u32_t { NONE = 0, DIFFUSE, SPECULAR, EMISSIVE, NORMAL, Latest };
 
 #define NUM_TEXTURE_LAYERS (core::detail::toUnderlying(TextureLayer::Latest))
 

@@ -6,7 +6,7 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-enum class ProfileType : u32_t { UNDEF, CORE, COMPATIBILITY };
+enum class ProfileType : u32_t { NONE = 0, CORE, COMPATIBILITY, Latest };
 
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)

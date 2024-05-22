@@ -4,6 +4,7 @@
 #include <sway/core.hpp>
 #include <sway/gapi/blendfunctions.hpp>
 #include <sway/gapi/comparefunctions.hpp>
+#include <sway/gapi/polygonmodes.hpp>
 #include <sway/gapi/statecapabilities.hpp>
 #include <sway/gapi/stenciloperations.hpp>
 
@@ -34,7 +35,9 @@ public:
 
   PURE_VIRTUAL(void setStencilFn(CompareFn func, s32_t ref, u32_t mask));
 
-  PURE_VIRTUAL(void setStencilOp(gapi::StencilOp fail, gapi::StencilOp depthFail, gapi::StencilOp depthPass));
+  PURE_VIRTUAL(void setStencilOp(StencilOp fail, StencilOp depthFail, StencilOp depthPass));
+
+  PURE_VIRTUAL(void setPolygonMode(PolygonMode mode));
 };
 
 NAMESPACE_END(gapi)

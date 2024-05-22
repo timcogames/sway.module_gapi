@@ -15,8 +15,8 @@ struct BufferDescriptor {
   s32_t capacity;  // Количество элементов в массиве.
 
   BufferDescriptor()
-      : target(BufferTarget::UNDEF)
-      , usage(BufferUsage::UNDEF)
+      : target(BufferTarget::NONE)
+      , usage(BufferUsage::NONE)
       , byteStride(0)
       , capacity(0) {}
 };

@@ -6,7 +6,7 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-enum class BufferTarget : u32_t { UNDEF, ARRAY, ELEMENT_ARRAY, UNIFORM, TEXTURE };
+enum class BufferTarget : u32_t { NONE = 0, ARRAY, ELEMENT_ARRAY, UNIFORM, TEXTURE, Latest };
 
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)

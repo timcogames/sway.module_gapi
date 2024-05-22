@@ -7,7 +7,7 @@ NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
 enum class StencilOp : u32_t {
-  UNDEF,
+  NONE = 0,
   KEEP,
   ZERO,
   REPLACE,
@@ -15,7 +15,8 @@ enum class StencilOp : u32_t {
   INCREMENT_WRAP,
   DECREMENT,
   DECREMENT_WRAP,
-  INVERT
+  INVERT,
+  Latest
 };
 
 NAMESPACE_END(gapi)

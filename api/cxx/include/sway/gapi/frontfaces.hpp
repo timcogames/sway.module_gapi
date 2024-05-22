@@ -6,7 +6,7 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-enum class FrontFace { UNDEF, CLOCK_WISE, COUNTER_CLOCK_WISE };
+enum class FrontFace { NONE = 0, CLOCK_WISE, COUNTER_CLOCK_WISE, Latest };
 
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)

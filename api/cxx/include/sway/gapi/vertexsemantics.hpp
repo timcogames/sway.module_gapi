@@ -7,7 +7,7 @@ NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
 enum class VertexSemantic : u32_t {
-  UNDEF,
+  NONE = 0,
   POS,
   COL,
   TEXCOORD_0,
@@ -22,7 +22,8 @@ enum class VertexSemantic : u32_t {
   TANGENT,
   BINORM,
   BLEND_WEIGHTS,
-  BLEND_INDICES
+  BLEND_INDICES,
+  Latest
 };
 
 NAMESPACE_END(gapi)

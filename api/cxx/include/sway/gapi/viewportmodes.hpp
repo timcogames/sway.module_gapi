@@ -9,7 +9,7 @@ NAMESPACE_BEGIN(gapi)
 /**
  * @brief Перечисление поведения окна просмотра.
  */
-enum class ViewportMode : u32_t { UNDEF, ENABLED, DISABLED, RENDER_TO_TEXTURE };
+enum class ViewportMode : u32_t { NONE = 0, ENABLED, DISABLED, RENDER_TO_TEXTURE, Latest };
 
 NAMESPACE_END(gapi)
 NAMESPACE_END(sway)
