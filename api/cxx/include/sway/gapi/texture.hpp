@@ -23,7 +23,7 @@ public:
 
   PURE_VIRTUAL(void setPixelStorage(PixelStorageMode mode, u32_t param));
 
-  PURE_VIRTUAL(void setActive(s32_t slot));
+  PURE_VIRTUAL(void setActive(i32_t slot));
 
   PURE_VIRTUAL(void bind());
 

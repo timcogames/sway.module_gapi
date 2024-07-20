@@ -11,13 +11,13 @@ NAMESPACE_BEGIN(gapi)
  * @brief Структура описания вершинного атрибута.
  */
 struct VertexAttribDescriptor {
-  s32_t location;
+  i32_t location;
   const void *pointer;
 
   VertexSemantic semantic;
   core::ValueDataType format;  // Формат данных.
-  s32_t numComponents;  // Количество компонентов.
-  s32_t stride;
+  i32_t numComponents;  // Количество компонентов.
+  i32_t stride;
   bool normalized;  // Нормализация входных данных.
   bool enabled;
 

@@ -11,8 +11,8 @@ NAMESPACE_BEGIN(gapi)
 struct BufferDescriptor {
   BufferTarget target;
   BufferUsage usage;
-  s32_t byteStride;
-  s32_t capacity;  // Количество элементов в массиве.
+  i32_t byteStride;
+  i32_t capacity;  // Количество элементов в массиве.
 
   BufferDescriptor()
       : target(BufferTarget::NONE)

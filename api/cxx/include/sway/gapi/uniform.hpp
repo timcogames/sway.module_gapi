@@ -13,7 +13,7 @@ NAMESPACE_BEGIN(gapi)
 struct Uniform {
   static const int maxUniformNameSize = 24;
 
-  s32_t location;
+  i32_t location;
   s8_t name[maxUniformNameSize];
 
   Uniform()

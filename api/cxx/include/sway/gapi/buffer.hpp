@@ -59,13 +59,13 @@ public:
    */
   PURE_VIRTUAL(void updateSubdata(const void *src));
 
-  PURE_VIRTUAL(void flush(s32_t offset, s32_t length));
+  PURE_VIRTUAL(void flush(i32_t offset, i32_t length));
 
   // clang-format off
   PURE_VIRTUAL(auto map(BufferMapAccess flags) -> void *);  // clang-format on
 
   // clang-format off
-  PURE_VIRTUAL(auto mapRange(s32_t offset, s32_t length, core::detail::EnumClassBitset<BufferMapRangeAccess> bitset) -> void *);  // clang-format on
+  PURE_VIRTUAL(auto mapRange(i32_t offset, i32_t length, core::detail::EnumClassBitset<BufferMapRangeAccess> bitset) -> void *);  // clang-format on
 
   PURE_VIRTUAL(void unmap());
 
@@ -101,13 +101,13 @@ public:
    * @brief Получает количество элементов в массиве.
    */
   // clang-format off
-  PURE_VIRTUAL(auto getCapacity() const -> s32_t);  // clang-format on
+  PURE_VIRTUAL(auto getCapacity() const -> i32_t);  // clang-format on
 
   /**
    * @brief Получает размер структуры данных.
    */
   // clang-format off
-  PURE_VIRTUAL(auto getByteStride() const -> s32_t);  // clang-format on
+  PURE_VIRTUAL(auto getByteStride() const -> i32_t);  // clang-format on
 };
 
 NAMESPACE_END(gapi)

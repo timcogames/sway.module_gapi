@@ -33,7 +33,7 @@ public:
 
   PURE_VIRTUAL(void setStencilMask(u32_t mask));
 
-  PURE_VIRTUAL(void setStencilFn(CompareFn func, s32_t ref, u32_t mask));
+  PURE_VIRTUAL(void setStencilFn(CompareFn func, i32_t ref, u32_t mask));
 
   PURE_VIRTUAL(void setStencilOp(StencilOp fail, StencilOp depthFail, StencilOp depthPass));
 

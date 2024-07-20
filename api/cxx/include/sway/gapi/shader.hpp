@@ -47,7 +47,7 @@ public:
    * @return Ссылка на идентификатор атрибута.
    */
   // clang-format off
-  PURE_VIRTUAL(auto getAttribLocation(std::optional<u32_t> progId, lpcstr_t name) -> s32_t);  // clang-format on
+  PURE_VIRTUAL(auto getAttribLocation(std::optional<u32_t> progId, lpcstr_t name) -> i32_t);  // clang-format on
 
   /**
    * @brief Получает тип шейдера.

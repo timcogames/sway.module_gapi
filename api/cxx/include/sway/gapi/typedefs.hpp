@@ -37,7 +37,7 @@ using DrawCbFunc_t = std::function<void(BufferPtr_t)>;
 
 using UniformVec4fUmap_t = std::unordered_map<std::string, math::vec4f_t>;
 using UniformMat4fUmap_t = std::unordered_map<std::string, math::mat4f_t>;
-using Uniform1iUmap_t = std::unordered_map<std::string, s32_t>;
+using Uniform1iUmap_t = std::unordered_map<std::string, i32_t>;
 using Uniform1fUmap_t = std::unordered_map<std::string, f32_t>;
 
 using VertexAttribDescUmap_t = std::unordered_map<std::string, struct VertexAttribDescriptor>;
