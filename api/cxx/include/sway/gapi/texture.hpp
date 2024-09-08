@@ -5,12 +5,15 @@
 #include <sway/gapi/pixelstoragemodes.hpp>
 #include <sway/gapi/texturecreateinfo.hpp>
 #include <sway/gapi/texturesubdatadescriptor.hpp>
+#include <sway/gapi/typedefs.hpp>
 #include <sway/math.hpp>
 
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
 class Texture : public core::foundation::Uniqueable<u32_t> {
+  DECLARE_CLASS_POINTER_ALIASES(Texture)
+
 public:
   Texture()
       : core::foundation::Uniqueable<u32_t>(std::nullopt) {}
@@ -29,8 +32,7 @@ public:
 
   PURE_VIRTUAL(void unbind());
 
-  // clang-format off
-  PURE_VIRTUAL(auto getTarget() -> TextureTarget);  // clang-format on
+  PURE_VIRTUAL(auto getTarget() -> TextureTarget);
 };
 
 NAMESPACE_END(gapi)

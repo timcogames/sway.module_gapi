@@ -69,6 +69,7 @@ using CreateShaderProgramFunc_t = core::binding::TFunction<ShaderProgramPtr_t(vo
 using CreateShaderPreprocessorFunc_t = core::binding::TFunction<ShaderPreprocessor::Ptr_t(u32_t, lpcstr_t)>;
 using CreateIdGeneratorFunc_t = core::binding::TFunction<IdGeneratorPtr_t()>;
 using CreateBufferFunc_t = core::binding::TFunction<BufferPtr_t(IdGeneratorPtr_t, const struct BufferCreateInfo &)>;
+using CreateFramebufferFunc_t = core::binding::TFunction<FramebufferPtr_t(void)>;
 using CreateVertexArrayFunc_t = core::binding::TFunction<VertexArrayPtr_t(void)>;
 using CreateVertexAttribLayoutFunc_t = core::binding::TFunction<VertexAttribLayoutPtr_t(ShaderProgramPtr_t)>;
 using CreateTextureFunc_t = core::binding::TFunction<TexturePtr_t(const struct TextureCreateInfo &)>;
@@ -84,6 +85,7 @@ struct ConcreatePluginFunctionSet : public core::PluginFunctionSet {
   CreateShaderPreprocessorFunc_t createShaderPreprocessor;
   CreateIdGeneratorFunc_t createIdGenerator;
   CreateBufferFunc_t createBuffer;
+  CreateFramebufferFunc_t createFramebuffer;
   CreateVertexArrayFunc_t createVertexArray;
   CreateVertexAttribLayoutFunc_t createVertexAttribLayout;
   CreateTextureFunc_t createTexture;
@@ -98,6 +100,7 @@ struct ConcreatePluginFunctionSet : public core::PluginFunctionSet {
     createShaderProgram = nullptr;
     createShaderPreprocessor = nullptr;
     createBuffer = nullptr;
+    createFramebuffer = nullptr;
     createVertexArray = nullptr;
     createVertexAttribLayout = nullptr;
     createTexture = nullptr;

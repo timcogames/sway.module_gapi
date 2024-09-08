@@ -7,11 +7,14 @@
 #include <sway/gapi/polygonmodes.hpp>
 #include <sway/gapi/statecapabilities.hpp>
 #include <sway/gapi/stenciloperations.hpp>
+#include <sway/gapi/typedefs.hpp>
 
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
 class StateContext {
+  DECLARE_CLASS_POINTER_ALIASES(StateContext)
+
 public:
   virtual ~StateContext() = default;
 

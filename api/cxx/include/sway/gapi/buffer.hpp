@@ -17,6 +17,8 @@ NAMESPACE_BEGIN(gapi)
  * @brief Представление аппаратного буфера.
  */
 class Buffer : public core::foundation::Uniqueable<u32_t> {
+  DECLARE_CLASS_POINTER_ALIASES(Buffer)
+
 public:
   struct BindFunctor {
     void operator()(BufferPtr_t buf) { buf->bind(); }
@@ -61,11 +63,10 @@ public:
 
   PURE_VIRTUAL(void flush(i32_t offset, i32_t length));
 
-  // clang-format off
-  PURE_VIRTUAL(auto map(BufferMapAccess flags) -> void *);  // clang-format on
+  PURE_VIRTUAL(auto map(BufferMapAccess flags) -> void *);
 
-  // clang-format off
-  PURE_VIRTUAL(auto mapRange(i32_t offset, i32_t length, core::detail::EnumClassBitset<BufferMapRangeAccess> bitset) -> void *);  // clang-format on
+  PURE_VIRTUAL(auto mapRange(
+                   i32_t offset, i32_t length, core::detail::EnumClassBitset<BufferMapRangeAccess> bitset) -> void *);
 
   PURE_VIRTUAL(void unmap());
 
@@ -88,26 +89,22 @@ public:
   /**
    * @brief Получает целевой тип буфера.
    */
-  // clang-format off
-  PURE_VIRTUAL(auto getTarget() const -> BufferTarget);  // clang-format on
+  PURE_VIRTUAL(auto getTarget() const -> BufferTarget);
 
   /**
    * @brief Получает режим работы с данными.
    */
-  // clang-format off
-  PURE_VIRTUAL(auto getUsage() const -> BufferUsage);  // clang-format on
+  PURE_VIRTUAL(auto getUsage() const -> BufferUsage);
 
   /**
    * @brief Получает количество элементов в массиве.
    */
-  // clang-format off
-  PURE_VIRTUAL(auto getCapacity() const -> i32_t);  // clang-format on
+  PURE_VIRTUAL(auto getCapacity() const -> i32_t);
 
   /**
    * @brief Получает размер структуры данных.
    */
-  // clang-format off
-  PURE_VIRTUAL(auto getByteStride() const -> i32_t);  // clang-format on
+  PURE_VIRTUAL(auto getByteStride() const -> i32_t);
 };
 
 NAMESPACE_END(gapi)

@@ -2,6 +2,7 @@
 #define SWAY_GAPI_UNIFORM_HPP
 
 #include <sway/core.hpp>
+#include <sway/gapi/typedefs.hpp>
 
 #include <string>
 
@@ -11,6 +12,8 @@ NAMESPACE_BEGIN(gapi)
 // enum class UniformType : u32_t { MAT4, FLOAT, INT, BOOLEAN, VEC2, VEC3, VEC4, TRANSFORM, COL, SAMPLER };
 
 struct Uniform {
+  DECLARE_CLASS_POINTER_ALIASES(Uniform)
+
   static const int maxUniformNameSize = 24;
 
   i32_t location;

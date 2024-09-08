@@ -2,16 +2,18 @@
 #define SWAY_GAPI_IDGENERATOR_HPP
 
 #include <sway/core.hpp>
+#include <sway/gapi/typedefs.hpp>
 
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
 class IdGenerator {
+  DECLARE_CLASS_POINTER_ALIASES(IdGenerator)
+
 public:
   virtual ~IdGenerator() = default;
 
-  // clang-format off
-  PURE_VIRTUAL(auto newGuid() -> u32_t);  // clang-format on
+  PURE_VIRTUAL(auto newGuid() -> u32_t);
 };
 
 NAMESPACE_END(gapi)

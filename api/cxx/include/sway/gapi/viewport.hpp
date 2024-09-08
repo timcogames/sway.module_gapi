@@ -2,12 +2,15 @@
 #define SWAY_GAPI_VIEWPORT_HPP
 
 #include <sway/core.hpp>
+#include <sway/gapi/typedefs.hpp>
 #include <sway/math.hpp>
 
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
 class Viewport {
+  DECLARE_CLASS_POINTER_ALIASES(Viewport)
+
 public:
   Viewport() {}
 
@@ -34,14 +37,12 @@ public:
   /**
    * @brief Получает размер прямоугольной области.
    */
-  // clang-format off
-  PURE_VIRTUAL(auto get() const -> math::rect4i_t);  // clang-format on
+  PURE_VIRTUAL(auto get() const -> math::rect4i_t);
 
   /**
    * @brief Получает соотношение сторон.
    */
-  // clang-format off
-  PURE_VIRTUAL(auto aspect() const -> f32_t);  // clang-format on
+  PURE_VIRTUAL(auto aspect() const -> f32_t);
 
   PURE_VIRTUAL(void clear());
 };

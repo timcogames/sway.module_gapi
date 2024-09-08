@@ -4,6 +4,7 @@
 #include <sway/core.hpp>
 #include <sway/gapi/shadercreateinfo.hpp>
 #include <sway/gapi/shadertypes.hpp>
+#include <sway/gapi/typedefs.hpp>
 
 #include <optional>  // std::optional, std::nullopt
 
@@ -14,6 +15,8 @@ NAMESPACE_BEGIN(gapi)
  * @brief Представление шейдера.
  */
 class Shader : public core::foundation::Uniqueable<u32_t> {
+  DECLARE_CLASS_POINTER_ALIASES(Shader)
+
 public:
   /**
    * @brief Конструктор класса.
@@ -37,8 +40,7 @@ public:
    *
    * @return Если компиляция прошла успешно 'true', иначе 'false'.
    */
-  // clang-format off
-  PURE_VIRTUAL(auto isCompiled() const -> bool);  // clang-format on
+  PURE_VIRTUAL(auto isCompiled() const -> bool);
 
   /**
    * @brief Получает ссылку на идентификатор атрибута вершинного шейдера.
@@ -46,16 +48,14 @@ public:
    * @param[in] name Имя атрибута.
    * @return Ссылка на идентификатор атрибута.
    */
-  // clang-format off
-  PURE_VIRTUAL(auto getAttribLocation(std::optional<u32_t> progId, lpcstr_t name) -> i32_t);  // clang-format on
+  PURE_VIRTUAL(auto getAttribLocation(std::optional<u32_t> progId, lpcstr_t name) -> i32_t);
 
   /**
    * @brief Получает тип шейдера.
    *
    * @return Тип шейдера.
    */
-  // clang-format off
-  PURE_VIRTUAL(auto getType() const -> ShaderType);  // clang-format on
+  PURE_VIRTUAL(auto getType() const -> ShaderType);
 };
 
 NAMESPACE_END(gapi)

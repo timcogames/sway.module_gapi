@@ -2,12 +2,15 @@
 #define SWAY_GAPI_VERTEXARRAY_HPP
 
 #include <sway/core.hpp>
+#include <sway/gapi/typedefs.hpp>
 #include <sway/gapi/vertexattribdescriptor.hpp>
 
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
 class VertexArray {
+  DECLARE_CLASS_POINTER_ALIASES(VertexArray)
+
 public:
   PURE_VIRTUAL(void bind());
 

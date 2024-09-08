@@ -3,6 +3,7 @@
 
 #include <sway/core.hpp>
 #include <sway/gapi/shader.hpp>
+#include <sway/gapi/typedefs.hpp>
 #include <sway/math.hpp>
 
 #include <string>
@@ -14,6 +15,8 @@ NAMESPACE_BEGIN(gapi)
  * @brief Представление шейдерной программы.
  */
 class ShaderProgram : public core::foundation::Uniqueable<u32_t> {
+  DECLARE_CLASS_POINTER_ALIASES(ShaderProgram)
+
 public:
   ShaderProgram()
       : core::foundation::Uniqueable<u32_t>(std::nullopt) {}
@@ -37,8 +40,7 @@ public:
    */
   PURE_VIRTUAL(void detach(std::pair<ShaderType, ShaderPtr_t> pair, bool erasing));
 
-  // clang-format off
-  PURE_VIRTUAL(auto getShader(ShaderType type) -> ShaderPtr_t);  // clang-format on
+  PURE_VIRTUAL(auto getShader(ShaderType type) -> ShaderPtr_t);
 
   /**
    * @brief Компонует программный объект.
@@ -52,8 +54,7 @@ public:
    *
    * @sa link()
    */
-  // clang-format off
-  PURE_VIRTUAL(auto isLinked() const -> bool);  // clang-format on
+  PURE_VIRTUAL(auto isLinked() const -> bool);
 
   /**
    * @brief Проверяет скомпоновонный объект на корректность.
@@ -67,8 +68,7 @@ public:
    *
    * @sa validate()
    */
-  // clang-format off
-  PURE_VIRTUAL(auto isValidated() const -> bool);  // clang-format on
+  PURE_VIRTUAL(auto isValidated() const -> bool);
 
   /**
    * @brief Делает шейдерную программу активной.
@@ -93,8 +93,7 @@ public:
    * @sa use(),
    *     unuse()
    */
-  // clang-format off
-  PURE_VIRTUAL(auto isUsed() const -> bool);  // clang-format on
+  PURE_VIRTUAL(auto isUsed() const -> bool);
 
   /**
    * @brief Передает значение uniform-переменной в шейдер.

@@ -10,6 +10,8 @@ NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
 class DrawCall {
+  DECLARE_CLASS_POINTER_ALIASES(DrawCall)
+
 public:
   DrawCall() {}
 

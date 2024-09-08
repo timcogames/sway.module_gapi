@@ -17,21 +17,21 @@ NAMESPACE_BEGIN(gapi)
 
 using ExtensionInitList_t = std::initializer_list<std::pair<lpcstr_t, lpcstr_t>>;
 
-using CapabilityPtr_t = class Capability *;
-using ShaderPtr_t = class Shader *;
-using ShaderProgramPtr_t = class ShaderProgram *;
-using TexturePtr_t = class Texture *;
-using TextureSamplerPtr_t = class TextureSampler *;
-using RenderbufferPtr_t = class Renderbuffer *;
-using FramebufferPtr_t = class Framebuffer *;
-using IdGeneratorPtr_t = class IdGenerator *;
-using VertexArrayPtr_t = class VertexArray *;
-using BufferPtr_t = class Buffer *;
-using VertexAttribLayoutPtr_t = class VertexAttribLayout *;
-using ViewportPtr_t = class Viewport *;
-using DrawCallPtr_t = class DrawCall *;
-using StateContextPtr_t = class StateContext *;
-using UniformPtr_t = struct Uniform *;
+DECLARE_CLASS_POINTER_TYPES(Capability)
+DECLARE_CLASS_POINTER_TYPES(Shader)
+DECLARE_CLASS_POINTER_TYPES(ShaderProgram)
+DECLARE_CLASS_POINTER_TYPES(Texture)
+DECLARE_CLASS_POINTER_TYPES(TextureSampler)
+DECLARE_CLASS_POINTER_TYPES(Renderbuffer)
+DECLARE_CLASS_POINTER_TYPES(Framebuffer)
+DECLARE_CLASS_POINTER_TYPES(IdGenerator)
+DECLARE_CLASS_POINTER_TYPES(VertexArray)
+DECLARE_CLASS_POINTER_TYPES(Buffer)
+DECLARE_CLASS_POINTER_TYPES(VertexAttribLayout)
+DECLARE_CLASS_POINTER_TYPES(Viewport)
+DECLARE_CLASS_POINTER_TYPES(DrawCall)
+DECLARE_CLASS_POINTER_TYPES(StateContext)
+DECLARE_CLASS_POINTER_TYPES(Uniform)
 
 using DrawCbFunc_t = std::function<void(BufferPtr_t)>;
 

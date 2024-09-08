@@ -4,11 +4,14 @@
 #include <sway/core.hpp>
 #include <sway/gapi/texturefilters.hpp>
 #include <sway/gapi/texturewraps.hpp>
+#include <sway/gapi/typedefs.hpp>
 
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
 class TextureSampler {
+  DECLARE_CLASS_POINTER_ALIASES(TextureSampler)
+
 public:
   virtual ~TextureSampler() = default;
 

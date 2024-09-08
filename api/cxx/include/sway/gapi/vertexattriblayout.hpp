@@ -9,6 +9,8 @@ NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
 class VertexAttribLayout {
+  DECLARE_CLASS_POINTER_ALIASES(VertexAttribLayout)
+
 public:
   virtual ~VertexAttribLayout() = default;
 
