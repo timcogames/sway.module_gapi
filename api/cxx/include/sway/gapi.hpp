@@ -18,6 +18,8 @@
 #include <sway/gapi/cullfaces.hpp>
 #include <sway/gapi/depthdescriptor.hpp>
 #include <sway/gapi/drawcall.hpp>
+#include <sway/gapi/framebuffer.hpp>
+#include <sway/gapi/framebufferattachments.hpp>
 #include <sway/gapi/frontfaces.hpp>
 #include <sway/gapi/pixelformats.hpp>
 #include <sway/gapi/pixelstoragemodes.hpp>
