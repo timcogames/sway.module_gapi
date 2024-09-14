@@ -44,6 +44,8 @@ public:
    */
   PURE_VIRTUAL(auto aspect() const -> f32_t);
 
+  PURE_VIRTUAL(void setClearColor(const math::col4f_t &col));
+
   PURE_VIRTUAL(void clear());
 };
 
