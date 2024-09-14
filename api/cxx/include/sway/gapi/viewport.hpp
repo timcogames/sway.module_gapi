@@ -46,7 +46,7 @@ public:
 
   PURE_VIRTUAL(void setClearColor(const math::col4f_t &col));
 
-  PURE_VIRTUAL(void clear());
+  PURE_VIRTUAL(void clear(ClearFlag flags));
 };
 
 NAMESPACE_END(gapi)
