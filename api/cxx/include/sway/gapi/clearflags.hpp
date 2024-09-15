@@ -8,6 +8,7 @@ NAMESPACE_BEGIN(gapi)
 
 // clang-format off
 enum class ClearFlag : u8_t {
+  NONE = 0,
   COLOR = ENUM_BITMASK(0),
   DEPTH = ENUM_BITMASK(1),
   STENCIL = ENUM_BITMASK(2)
