@@ -11,6 +11,7 @@ enum class StateCapability : u32_t {
   BLEND,
   RASTERIZER,
   CULL_FACE,
+  ALPHA_TEST,
   DEPTH_TEST,
   SCISSOR_TEST,
   STENCIL_TEST,
