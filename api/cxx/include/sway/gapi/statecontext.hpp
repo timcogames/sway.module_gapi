@@ -20,11 +20,17 @@ public:
 
   PURE_VIRTUAL(void setCapabilityEnable(StateCapability cap, bool enable));
 
+  PURE_VIRTUAL(void setAlphaEnable(bool enable));
+
+  PURE_VIRTUAL(void setAlphaFunc(CompareFn func, f32_t ref));
+
   PURE_VIRTUAL(void setBlendEnable(bool enable));
 
   PURE_VIRTUAL(void setBlendFn(BlendFn src, BlendFn dst));
 
   PURE_VIRTUAL(void setDepthEnable(bool enable));
+
+  PURE_VIRTUAL(void setClearDepth(f64_t depth));
 
   PURE_VIRTUAL(void setDepthFn(CompareFn func));
 
@@ -33,6 +39,8 @@ public:
   PURE_VIRTUAL(void setColorMask(bool red, bool green, bool blue, bool alpha));
 
   PURE_VIRTUAL(void setStencilEnable(bool enable));
+
+  PURE_VIRTUAL(void setClearStencil(i32_t idx));
 
   PURE_VIRTUAL(void setStencilMask(u32_t mask));
 
