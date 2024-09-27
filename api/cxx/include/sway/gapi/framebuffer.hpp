@@ -7,8 +7,6 @@
 #include <sway/gapi/texture.hpp>
 #include <sway/gapi/typedefs.hpp>
 
-#include <memory>  // shared_ptr
-
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
@@ -21,13 +19,15 @@ public:
 
   virtual ~Framebuffer() = default;
 
-  PURE_VIRTUAL(void attach(FramebufferAttachment attachment, TexturePtr_t texture, int mipLevels));
-
-  PURE_VIRTUAL(void attach(FramebufferAttachment attachment, RenderbufferPtr_t renderbuffer));
-
   PURE_VIRTUAL(void bind());
 
   PURE_VIRTUAL(void unbind());
+
+  PURE_VIRTUAL(void attach(FramebufferAttachment attachment, TexturePtr_t tex, i32_t mipLevels));
+
+  PURE_VIRTUAL(void attach(FramebufferAttachment attachment, RenderBufferPtr_t buf));
+
+  PURE_VIRTUAL(void drawBuffers(i32_t num, const u32_t *bufs));
 };
 
 NAMESPACE_END(gapi)

@@ -3,18 +3,25 @@
 
 #include <sway/core.hpp>
 #include <sway/gapi/typedefs.hpp>
+#include <sway/math.hpp>
 
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-class Renderbuffer : public core::foundation::Uniqueable<u32_t> {
-  DECLARE_CLASS_POINTER_ALIASES(Renderbuffer)
+class RenderBuffer : public core::foundation::Uniqueable<u32_t> {
+  DECLARE_CLASS_POINTER_ALIASES(RenderBuffer)
 
 public:
-  Renderbuffer()
+  RenderBuffer()
       : core::foundation::Uniqueable<u32_t>(std::nullopt) {}
 
-  virtual ~Renderbuffer() = default;
+  virtual ~RenderBuffer() = default;
+
+  PURE_VIRTUAL(void bind());
+
+  PURE_VIRTUAL(void unbind());
+
+  PURE_VIRTUAL(void store(const math::size2i_t &size));
 };
 
 NAMESPACE_END(gapi)
