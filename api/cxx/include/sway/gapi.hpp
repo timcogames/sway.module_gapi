@@ -27,6 +27,7 @@
 #include <sway/gapi/precisionqualifiers.hpp>
 #include <sway/gapi/profiletypes.hpp>
 #include <sway/gapi/rasterizerdescriptor.hpp>
+#include <sway/gapi/renderbuffer.hpp>
 #include <sway/gapi/shader.hpp>
 #include <sway/gapi/shadercreateinfo.hpp>
 #include <sway/gapi/shaderpreprocessor.hpp>
@@ -72,6 +73,7 @@ using CreateShaderPreprocessorFunc_t = core::binding::TFunction<ShaderPreprocess
 using CreateIdGeneratorFunc_t = core::binding::TFunction<IdGeneratorPtr_t()>;
 using CreateBufferFunc_t = core::binding::TFunction<BufferPtr_t(IdGeneratorPtr_t, const struct BufferCreateInfo &)>;
 using CreateFramebufferFunc_t = core::binding::TFunction<FramebufferPtr_t(void)>;
+using CreateRenderBufferFunc_t = core::binding::TFunction<RenderBufferPtr_t(void)>;
 using CreateVertexArrayFunc_t = core::binding::TFunction<VertexArrayPtr_t(void)>;
 using CreateVertexAttribLayoutFunc_t = core::binding::TFunction<VertexAttribLayoutPtr_t(ShaderProgramPtr_t)>;
 using CreateTextureFunc_t = core::binding::TFunction<TexturePtr_t(const struct TextureCreateInfo &)>;
@@ -88,6 +90,7 @@ struct ConcreatePluginFunctionSet : public core::PluginFunctionSet {
   CreateIdGeneratorFunc_t createIdGenerator;
   CreateBufferFunc_t createBuffer;
   CreateFramebufferFunc_t createFramebuffer;
+  CreateRenderBufferFunc_t createRenderBuffer;
   CreateVertexArrayFunc_t createVertexArray;
   CreateVertexAttribLayoutFunc_t createVertexAttribLayout;
   CreateTextureFunc_t createTexture;
@@ -103,6 +106,7 @@ struct ConcreatePluginFunctionSet : public core::PluginFunctionSet {
     createShaderPreprocessor = nullptr;
     createBuffer = nullptr;
     createFramebuffer = nullptr;
+    createRenderBuffer = nullptr;
     createVertexArray = nullptr;
     createVertexAttribLayout = nullptr;
     createTexture = nullptr;
