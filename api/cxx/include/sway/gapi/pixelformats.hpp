@@ -23,6 +23,8 @@ enum class PixelFormat : u32_t {
   LUMINANCE,
   LUMINANCE_ALPHA,
 
+  RGBA4,
+
   BGR,
   BGRA,
   RGB8,
