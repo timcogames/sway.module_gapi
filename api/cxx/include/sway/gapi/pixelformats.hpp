@@ -16,7 +16,8 @@ enum class PixelFormat : u32_t {
   RGBA,
   RGBA32F,  // or HDR
   HDR,  // or RGBA32F
-  DEPTH,
+  D24,
+  D24S8,
 
   LUMINANCE,
   LUMINANCE_ALPHA,
