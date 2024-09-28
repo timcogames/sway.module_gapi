@@ -22,7 +22,7 @@ public:
 
   PURE_VIRTUAL(void unbind());
 
-  PURE_VIRTUAL(void store(PixelFormat fmt, const math::size2i_t &size));
+  PURE_VIRTUAL(void store(PixelFormat fmt, const math::size2i_t &size, i32_t samples));
 };
 
 NAMESPACE_END(gapi)
