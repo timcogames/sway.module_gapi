@@ -2,6 +2,7 @@
 #define SWAY_GAPI_RENDERBUFFER_HPP
 
 #include <sway/core.hpp>
+#include <sway/gapi/pixelformats.hpp>
 #include <sway/gapi/typedefs.hpp>
 #include <sway/math.hpp>
 
@@ -21,7 +22,7 @@ public:
 
   PURE_VIRTUAL(void unbind());
 
-  PURE_VIRTUAL(void store(const math::size2i_t &size));
+  PURE_VIRTUAL(void store(PixelFormat fmt, const math::size2i_t &size));
 };
 
 NAMESPACE_END(gapi)
