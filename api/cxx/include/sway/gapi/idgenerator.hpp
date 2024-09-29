@@ -13,7 +13,7 @@ class IdGenerator {
 public:
   virtual ~IdGenerator() = default;
 
-  PURE_VIRTUAL(auto newGuid() -> u32_t);
+  PURE_VIRTUAL(auto getNextUid() -> u32_t);
 };
 
 NAMESPACE_END(gapi)
