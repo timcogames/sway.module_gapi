@@ -5,12 +5,14 @@
 #include <sway/math.hpp>
 
 #include <functional>  // std::function
-#include <initializer_list>  // std::initializer_list
-#include <memory>  // std::shared_ptr
-#include <set>  // std::set
-#include <string.h>  // std::string
-#include <unordered_map>  // std::unordered_map
+#include <initializer_list>
+#include <optional>
+#include <queue>
+#include <set>
+#include <string.h>
+#include <unordered_map>
 #include <utility>  // std::pair
+#include <vector>
 
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
@@ -20,6 +22,7 @@ using ExtensionInitList_t = std::initializer_list<std::pair<lpcstr_t, lpcstr_t>>
 DECLARE_CLASS_POINTER_TYPES(Capability)
 DECLARE_CLASS_POINTER_TYPES(Shader)
 DECLARE_CLASS_POINTER_TYPES(ShaderProgram)
+DECLARE_CLASS_POINTER_TYPES(ShaderPreprocessor)
 DECLARE_CLASS_POINTER_TYPES(Texture)
 DECLARE_CLASS_POINTER_TYPES(TextureSampler)
 DECLARE_CLASS_POINTER_TYPES(RenderBuffer)
@@ -32,6 +35,12 @@ DECLARE_CLASS_POINTER_TYPES(Viewport)
 DECLARE_CLASS_POINTER_TYPES(DrawCall)
 DECLARE_CLASS_POINTER_TYPES(StateContext)
 DECLARE_CLASS_POINTER_TYPES(Uniform)
+
+using ObjectUid_t = u32_t;
+using ObjectUidOpt_t = std::optional<ObjectUid_t>;
+using ObjectUidVec_t = std::vector<ObjectUid_t>;
+using ObjectUidDeque_t = std::deque<ObjectUid_t>;
+using ObjectUidQueue_t = std::queue<ObjectUid_t, ObjectUidDeque_t>;
 
 using DrawCbFunc_t = std::function<void(BufferPtr_t)>;
 

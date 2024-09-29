@@ -16,7 +16,7 @@ NAMESPACE_BEGIN(gapi)
 /**
  * @brief Представление аппаратного буфера.
  */
-class Buffer : public core::foundation::Uniqueable<u32_t> {
+class Buffer : public core::foundation::Uniqueable<ObjectUid_t> {
   DECLARE_CLASS_POINTER_ALIASES(Buffer)
 
 public:
@@ -34,7 +34,7 @@ public:
    * @param[in] desc Описание буфера.
    */
   Buffer(const BufferDescriptor &desc)
-      : core::foundation::Uniqueable<u32_t>(std::nullopt) {}
+      : core::foundation::Uniqueable<ObjectUid_t>(std::nullopt) {}
 
   virtual ~Buffer() = default;
 
@@ -61,16 +61,16 @@ public:
    */
   PURE_VIRTUAL(void updateSubdata(const void *src));
 
-  PURE_VIRTUAL(void flush(i32_t offset, i32_t length));
+  PURE_VIRTUAL(void flush(i32_t offset, i32_t len));
 
   PURE_VIRTUAL(auto map(BufferMapAccess flags) -> void *);
 
   PURE_VIRTUAL(auto mapRange(
-                   i32_t offset, i32_t length, core::detail::EnumClassBitset<BufferMapRangeAccess> bitset) -> void *);
+                   i32_t offset, i32_t len, core::detail::EnumClassBitset<BufferMapRangeAccess> bitset) -> void *);
 
   PURE_VIRTUAL(void unmap());
 
-  PURE_VIRTUAL(void bindRange(u32_t buffer, ptrdiff_t offset, ptrdiff_t size));
+  PURE_VIRTUAL(void bindRange(u32_t buf, ptrdiff_t offset, ptrdiff_t size));
 
   /**
    * @brief Делает буфер текущим.

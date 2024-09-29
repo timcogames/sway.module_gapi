@@ -10,17 +10,16 @@ NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
 class ShaderPreprocessor {
-public:
-  using Ptr_t = ShaderPreprocessor *;
+  DECLARE_CLASS_POINTER_ALIASES(ShaderPreprocessor)
 
+public:
   ShaderPreprocessor() {}
 
   virtual ~ShaderPreprocessor() = default;
 
   PURE_VIRTUAL(void addDefine(const std::string &name, const std::string &val));
 
-  // clang-format off
-  PURE_VIRTUAL(auto hasDefined(const std::string &name) const -> bool);  // clang-format on
+  PURE_VIRTUAL(auto hasDefined(const std::string &name) const -> bool);
 };
 
 NAMESPACE_END(gapi)

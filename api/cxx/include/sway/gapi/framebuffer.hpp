@@ -10,12 +10,12 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-class Framebuffer : public core::foundation::Uniqueable<u32_t> {
+class Framebuffer : public core::foundation::Uniqueable<ObjectUid_t> {
   DECLARE_CLASS_POINTER_ALIASES(Framebuffer)
 
 public:
   Framebuffer()
-      : core::foundation::Uniqueable<u32_t>(std::nullopt) {}
+      : core::foundation::Uniqueable<ObjectUid_t>(std::nullopt) {}
 
   virtual ~Framebuffer() = default;
 

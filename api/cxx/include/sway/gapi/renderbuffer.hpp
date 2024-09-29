@@ -9,12 +9,12 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-class RenderBuffer : public core::foundation::Uniqueable<u32_t> {
+class RenderBuffer : public core::foundation::Uniqueable<ObjectUid_t> {
   DECLARE_CLASS_POINTER_ALIASES(RenderBuffer)
 
 public:
   RenderBuffer()
-      : core::foundation::Uniqueable<u32_t>(std::nullopt) {}
+      : core::foundation::Uniqueable<ObjectUid_t>(std::nullopt) {}
 
   virtual ~RenderBuffer() = default;
 

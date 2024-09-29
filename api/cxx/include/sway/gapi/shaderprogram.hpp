@@ -14,12 +14,12 @@ NAMESPACE_BEGIN(gapi)
 /**
  * @brief Представление шейдерной программы.
  */
-class ShaderProgram : public core::foundation::Uniqueable<u32_t> {
+class ShaderProgram : public core::foundation::Uniqueable<ObjectUid_t> {
   DECLARE_CLASS_POINTER_ALIASES(ShaderProgram)
 
 public:
   ShaderProgram()
-      : core::foundation::Uniqueable<u32_t>(std::nullopt) {}
+      : core::foundation::Uniqueable<ObjectUid_t>(std::nullopt) {}
 
   virtual ~ShaderProgram() = default;
 

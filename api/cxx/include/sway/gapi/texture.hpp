@@ -11,12 +11,12 @@
 NAMESPACE_BEGIN(sway)
 NAMESPACE_BEGIN(gapi)
 
-class Texture : public core::foundation::Uniqueable<u32_t> {
+class Texture : public core::foundation::Uniqueable<ObjectUid_t> {
   DECLARE_CLASS_POINTER_ALIASES(Texture)
 
 public:
   Texture()
-      : core::foundation::Uniqueable<u32_t>(std::nullopt) {}
+      : core::foundation::Uniqueable<ObjectUid_t>(std::nullopt) {}
 
   virtual ~Texture() = default;
 

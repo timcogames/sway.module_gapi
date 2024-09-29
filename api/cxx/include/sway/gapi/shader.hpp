@@ -14,7 +14,7 @@ NAMESPACE_BEGIN(gapi)
 /**
  * @brief Представление шейдера.
  */
-class Shader : public core::foundation::Uniqueable<u32_t> {
+class Shader : public core::foundation::Uniqueable<ObjectUid_t> {
   DECLARE_CLASS_POINTER_ALIASES(Shader)
 
 public:
@@ -24,7 +24,7 @@ public:
    * @param[in] type Тип создаваемого шейдера.
    */
   Shader(ShaderType type)
-      : core::foundation::Uniqueable<u32_t>(std::nullopt) {}
+      : core::foundation::Uniqueable<ObjectUid_t>(std::nullopt) {}
 
   virtual ~Shader() = default;
 
@@ -48,7 +48,7 @@ public:
    * @param[in] name Имя атрибута.
    * @return Ссылка на идентификатор атрибута.
    */
-  PURE_VIRTUAL(auto getAttribLocation(std::optional<u32_t> progId, lpcstr_t name) -> i32_t);
+  PURE_VIRTUAL(auto getAttribLocation(ObjectUidOpt_t progId, lpcstr_t name) -> i32_t);
 
   /**
    * @brief Получает тип шейдера.
