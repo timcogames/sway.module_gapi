@@ -3,24 +3,38 @@
 
 #include <sway/core.hpp>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
 /**
+ * @enum TopologyType::Enum
  * @brief Перечисление типов топологии.
  */
-enum class TopologyType : u32_t {
-  NONE = 0,
-  POINT_LIST,  // Список точек.
-  LINE_LIST,  // Список линий.
-  LINE_STRIP,
-  TRIANGLE_LIST,  // Список треугольников.
-  TRIANGLE_STRIP,
-  TRIANGLE_FAN,
-  Latest
-};
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+/**
+ * @var TopologyType::Enum::POINT_LIST
+ * @brief Список точек.
+ */
+
+/**
+ * @var TopologyType::Enum::LINE_LIST
+ * @brief Список линий.
+ */
+
+/**
+ * @var TopologyType::Enum::TRIANGLE_LIST
+ * @brief Список треугольников.
+ */
+
+// clang-format off
+DECLARE_ENUM(TopologyType,
+  POINT_LIST,  
+  LINE_LIST, LINE_STRIP,
+  TRIANGLE_LIST, TRIANGLE_STRIP, TRIANGLE_FAN
+);
+// clang-format on
+
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_TOPOLOGYTYPES_HPP

@@ -4,8 +4,8 @@
 #include <sway/core.hpp>
 #include <sway/gapi/typedefs.hpp>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
 class IdGenerator {
   DECLARE_CLASS_POINTER_ALIASES(IdGenerator)
@@ -16,7 +16,7 @@ public:
   PURE_VIRTUAL(auto getNextUid() -> ObjectUid_t);
 };
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_IDGENERATOR_HPP

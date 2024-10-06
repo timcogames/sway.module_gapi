@@ -4,29 +4,28 @@
 #include <sway/core.hpp>
 #include <sway/gapi/statecapabilities.hpp>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
 class StateContext;
 
 struct StateDescriptorBase {};
 
-template <StateCapability T>
+template <StateCapability::Enum CAP>
 struct StateDescriptor : StateDescriptorBase {};
 
 template <>
-struct StateDescriptor<StateCapability::RASTERIZER> : StateDescriptorBase {};
+struct StateDescriptor<StateCapability::Enum::RASTERIZER> : StateDescriptorBase {};
 
 template <typename TConcreteData>
 class StateEnableable {
 public:
-  // clang-format off
-  PURE_VIRTUAL(auto capture() -> TConcreteData);  // clang-format on
+  PURE_VIRTUAL(auto capture() -> TConcreteData);
 
   PURE_VIRTUAL(void apply(StateContext *state, const TConcreteData &data));
 };
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_STATEENABLEABLE_HPP

@@ -5,20 +5,20 @@
 #include <sway/gapi/comparefunctions.hpp>
 #include <sway/gapi/stenciloperations.hpp>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
 struct StencilFaceDescriptor {
-  gapi::CompareFn func;
-  gapi::StencilOp fail;
-  gapi::StencilOp depthFail;
-  gapi::StencilOp depthPass;
+  gapi::CompareFn::Enum func;
+  gapi::StencilOp::Enum fail;
+  gapi::StencilOp::Enum depthFail;
+  gapi::StencilOp::Enum depthPass;
   u32_t reference;
   u32_t rmask;
   u32_t wmask;
 };
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_STENCILFACEDESCRIPTOR_HPP

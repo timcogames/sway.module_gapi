@@ -4,11 +4,11 @@
 
 template <typename Type = char, typename Traits = std::char_traits<Type>>
 inline std::basic_ostream<Type, Traits> &operator<<(
-    std::basic_ostream<Type, Traits> &stream, sway::gapi::ShaderType value) {
+    std::basic_ostream<Type, Traits> &stream, sway::gapi::ShaderType::Enum value) {
   switch (value) {
-    case sway::gapi::ShaderType::VERT:
+    case sway::gapi::ShaderType::Enum::VERT:
       return stream << "vertex";
-    case sway::gapi::ShaderType::FRAG:
+    case sway::gapi::ShaderType::Enum::FRAG:
       return stream << "fragment";
     default:
       return stream << "unknown";
@@ -16,11 +16,11 @@ inline std::basic_ostream<Type, Traits> &operator<<(
 }
 
 template <typename Type = char, typename Traits = std::char_traits<Type>, typename Alloc = std::allocator<Type>>
-inline std::basic_string<Type, Traits, Alloc> stringize(sway::gapi::ShaderType value) {
+inline std::basic_string<Type, Traits, Alloc> stringize(sway::gapi::ShaderType::Enum value) {
   switch (value) {
-    case sway::gapi::ShaderType::VERT:
+    case sway::gapi::ShaderType::Enum::VERT:
       return "vertex";
-    case sway::gapi::ShaderType::FRAG:
+    case sway::gapi::ShaderType::Enum::FRAG:
       return "fragment";
     default:
       return "unknown";

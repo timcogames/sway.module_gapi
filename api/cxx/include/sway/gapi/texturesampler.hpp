@@ -6,8 +6,8 @@
 #include <sway/gapi/texturewraps.hpp>
 #include <sway/gapi/typedefs.hpp>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
 class TextureSampler {
   DECLARE_CLASS_POINTER_ALIASES(TextureSampler)
@@ -15,12 +15,12 @@ class TextureSampler {
 public:
   virtual ~TextureSampler() = default;
 
-  PURE_VIRTUAL(void setWrapMode(TextureWrap wrapS, TextureWrap wrapT, TextureWrap wrapR));
+  PURE_VIRTUAL(void setWrapMode(TextureWrap::Enum wrapS, TextureWrap::Enum wrapT, TextureWrap::Enum wrapR));
 
-  PURE_VIRTUAL(void setFilterMode(TextureFilter minFilter, TextureFilter magFilter));
+  PURE_VIRTUAL(void setFilterMode(TextureFilter::Enum minFilter, TextureFilter::Enum magFilter));
 };
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_TEXTURESAMPLER_HPP

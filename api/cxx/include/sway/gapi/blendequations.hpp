@@ -3,12 +3,12 @@
 
 #include <sway/core.hpp>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
-enum class BlendEq : u32_t { NONE = 0, ADD, SUBTRACT, REVERSE_SUBTRACT, MIN, MAX, Latest };
+DECLARE_ENUM(BlendEq, ADD, SUBTRACT, REVERSE_SUBTRACT, MIN, MAX);
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_BLENDEQUATIONS_HPP

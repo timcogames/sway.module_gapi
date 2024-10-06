@@ -4,8 +4,8 @@
 #include <sway/core.hpp>
 #include <sway/gapi/vertexsemantics.hpp>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
 /**
  * @brief Структура описания вершинного атрибута.
@@ -15,7 +15,7 @@ struct VertexAttribDescriptor {
   const void *pointer;
 
   VertexSemantic semantic;
-  core::ValueDataType format;  // Формат данных.
+  core::ValueDataType::Enum format;  // Формат данных.
   i32_t numComponents;  // Количество компонентов.
   i32_t stride;
   bool normalized;  // Нормализация входных данных.
@@ -34,7 +34,7 @@ struct VertexAttribDescriptor {
   }
 };
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_VERTEXATTRIBDESCRIPTOR_HPP

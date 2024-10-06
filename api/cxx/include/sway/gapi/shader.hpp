@@ -8,8 +8,8 @@
 
 #include <optional>  // std::optional, std::nullopt
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
 /**
  * @brief Представление шейдера.
@@ -23,7 +23,7 @@ public:
    *
    * @param[in] type Тип создаваемого шейдера.
    */
-  Shader(ShaderType type)
+  Shader(ShaderType::Enum type)
       : core::foundation::Uniqueable<ObjectUid_t>(std::nullopt) {}
 
   virtual ~Shader() = default;
@@ -55,10 +55,10 @@ public:
    *
    * @return Тип шейдера.
    */
-  PURE_VIRTUAL(auto getType() const -> ShaderType);
+  PURE_VIRTUAL(auto getType() const -> ShaderType::Enum);
 };
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_SHADER_HPP

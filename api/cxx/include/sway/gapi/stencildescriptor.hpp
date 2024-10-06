@@ -4,8 +4,8 @@
 #include <sway/core.hpp>
 #include <sway/gapi/stencilfacedescriptor.hpp>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
 struct StencilDescriptor {
   bool enabled;
@@ -13,7 +13,7 @@ struct StencilDescriptor {
   StencilFaceDescriptor back;
 };
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_STENCILDESCRIPTOR_HPP

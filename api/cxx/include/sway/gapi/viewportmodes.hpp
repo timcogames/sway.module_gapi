@@ -3,15 +3,17 @@
 
 #include <sway/core.hpp>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
 /**
+ * @enum ViewportMode::Enum
  * @brief Перечисление поведения окна просмотра.
  */
-enum class ViewportMode : u32_t { NONE = 0, ENABLED, DISABLED, RENDER_TO_TEXTURE, Latest };
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+DECLARE_ENUM(ViewportMode, ENABLED, DISABLED, RENDER_TO_TEXTURE);
+
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_VIEWPORTMODES_HPP

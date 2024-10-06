@@ -5,23 +5,23 @@
 #include <sway/gapi/buffertargets.hpp>
 #include <sway/gapi/bufferusages.hpp>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
 struct BufferDescriptor {
-  BufferTarget target;
-  BufferUsage usage;
+  BufferTarget::Enum target;
+  BufferUsage::Enum usage;
   i32_t byteStride;
   i32_t capacity;  // Количество элементов в массиве.
 
   BufferDescriptor()
-      : target(BufferTarget::NONE)
-      , usage(BufferUsage::NONE)
+      : target(BufferTarget::Enum::NONE)
+      , usage(BufferUsage::Enum::NONE)
       , byteStride(0)
       , capacity(0) {}
 };
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_BUFFERDESCRIPTOR_HPP

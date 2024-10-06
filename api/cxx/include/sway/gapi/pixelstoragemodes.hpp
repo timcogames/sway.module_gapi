@@ -3,12 +3,12 @@
 
 #include <sway/core.hpp>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
-enum class PixelStorageMode : u32_t { NONE = 0, UNPACK_ALIGNMENT, UNPACK_ROW_LENGTH, Latest };
+DECLARE_ENUM(PixelStorageMode, UNPACK_ALIGNMENT, UNPACK_ROW_LENGTH);
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_PIXELSTORAGEMODES_HPP

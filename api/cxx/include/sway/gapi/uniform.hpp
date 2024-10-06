@@ -6,8 +6,8 @@
 
 #include <string>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
 // enum class UniformType : u32_t { MAT4, FLOAT, INT, BOOLEAN, VEC2, VEC3, VEC4, TRANSFORM, COL, SAMPLER };
 
@@ -27,7 +27,7 @@ struct Uniform {
   PURE_VIRTUAL(u32_t getType() const);
 };
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_UNIFORM_HPP

@@ -3,22 +3,22 @@
 
 #include <sway/core.hpp>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
-enum class StateCapability : u32_t {
-  NONE = 0,
+// clang-format off
+DECLARE_ENUM(StateCapability,
   BLEND,
   RASTERIZER,
   CULL_FACE,
   ALPHA_TEST,
   DEPTH_TEST,
   SCISSOR_TEST,
-  STENCIL_TEST,
-  Latest
-};
+  STENCIL_TEST
+);
+// clang-format on
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_STATECAPABILITIES_HPP

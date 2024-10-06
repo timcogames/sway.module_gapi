@@ -63,8 +63,8 @@
 #  include <emscripten.h>
 #endif
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
 using CreateCapabilityFunc_t = core::binding::TFunction<CapabilityPtr_t(void)>;
 using CreateShaderFunc_t = core::binding::TFunction<ShaderPtr_t(const struct ShaderCreateInfo &)>;
@@ -129,7 +129,7 @@ D_MODULE_GAPI_INTERFACE_EXPORT_API void pluginInitialize(core::PluginFunctionSet
 
 EXTERN_C_END
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_HPP

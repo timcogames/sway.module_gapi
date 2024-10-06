@@ -3,8 +3,8 @@
 
 #include <sway/core.hpp>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
 enum class PixelFormat : u32_t {
   UNKNOWN,
@@ -31,7 +31,7 @@ enum class PixelFormat : u32_t {
   RGBA8
 };
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_PIXELFORMATS_HPP

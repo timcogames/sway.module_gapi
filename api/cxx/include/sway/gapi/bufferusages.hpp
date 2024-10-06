@@ -3,12 +3,12 @@
 
 #include <sway/core.hpp>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
-enum class BufferUsage : u32_t { NONE = 0, STATIC, DYNAMIC, STREAM, Latest };
+DECLARE_ENUM(BufferUsage, STATIC, DYNAMIC, STREAM);
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_BUFFERUSAGES_HPP

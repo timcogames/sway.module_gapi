@@ -6,21 +6,21 @@
 #include <sway/gapi/texturetargets.hpp>
 #include <sway/math.hpp>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
 struct TextureCreateInfo {
-  TextureTarget target;
+  TextureTarget::Enum target;
   math::size2i_t size;
   u32_t arraySize;
   PixelFormat format, internalFormat;
-  core::ValueDataType dataType;
+  core::ValueDataType::Enum dataType;
   s8_t *pixels;
   u32_t mipLevels;
   u32_t sampleCount;
 };
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_TEXTURECREATEINFO_HPP

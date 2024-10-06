@@ -4,18 +4,18 @@
 #include <sway/core.hpp>
 #include <sway/gapi/comparefunctions.hpp>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
 struct DepthDescriptor {
   bool enabled;
-  CompareFn func;
+  CompareFn::Enum func;
   bool mask;
   f64_t near;
   f64_t far;
 };
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_DEPTHDESCRIPTOR_HPP

@@ -6,8 +6,8 @@
 #include <memory>
 #include <string>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
 class ShaderPreprocessor {
   DECLARE_CLASS_POINTER_ALIASES(ShaderPreprocessor)
@@ -22,7 +22,7 @@ public:
   PURE_VIRTUAL(auto hasDefined(const std::string &name) const -> bool);
 };
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_SHADERPREPROCESSOR_HPP

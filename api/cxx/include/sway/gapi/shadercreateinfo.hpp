@@ -7,11 +7,11 @@
 
 #include <string>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
 struct ShaderCreateInfo {
-  ShaderType type;  // Тип шейдера.
+  ShaderType::Enum type;  // Тип шейдера.
   std::string code;  // Исходный код шейдера.
   ShaderPreprocessor::Ptr_t preprocessor;
 };
@@ -21,7 +21,7 @@ struct ShaderCreateInfoSet {
   ShaderCreateInfo fs;
 };
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_SHADERCREATEINFO_HPP

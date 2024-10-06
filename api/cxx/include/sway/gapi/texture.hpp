@@ -8,8 +8,8 @@
 #include <sway/gapi/typedefs.hpp>
 #include <sway/math.hpp>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
 class Texture : public core::foundation::Uniqueable<ObjectUid_t> {
   DECLARE_CLASS_POINTER_ALIASES(Texture)
@@ -24,7 +24,7 @@ public:
 
   PURE_VIRTUAL(void updateSubdata(TextureSubdataDescriptor desc));
 
-  PURE_VIRTUAL(void setPixelStorage(PixelStorageMode mode, u32_t param));
+  PURE_VIRTUAL(void setPixelStorage(PixelStorageMode::Enum mode, u32_t param));
 
   PURE_VIRTUAL(void setActive(i32_t slot));
 
@@ -32,10 +32,10 @@ public:
 
   PURE_VIRTUAL(void unbind());
 
-  PURE_VIRTUAL(auto getTarget() -> TextureTarget);
+  PURE_VIRTUAL(auto getTarget() -> TextureTarget::Enum);
 };
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_TEXTURE_HPP

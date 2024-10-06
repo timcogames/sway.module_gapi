@@ -9,8 +9,8 @@
 #include <sway/gapi/stenciloperations.hpp>
 #include <sway/gapi/typedefs.hpp>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
 class StateContext {
   DECLARE_CLASS_POINTER_ALIASES(StateContext)
@@ -18,21 +18,21 @@ class StateContext {
 public:
   virtual ~StateContext() = default;
 
-  PURE_VIRTUAL(void setCapabilityEnable(StateCapability cap, bool enable));
+  PURE_VIRTUAL(void setCapabilityEnable(StateCapability::Enum cap, bool enable));
 
   PURE_VIRTUAL(void setAlphaEnable(bool enable));
 
-  PURE_VIRTUAL(void setAlphaFunc(CompareFn func, f32_t ref));
+  PURE_VIRTUAL(void setAlphaFunc(CompareFn::Enum func, f32_t ref));
 
   PURE_VIRTUAL(void setBlendEnable(bool enable));
 
-  PURE_VIRTUAL(void setBlendFn(BlendFn src, BlendFn dst));
+  PURE_VIRTUAL(void setBlendFn(BlendFn::Enum src, BlendFn::Enum dst));
 
   PURE_VIRTUAL(void setDepthEnable(bool enable));
 
   PURE_VIRTUAL(void setClearDepth(f64_t depth));
 
-  PURE_VIRTUAL(void setDepthFn(CompareFn func));
+  PURE_VIRTUAL(void setDepthFn(CompareFn::Enum func));
 
   PURE_VIRTUAL(void setDepthMask(bool flag));
 
@@ -44,14 +44,14 @@ public:
 
   PURE_VIRTUAL(void setStencilMask(u32_t mask));
 
-  PURE_VIRTUAL(void setStencilFn(CompareFn func, i32_t ref, u32_t mask));
+  PURE_VIRTUAL(void setStencilFn(CompareFn::Enum func, i32_t ref, u32_t mask));
 
-  PURE_VIRTUAL(void setStencilOp(StencilOp fail, StencilOp depthFail, StencilOp depthPass));
+  PURE_VIRTUAL(void setStencilOp(StencilOp::Enum fail, StencilOp::Enum depthFail, StencilOp::Enum depthPass));
 
-  PURE_VIRTUAL(void setPolygonMode(PolygonMode mode));
+  PURE_VIRTUAL(void setPolygonMode(PolygonMode::Enum mode));
 };
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_STATECONTEXT_HPP

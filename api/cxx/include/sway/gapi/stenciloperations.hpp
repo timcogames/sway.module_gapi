@@ -3,11 +3,11 @@
 
 #include <sway/core.hpp>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
-enum class StencilOp : u32_t {
-  NONE = 0,
+// clang-format off
+DECLARE_ENUM(StencilOp,
   KEEP,
   ZERO,
   REPLACE,
@@ -15,11 +15,11 @@ enum class StencilOp : u32_t {
   INCREMENT_WRAP,
   DECREMENT,
   DECREMENT_WRAP,
-  INVERT,
-  Latest
-};
+  INVERT
+);
+// clang-format on
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_STENCILOPERATIONS_HPP

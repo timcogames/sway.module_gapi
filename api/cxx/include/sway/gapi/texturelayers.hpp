@@ -3,14 +3,14 @@
 
 #include <sway/core.hpp>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
 enum class TextureLayer : u32_t { NONE = 0, DIFFUSE, SPECULAR, EMISSIVE, NORMAL, Latest };
 
 #define NUM_TEXTURE_LAYERS (core::detail::toBase(TextureLayer::Latest))
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_TEXTURELAYERS_HPP

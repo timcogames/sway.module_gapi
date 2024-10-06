@@ -7,8 +7,8 @@
 #include <sway/gapi/texture.hpp>
 #include <sway/gapi/typedefs.hpp>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
 class Framebuffer : public core::foundation::Uniqueable<ObjectUid_t> {
   DECLARE_CLASS_POINTER_ALIASES(Framebuffer)
@@ -23,14 +23,14 @@ public:
 
   PURE_VIRTUAL(void unbind());
 
-  PURE_VIRTUAL(void attach(FramebufferAttachment attachment, TexturePtr_t tex, i32_t mipLevels));
+  PURE_VIRTUAL(void attach(FramebufferAttachment::Enum attachment, TexturePtr_t tex, i32_t mipLevels));
 
-  PURE_VIRTUAL(void attach(FramebufferAttachment attachment, RenderBufferPtr_t buf));
+  PURE_VIRTUAL(void attach(FramebufferAttachment::Enum attachment, RenderBufferPtr_t buf));
 
   PURE_VIRTUAL(void drawBuffers(i32_t num, const u32_t *bufs));
 };
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_FRAMEBUFFER_HPP

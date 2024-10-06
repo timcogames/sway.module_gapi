@@ -3,22 +3,12 @@
 
 #include <sway/core.hpp>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
-enum class TextureTarget : u32_t {
-  TEX_2D,
-  TEX_2D_ARRAY,
-  MULTISAMPLE,
-  MULTISAMPLE_ARRAY,
-  RECT,
-  CUBE_MAP,
+DECLARE_ENUM(TextureTarget, TEX_2D, TEX_2D_ARRAY, MULTISAMPLE, MULTISAMPLE_ARRAY, RECT, CUBE_MAP);
 
-  Unknown,
-  Latest
-};
-
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_TEXTURETARGETS_HPP

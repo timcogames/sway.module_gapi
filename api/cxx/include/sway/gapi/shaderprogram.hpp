@@ -8,8 +8,8 @@
 
 #include <string>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
 /**
  * @brief Представление шейдерной программы.
@@ -27,7 +27,7 @@ public:
    * @brief Связывает шейдерный объект с программным объектом.
    *
    * @param[in] shader Указатель на связываемый шейдерный объект.
-   * @sa detach(std::pair<ShaderType, ShaderPtr_t>)
+   * @sa detach(std::pair<ShaderType::Enum, ShaderPtr_t>)
    */
   PURE_VIRTUAL(void attach(ShaderPtr_t shader));
 
@@ -38,9 +38,9 @@ public:
    * @param[in] erasing Убрать из коллекции?.
    * @sa attach(ShaderPtr_t)
    */
-  PURE_VIRTUAL(void detach(std::pair<ShaderType, ShaderPtr_t> pair, bool erasing));
+  PURE_VIRTUAL(void detach(std::pair<ShaderType::Enum, ShaderPtr_t> pair, bool erasing));
 
-  PURE_VIRTUAL(auto getShader(ShaderType type) -> ShaderPtr_t);
+  PURE_VIRTUAL(auto getShader(ShaderType::Enum type) -> ShaderPtr_t);
 
   /**
    * @brief Компонует программный объект.
@@ -118,7 +118,7 @@ public:
   PURE_VIRTUAL(void setUniform1f(const std::string &uniform, f32_t val));
 };
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_SHADERPROGRAM_HPP

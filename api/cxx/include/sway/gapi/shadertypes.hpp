@@ -3,21 +3,28 @@
 
 #include <sway/core.hpp>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
 /**
+ * @enum ShaderType::Enum
  * @brief Перечисление типов шейдера.
  */
-enum class ShaderType : u32_t {
-  NONE = 0,
-  VERT,  // Вершинный шейдер.
-  FRAG,  // Фрагментный шейдер.
-  Latest
-};
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+/**
+ * @var ShaderType::Enum::VERT
+ * @brief Вершинный шейдер.
+ */
+
+/**
+ * @var ShaderType::Enum::FRAG
+ * @brief Фрагментный шейдер.
+ */
+
+DECLARE_ENUM(ShaderType, VERT, FRAG);
+
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #include <sway/gapi/shadertypes.inl>
 

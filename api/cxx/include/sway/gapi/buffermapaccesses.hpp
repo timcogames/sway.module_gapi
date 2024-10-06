@@ -3,12 +3,12 @@
 
 #include <sway/core.hpp>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
-enum class BufferMapAccess : u32_t { NONE = 0, READ, WRITE, READ_WRITE, Latest };
+DECLARE_ENUM(BufferMapAccess, READ, WRITE, READ_WRITE);
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_BUFFERMAPACCESSES_HPP

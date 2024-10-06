@@ -3,21 +3,20 @@
 
 #include <sway/core.hpp>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
-enum class BufferMapRangeAccess : u32_t {
-  NONE = 0,
-  READ,
-  WRITE,
+// clang-format off
+DECLARE_ENUM(BufferMapRangeAccess,
+  READ, WRITE,
   INVALIDATE_RANGE,
   INVALIDATE_BUFFER,
   FLUSH_EXPLICIT,
-  UNSYNCHRONIZED,
-  Latest
-};
+  UNSYNCHRONIZED
+);
+// clang-format on
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_BUFFERMAPRANGEACCESSES_HPP

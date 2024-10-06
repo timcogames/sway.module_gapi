@@ -3,11 +3,11 @@
 
 #include <sway/core.hpp>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
-enum class BlendFn : u32_t {
-  NONE = 0,
+// clang-format off
+DECLARE_ENUM(BlendFn,
   ZERO,
   ONE,
   SRC_COLOR,
@@ -18,11 +18,11 @@ enum class BlendFn : u32_t {
   ONE_MINUS_SRC_ALPHA,
   DST_ALPHA,
   ONE_MINUS_DST_ALPHA,
-  SRC_ALPHA_SATURATE,
-  Latest
-};
+  SRC_ALPHA_SATURATE
+);
+// clang-format on
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_BLENDFUNCTIONS_HPP

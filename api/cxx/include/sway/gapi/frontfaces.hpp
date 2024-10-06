@@ -3,12 +3,12 @@
 
 #include <sway/core.hpp>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
-enum class FrontFace { NONE = 0, CLOCK_WISE, COUNTER_CLOCK_WISE, Latest };
+DECLARE_ENUM(FrontFace, CLOCK_WISE, COUNTER_CLOCK_WISE);
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_FRONTFACES_HPP

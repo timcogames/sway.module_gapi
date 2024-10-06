@@ -5,8 +5,8 @@
 #include <sway/gapi/typedefs.hpp>
 #include <sway/gapi/vertexattribdescriptor.hpp>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
 class VertexAttribLayout {
   DECLARE_CLASS_POINTER_ALIASES(VertexAttribLayout)
@@ -32,7 +32,7 @@ public:
   PURE_VIRTUAL(void disable());
 };
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_VERTEXATTRIBLAYOUT_HPP

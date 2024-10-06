@@ -6,8 +6,8 @@
 #include <sway/gapi/topologytypes.hpp>
 #include <sway/gapi/typedefs.hpp>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
 class DrawCall {
   DECLARE_CLASS_POINTER_ALIASES(DrawCall)
@@ -24,10 +24,10 @@ public:
    * @param[in] bufset Набор буферных объектов.
    * @param[in] type Тип значений в индексах.
    */
-  PURE_VIRTUAL(void execute(TopologyType topology, BufferSet bufset, core::ValueDataType type));
+  PURE_VIRTUAL(void execute(TopologyType::Enum topology, BufferSet bufset, core::ValueDataType::Enum type));
 };
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_DRAWCALL_HPP

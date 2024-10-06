@@ -3,12 +3,12 @@
 
 #include <sway/core.hpp>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
-enum class BufferTarget : u32_t { NONE = 0, ARRAY, ELEMENT_ARRAY, UNIFORM, TEXTURE, Latest };
+DECLARE_ENUM(BufferTarget, ARRAY, ELEMENT_ARRAY, UNIFORM, TEXTURE);
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_BUFFERTARGETS_HPP

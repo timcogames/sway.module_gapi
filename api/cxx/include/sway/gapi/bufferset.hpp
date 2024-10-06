@@ -4,8 +4,8 @@
 #include <sway/core.hpp>
 #include <sway/gapi/typedefs.hpp>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
 struct BufferSet {
   VertexArrayPtr_t vao;
@@ -13,7 +13,7 @@ struct BufferSet {
   BufferPtr_t ebo;
 };
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_BUFFERSET_HPP

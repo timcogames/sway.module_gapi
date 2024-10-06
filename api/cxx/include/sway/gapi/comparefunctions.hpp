@@ -3,11 +3,11 @@
 
 #include <sway/core.hpp>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
-enum class CompareFn : u32_t {
-  NONE = 0,
+// clang-format off
+DECLARE_ENUM(CompareFn,
   ALWAYS,
   NEVER,
   EQUAL,
@@ -15,11 +15,11 @@ enum class CompareFn : u32_t {
   LESS,
   LESS_OR_EQUAL,
   GREATER,
-  GREATER_OR_EQUAL,
-  Latest
-};
+  GREATER_OR_EQUAL
+);
+// clang-format on
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_COMPAREFUNCTIONS_HPP

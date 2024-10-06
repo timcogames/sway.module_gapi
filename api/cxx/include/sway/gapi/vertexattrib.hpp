@@ -4,8 +4,8 @@
 #include <sway/core.hpp>
 #include <sway/gapi/vertexattribdescriptor.hpp>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
 class VertexAttrib {
 public:
@@ -29,7 +29,7 @@ public:
   PURE_VIRTUAL(auto isEnabled() const -> bool);  // clang-format on
 };
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_VERTEXATTRIB_HPP

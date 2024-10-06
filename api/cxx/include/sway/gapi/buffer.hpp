@@ -10,8 +10,8 @@
 #include <sway/gapi/bufferusages.hpp>
 #include <sway/gapi/typedefs.hpp>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
 /**
  * @brief Представление аппаратного буфера.
@@ -63,10 +63,10 @@ public:
 
   PURE_VIRTUAL(void flush(i32_t offset, i32_t len));
 
-  PURE_VIRTUAL(auto map(BufferMapAccess flags) -> void *);
+  PURE_VIRTUAL(auto map(BufferMapAccess::Enum flags) -> void *);
 
-  PURE_VIRTUAL(auto mapRange(
-                   i32_t offset, i32_t len, core::detail::EnumClassBitset<BufferMapRangeAccess> bitset) -> void *);
+  PURE_VIRTUAL(auto mapRange(i32_t offset, i32_t len,
+                   core::detail::EnumClassBitset<BufferMapRangeAccess::Enum> bitset) -> void *);
 
   PURE_VIRTUAL(void unmap());
 
@@ -89,12 +89,12 @@ public:
   /**
    * @brief Получает целевой тип буфера.
    */
-  PURE_VIRTUAL(auto getTarget() const -> BufferTarget);
+  PURE_VIRTUAL(auto getTarget() const -> BufferTarget::Enum);
 
   /**
    * @brief Получает режим работы с данными.
    */
-  PURE_VIRTUAL(auto getUsage() const -> BufferUsage);
+  PURE_VIRTUAL(auto getUsage() const -> BufferUsage::Enum);
 
   /**
    * @brief Получает количество элементов в массиве.
@@ -107,7 +107,7 @@ public:
   PURE_VIRTUAL(auto getByteStride() const -> i32_t);
 };
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_BUFFER_HPP

@@ -3,11 +3,11 @@
 
 #include <sway/core.hpp>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
-enum class FramebufferAttachment : u32_t {
-  NONE = 0,
+// clang-format off
+DECLARE_ENUM(FramebufferAttachment,
   DEPTH_STENCIL,
   DEPTH,
   STENCIL,
@@ -15,11 +15,11 @@ enum class FramebufferAttachment : u32_t {
   COL_2,
   COL_3,
   COL_4,
-  COL_5,
-  Latest
-};
+  COL_5
+);
+// clang-format on
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_FRAMEBUFFERATTACHMENTS_HPP

@@ -14,8 +14,8 @@
 #include <utility>  // std::pair
 #include <vector>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
 using ExtensionInitList_t = std::initializer_list<std::pair<lpcstr_t, lpcstr_t>>;
 
@@ -51,7 +51,7 @@ using Uniform1fUmap_t = std::unordered_map<std::string, f32_t>;
 
 using VertexAttribDescUmap_t = std::unordered_map<std::string, struct VertexAttribDescriptor>;
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_TYPEDEFS_HPP

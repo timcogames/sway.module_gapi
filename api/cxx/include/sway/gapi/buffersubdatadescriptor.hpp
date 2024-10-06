@@ -3,8 +3,8 @@
 
 #include <sway/core.hpp>
 
-NAMESPACE_BEGIN(sway)
-NAMESPACE_BEGIN(gapi)
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
 
 struct BufferSubdataDescriptor {
   u32_t offset;  // Начало изменяемого блока данных.
@@ -12,7 +12,7 @@ struct BufferSubdataDescriptor {
   const void *data;  // Область памяти, содержащая новые значения.
 };
 
-NAMESPACE_END(gapi)
-NAMESPACE_END(sway)
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
 
 #endif  // SWAY_GAPI_BUFFERUPDATESUBDATAINFO_HPP
