@@ -17,12 +17,12 @@ struct StateDescriptor : StateDescriptorBase {};
 template <>
 struct StateDescriptor<StateCapability::Enum::RASTERIZER> : StateDescriptorBase {};
 
-template <typename TConcreteData>
+template <typename CONCRETE_DATA>
 class StateEnableable {
 public:
-  PURE_VIRTUAL(auto capture() -> TConcreteData);
+  PURE_VIRTUAL(auto capture() -> CONCRETE_DATA);
 
-  PURE_VIRTUAL(void apply(StateContext *state, const TConcreteData &data));
+  PURE_VIRTUAL(void apply(StateContext *state, const CONCRETE_DATA &data));
 };
 
 NS_END()  // namespace gapi

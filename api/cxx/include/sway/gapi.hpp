@@ -82,6 +82,7 @@ using CreateTextureSamplerFunc_t = core::binding::TFunction<TextureSamplerPtr_t(
 using CreateDrawCallFunc_t = core::binding::TFunction<DrawCallPtr_t(void)>;
 using CreateViewportFunc_t = core::binding::TFunction<ViewportPtr_t(void)>;
 using CreateStateContextFunc_t = core::binding::TFunction<StateContextPtr_t(void)>;
+using CreateRasterizerStateFunc_t = core::binding::TFunction<StateEnableable<RasterizerDescriptor> *(void)>;
 
 struct ConcreatePluginFunctionSet : public core::PluginFunctionSet {
   CreateCapabilityFunc_t createCapability;
@@ -100,6 +101,7 @@ struct ConcreatePluginFunctionSet : public core::PluginFunctionSet {
   CreateDrawCallFunc_t createDrawCall;
   CreateViewportFunc_t createViewport;
   CreateStateContextFunc_t createStateContext;
+  CreateRasterizerStateFunc_t createRasterizerState;
 
   ConcreatePluginFunctionSet() {
     createCapability = nullptr;
@@ -118,6 +120,7 @@ struct ConcreatePluginFunctionSet : public core::PluginFunctionSet {
     createDrawCall = nullptr;
     createViewport = nullptr;
     createStateContext = nullptr;
+    createRasterizerState = nullptr;
   }
 };
 
