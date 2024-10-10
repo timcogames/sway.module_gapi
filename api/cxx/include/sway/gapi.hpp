@@ -72,7 +72,8 @@ using CreateShaderProgramFunc_t = core::binding::TFunction<ShaderProgramPtr_t(vo
 using CreateShaderPreprocessorFunc_t = core::binding::TFunction<ShaderPreprocessor::Ptr_t(u32_t, lpcstr_t)>;
 using CreateBufferIdGeneratorFunc_t = core::binding::TFunction<IdGeneratorPtr_t()>;
 using CreateBufferFunc_t = core::binding::TFunction<BufferPtr_t(IdGeneratorPtr_t, const struct BufferCreateInfo &)>;
-using CreateFramebufferFunc_t = core::binding::TFunction<FramebufferPtr_t(void)>;
+using CreateFrameBufferIdGeneratorFunc_t = core::binding::TFunction<IdGeneratorPtr_t()>;
+using CreateFrameBufferFunc_t = core::binding::TFunction<FrameBufferPtr_t(IdGeneratorPtr_t)>;
 using CreateRenderBufferFunc_t = core::binding::TFunction<RenderBufferPtr_t(void)>;
 using CreateVertexArrayFunc_t = core::binding::TFunction<VertexArrayPtr_t(void)>;
 using CreateVertexAttribLayoutFunc_t = core::binding::TFunction<VertexAttribLayoutPtr_t(ShaderProgramPtr_t)>;
@@ -91,7 +92,8 @@ struct ConcreatePluginFunctionSet : public core::PluginFunctionSet {
   CreateShaderPreprocessorFunc_t createShaderPreprocessor;
   CreateBufferIdGeneratorFunc_t createBufferIdGenerator;
   CreateBufferFunc_t createBuffer;
-  CreateFramebufferFunc_t createFramebuffer;
+  CreateFrameBufferIdGeneratorFunc_t createFrameBufferIdGenerator;
+  CreateFrameBufferFunc_t createFrameBuffer;
   CreateRenderBufferFunc_t createRenderBuffer;
   CreateVertexArrayFunc_t createVertexArray;
   CreateVertexAttribLayoutFunc_t createVertexAttribLayout;
@@ -110,7 +112,8 @@ struct ConcreatePluginFunctionSet : public core::PluginFunctionSet {
     createShaderPreprocessor = nullptr;
     createBufferIdGenerator = nullptr;
     createBuffer = nullptr;
-    createFramebuffer = nullptr;
+    createFrameBufferIdGenerator = nullptr;
+    createFrameBuffer = nullptr;
     createRenderBuffer = nullptr;
     createVertexArray = nullptr;
     createVertexAttribLayout = nullptr;

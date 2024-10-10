@@ -10,22 +10,22 @@
 NS_BEGIN_SWAY()
 NS_BEGIN(gapi)
 
-class Framebuffer : public core::foundation::Uniqueable<ObjectUid_t> {
-  DECLARE_CLASS_POINTER_ALIASES(Framebuffer)
+class FrameBuffer : public core::foundation::Uniqueable<ObjectUid_t> {
+  DECLARE_CLASS_POINTER_ALIASES(FrameBuffer)
 
 public:
-  Framebuffer()
+  FrameBuffer()
       : core::foundation::Uniqueable<ObjectUid_t>(std::nullopt) {}
 
-  virtual ~Framebuffer() = default;
+  virtual ~FrameBuffer() = default;
 
   PURE_VIRTUAL(void bind());
 
   PURE_VIRTUAL(void unbind());
 
-  PURE_VIRTUAL(void attach(FramebufferAttachment::Enum attachment, TexturePtr_t tex, i32_t mipLevels));
+  PURE_VIRTUAL(void attach(FrameBufferAttachment::Enum attachment, TexturePtr_t tex, i32_t mipLevels));
 
-  PURE_VIRTUAL(void attach(FramebufferAttachment::Enum attachment, RenderBufferPtr_t buf));
+  PURE_VIRTUAL(void attach(FrameBufferAttachment::Enum attachment, RenderBufferPtr_t buf));
 
   PURE_VIRTUAL(void drawBuffers(i32_t num, const u32_t *bufs));
 };

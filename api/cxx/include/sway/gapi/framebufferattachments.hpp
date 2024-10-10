@@ -7,7 +7,7 @@ NS_BEGIN_SWAY()
 NS_BEGIN(gapi)
 
 // clang-format off
-DECLARE_ENUM(FramebufferAttachment,
+DECLARE_ENUM(FrameBufferAttachment,
   DEPTH_STENCIL,
   DEPTH,
   STENCIL,
