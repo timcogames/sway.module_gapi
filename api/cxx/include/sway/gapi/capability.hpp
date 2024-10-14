@@ -8,7 +8,7 @@ NS_BEGIN_SWAY()
 NS_BEGIN(gapi)
 
 class Capability {
-  DECLARE_CLASS_POINTER_ALIASES(Capability)
+  DECLARE_PTR_ALIASES(Capability)
 
 public:
   Capability() = default;

@@ -15,7 +15,7 @@ NS_BEGIN(gapi)
  * @brief Представление шейдера.
  */
 class Shader : public core::foundation::Uniqueable<ObjectUid_t> {
-  DECLARE_CLASS_POINTER_ALIASES(Shader)
+  DECLARE_PTR_ALIASES(Shader)
 
 public:
   /**

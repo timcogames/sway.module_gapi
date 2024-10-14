@@ -9,7 +9,7 @@ NS_BEGIN_SWAY()
 NS_BEGIN(gapi)
 
 class VertexArray {
-  DECLARE_CLASS_POINTER_ALIASES(VertexArray)
+  DECLARE_PTR_ALIASES(VertexArray)
 
 public:
   PURE_VIRTUAL(void bind());

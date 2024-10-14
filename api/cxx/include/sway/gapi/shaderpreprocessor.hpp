@@ -10,7 +10,7 @@ NS_BEGIN_SWAY()
 NS_BEGIN(gapi)
 
 class ShaderPreprocessor {
-  DECLARE_CLASS_POINTER_ALIASES(ShaderPreprocessor)
+  DECLARE_PTR_ALIASES(ShaderPreprocessor)
 
 public:
   ShaderPreprocessor() {}

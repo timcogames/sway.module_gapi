@@ -12,7 +12,7 @@ NS_BEGIN(gapi)
 // enum class UniformType : u32_t { MAT4, FLOAT, INT, BOOLEAN, VEC2, VEC3, VEC4, TRANSFORM, COL, SAMPLER };
 
 struct Uniform {
-  DECLARE_CLASS_POINTER_ALIASES(Uniform)
+  DECLARE_PTR_ALIASES(Uniform)
 
   static const int maxUniformNameSize = 24;
 

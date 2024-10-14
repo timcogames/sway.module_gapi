@@ -9,7 +9,7 @@ NS_BEGIN_SWAY()
 NS_BEGIN(gapi)
 
 class VertexAttribLayout {
-  DECLARE_CLASS_POINTER_ALIASES(VertexAttribLayout)
+  DECLARE_PTR_ALIASES(VertexAttribLayout)
 
 public:
   virtual ~VertexAttribLayout() = default;

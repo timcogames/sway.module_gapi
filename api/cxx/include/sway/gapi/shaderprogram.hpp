@@ -15,13 +15,13 @@ NS_BEGIN(gapi)
  * @brief Представление шейдерной программы.
  */
 class ShaderProgram : public core::foundation::Uniqueable<ObjectUid_t> {
-  DECLARE_CLASS_POINTER_ALIASES(ShaderProgram)
+  DECLARE_PTR_ALIASES(ShaderProgram)
 
 public:
   ShaderProgram()
       : core::foundation::Uniqueable<ObjectUid_t>(std::nullopt) {}
 
-  virtual ~ShaderProgram() = default;
+  DTOR_VIRTUAL_DEFAULT(ShaderProgram);
 
   /**
    * @brief Связывает шейдерный объект с программным объектом.

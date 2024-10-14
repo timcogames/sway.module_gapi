@@ -13,7 +13,7 @@ NS_BEGIN_SWAY()
 NS_BEGIN(gapi)
 
 class StateContext {
-  DECLARE_CLASS_POINTER_ALIASES(StateContext)
+  DECLARE_PTR_ALIASES(StateContext)
 
 public:
   virtual ~StateContext() = default;

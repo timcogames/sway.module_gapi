@@ -10,7 +10,7 @@ NS_BEGIN_SWAY()
 NS_BEGIN(gapi)
 
 class RenderBuffer : public core::foundation::Uniqueable<ObjectUid_t> {
-  DECLARE_CLASS_POINTER_ALIASES(RenderBuffer)
+  DECLARE_PTR_ALIASES(RenderBuffer)
 
 public:
   RenderBuffer()

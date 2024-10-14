@@ -12,7 +12,7 @@ NS_BEGIN_SWAY()
 NS_BEGIN(gapi)
 
 class Texture : public core::foundation::Uniqueable<ObjectUid_t> {
-  DECLARE_CLASS_POINTER_ALIASES(Texture)
+  DECLARE_PTR_ALIASES(Texture)
 
 public:
   Texture()

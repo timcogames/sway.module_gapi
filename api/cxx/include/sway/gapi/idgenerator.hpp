@@ -8,7 +8,7 @@ NS_BEGIN_SWAY()
 NS_BEGIN(gapi)
 
 class IdGenerator {
-  DECLARE_CLASS_POINTER_ALIASES(IdGenerator)
+  DECLARE_PTR_ALIASES(IdGenerator)
 
 public:
   virtual ~IdGenerator() = default;

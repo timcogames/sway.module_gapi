@@ -11,7 +11,7 @@ NS_BEGIN_SWAY()
 NS_BEGIN(gapi)
 
 class FrameBuffer : public core::foundation::Uniqueable<ObjectUid_t> {
-  DECLARE_CLASS_POINTER_ALIASES(FrameBuffer)
+  DECLARE_PTR_ALIASES(FrameBuffer)
 
 public:
   FrameBuffer()

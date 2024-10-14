@@ -17,7 +17,7 @@ NS_BEGIN(gapi)
  * @brief Представление аппаратного буфера.
  */
 class Buffer : public core::foundation::Uniqueable<ObjectUid_t> {
-  DECLARE_CLASS_POINTER_ALIASES(Buffer)
+  DECLARE_PTR_ALIASES(Buffer)
 
 public:
   struct BindFunctor {
