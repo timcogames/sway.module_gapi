@@ -15,10 +15,14 @@ class Texture : public core::foundation::Uniqueable<ObjectUid_t> {
   DECLARE_PTR_ALIASES(Texture)
 
 public:
+#pragma region "Ctors/Dtor"
+
   Texture()
       : core::foundation::Uniqueable<ObjectUid_t>(std::nullopt) {}
 
-  virtual ~Texture() = default;
+  DTOR_VIRTUAL_DEFAULT(Texture);
+
+#pragma endregion
 
   PURE_VIRTUAL(void create(const TextureCreateInfo &createInfo));
 

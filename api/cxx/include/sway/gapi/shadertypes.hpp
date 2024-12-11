@@ -8,20 +8,20 @@ NS_BEGIN(gapi)
 
 /**
  * @enum ShaderType::Enum
- * @brief Перечисление типов шейдера.
+ * \~russian @brief Перечисление типов шейдера.
  */
 
 /**
  * @var ShaderType::Enum::VERT
- * @brief Вершинный шейдер.
+ * \~russian @brief Вершинный шейдер.
  */
 
 /**
  * @var ShaderType::Enum::FRAG
- * @brief Фрагментный шейдер.
+ * \~russian @brief Фрагментный шейдер.
  */
 
-DECLARE_ENUM(ShaderType, VERT, FRAG);
+DECLARE_ENUM_IDX(ShaderType, VERT, FRAG);
 
 NS_END()  // namespace gapi
 NS_END()  // namespace sway

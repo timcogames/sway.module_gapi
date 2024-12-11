@@ -14,19 +14,15 @@ public:
   // TODO: temp
   PURE_VIRTUAL(void importRawdata2(void *data, i32_t offset, void *vertices));
 
-  // clang-format off
-  PURE_VIRTUAL(auto getComponent(u32_t idx) const -> void *);  // clang-format on
+  PURE_VIRTUAL(auto getComponent(u32_t idx) const -> void *);
 
-  // clang-format off
-  PURE_VIRTUAL(auto getDescriptor() -> VertexAttribDescriptor);  // clang-format on
+  PURE_VIRTUAL(auto getDescriptor() -> VertexAttribDescriptor);
 
   PURE_VIRTUAL(void use());
 
-  // clang-format off
-  PURE_VIRTUAL(auto getCapacity() -> i32_t);  // clang-format on
+  PURE_VIRTUAL(auto getCapacity() -> i32_t);
 
-  // clang-format off
-  PURE_VIRTUAL(auto isEnabled() const -> bool);  // clang-format on
+  PURE_VIRTUAL(auto isEnabled() const -> bool);
 };
 
 NS_END()  // namespace gapi

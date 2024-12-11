@@ -14,10 +14,14 @@ class FrameBuffer : public core::foundation::Uniqueable<ObjectUid_t> {
   DECLARE_PTR_ALIASES(FrameBuffer)
 
 public:
+#pragma region "Ctors/Dtor"
+
   FrameBuffer()
       : core::foundation::Uniqueable<ObjectUid_t>(std::nullopt) {}
 
-  virtual ~FrameBuffer() = default;
+  DTOR_VIRTUAL_DEFAULT(FrameBuffer);
+
+#pragma endregion
 
   PURE_VIRTUAL(void bind());
 

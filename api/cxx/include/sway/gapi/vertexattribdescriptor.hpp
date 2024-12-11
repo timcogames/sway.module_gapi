@@ -8,17 +8,17 @@ NS_BEGIN_SWAY()
 NS_BEGIN(gapi)
 
 /**
- * @brief Структура описания вершинного атрибута.
+ * \~russian @brief Структура описания вершинного атрибута.
  */
 struct VertexAttribDescriptor {
   i32_t location;
   const void *pointer;
 
   VertexSemantic semantic;
-  core::ValueDataType::Enum format;  // Формат данных.
-  i32_t numComponents;  // Количество компонентов.
+  core::ValueDataType::Enum format;  ///< Формат данных.
+  i32_t numComponents;  ///< Количество компонентов.
   i32_t stride;
-  bool normalized;  // Нормализация входных данных.
+  bool normalized;  ///< Нормализация входных данных.
   bool enabled;
 
   template <typename TAttribFormatType>

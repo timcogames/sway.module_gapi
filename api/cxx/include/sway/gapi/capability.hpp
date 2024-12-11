@@ -11,9 +11,13 @@ class Capability {
   DECLARE_PTR_ALIASES(Capability)
 
 public:
+#pragma region "Ctors/Dtor"
+
   Capability() = default;
 
-  virtual ~Capability() = default;
+  DTOR_VIRTUAL_DEFAULT(Capability);
+
+#pragma endregion
 
   PURE_VIRTUAL(auto getVersion() const -> core::Version);
 };

@@ -12,7 +12,7 @@ struct BufferDescriptor {
   BufferTarget::Enum target;
   BufferUsage::Enum usage;
   i32_t byteStride;
-  i32_t capacity;  // Количество элементов в массиве.
+  i32_t capacity;  ///< Количество элементов в массиве.
 
   BufferDescriptor()
       : target(BufferTarget::Enum::NONE)

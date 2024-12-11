@@ -11,8 +11,8 @@ NS_BEGIN_SWAY()
 NS_BEGIN(gapi)
 
 struct ShaderCreateInfo {
-  ShaderType::Enum type;  // Тип шейдера.
-  std::string code;  // Исходный код шейдера.
+  ShaderType::Enum type;  ///< Тип шейдера.
+  std::string code;  ///< Исходный код шейдера.
   ShaderPreprocessor::Ptr_t preprocessor;
 };
 

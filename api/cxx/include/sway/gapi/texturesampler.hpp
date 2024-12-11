@@ -13,7 +13,11 @@ class TextureSampler {
   DECLARE_PTR_ALIASES(TextureSampler)
 
 public:
-  virtual ~TextureSampler() = default;
+#pragma region "Ctors/Dtor"
+
+  DTOR_VIRTUAL_DEFAULT(TextureSampler);
+
+#pragma endregion
 
   PURE_VIRTUAL(void setWrapMode(TextureWrap::Enum wrapS, TextureWrap::Enum wrapT, TextureWrap::Enum wrapR));
 

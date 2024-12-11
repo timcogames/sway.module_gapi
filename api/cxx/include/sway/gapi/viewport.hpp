@@ -12,12 +12,16 @@ class Viewport {
   DECLARE_PTR_ALIASES(Viewport)
 
 public:
-  Viewport() {}
+#pragma region "Ctors/Dtor"
 
-  virtual ~Viewport() = default;
+  Viewport() = default;
+
+  DTOR_VIRTUAL_DEFAULT(Viewport);
+
+#pragma endregion
 
   /**
-   * @brief Устанавливает новые значения прямоугольной области.
+   * \~russian @brief Устанавливает новые значения прямоугольной области.
    *
    * @param[in] x Значение координаты по оси X.
    * @param[in] y Значение координаты по оси Y.
@@ -27,7 +31,7 @@ public:
   PURE_VIRTUAL(void set(i32_t x, i32_t y, i32_t w, i32_t h));
 
   /**
-   * @brief Устанавливает размер прямоугольной области.
+   * \~russian @brief Устанавливает размер прямоугольной области.
    *
    * @param[in] w Значение ширины.
    * @param[in] h Значение высоты.
@@ -35,12 +39,12 @@ public:
   PURE_VIRTUAL(void set(i32_t w, i32_t h));
 
   /**
-   * @brief Получает размер прямоугольной области.
+   * \~russian @brief Получает размер прямоугольной области.
    */
   PURE_VIRTUAL(auto get() const -> math::rect4i_t);
 
   /**
-   * @brief Получает соотношение сторон.
+   * \~russian @brief Получает соотношение сторон.
    */
   PURE_VIRTUAL(auto aspect() const -> f32_t);
 

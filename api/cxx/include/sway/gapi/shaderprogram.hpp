@@ -12,19 +12,23 @@ NS_BEGIN_SWAY()
 NS_BEGIN(gapi)
 
 /**
- * @brief Представление шейдерной программы.
+ * \~russian @brief Представление шейдерной программы.
  */
 class ShaderProgram : public core::foundation::Uniqueable<ObjectUid_t> {
   DECLARE_PTR_ALIASES(ShaderProgram)
 
 public:
+#pragma region "Ctors/Dtor"
+
   ShaderProgram()
       : core::foundation::Uniqueable<ObjectUid_t>(std::nullopt) {}
 
   DTOR_VIRTUAL_DEFAULT(ShaderProgram);
 
+#pragma endregion
+
   /**
-   * @brief Связывает шейдерный объект с программным объектом.
+   * \~russian @brief Связывает шейдерный объект с программным объектом.
    *
    * @param[in] shader Указатель на связываемый шейдерный объект.
    * @sa detach(std::pair<ShaderType::Enum, ShaderPtr_t>)
@@ -32,7 +36,7 @@ public:
   PURE_VIRTUAL(void attach(ShaderPtr_t shader));
 
   /**
-   * @brief Отсоединяет шейдерный объект от программного объекта.
+   * \~russian @brief Отсоединяет шейдерный объект от программного объекта.
    *
    * @param[in] pair Отвязываемый шейдерный объект.
    * @param[in] erasing Убрать из коллекции?.
@@ -43,35 +47,35 @@ public:
   PURE_VIRTUAL(auto getShader(ShaderType::Enum type) -> ShaderPtr_t);
 
   /**
-   * @brief Компонует программный объект.
+   * \~russian @brief Компонует программный объект.
    *
    * @sa isLinked() const
    */
   PURE_VIRTUAL(void link());
 
   /**
-   * @brief Возвращает статус компоновки.
+   * \~russian @brief Возвращает статус компоновки.
    *
    * @sa link()
    */
   PURE_VIRTUAL(auto isLinked() const -> bool);
 
   /**
-   * @brief Проверяет скомпоновонный объект на корректность.
+   * \~russian @brief Проверяет скомпоновонный объект на корректность.
    *
    * @sa isValidated() const
    */
   PURE_VIRTUAL(void validate());
 
   /**
-   * @brief Возвращает статус корректности скомпоновоного объекта.
+   * \~russian @brief Возвращает статус корректности скомпоновоного объекта.
    *
    * @sa validate()
    */
   PURE_VIRTUAL(auto isValidated() const -> bool);
 
   /**
-   * @brief Делает шейдерную программу активной.
+   * \~russian @brief Делает шейдерную программу активной.
    *
    * @sa unuse(),
    *     isUsed() const
@@ -79,7 +83,7 @@ public:
   PURE_VIRTUAL(void use());
 
   /**
-   * @brief Деактивирует шейдерную программу.
+   * \~russian @brief Деактивирует шейдерную программу.
    *
    * @sa use(),
    *     isUsed() const
@@ -87,8 +91,8 @@ public:
   PURE_VIRTUAL(void unuse());
 
   /**
-   * @brief Возвращает логическое значение, которое определяет,
-   *        является ли шейдерная программа активной в текущем состоянии рендеринга.
+   * \~russian @brief Возвращает логическое значение, которое определяет,
+   *                  является ли шейдерная программа активной в текущем состоянии рендеринга.
    *
    * @sa use(),
    *     unuse()
@@ -96,7 +100,7 @@ public:
   PURE_VIRTUAL(auto isUsed() const -> bool);
 
   /**
-   * @brief Передает значение uniform-переменной в шейдер.
+   * \~russian @brief Передает значение uniform-переменной в шейдер.
    *
    * @param[in] uniform Имя uniform-переменной.
    * @param[in] vec Значение uniform-переменной.
@@ -104,7 +108,7 @@ public:
   PURE_VIRTUAL(void setUniformVec4f(const std::string &uniform, const math::vec4f_t &vec));
 
   /**
-   * @brief Передает значение uniform-переменной в шейдер.
+   * \~russian @brief Передает значение uniform-переменной в шейдер.
    *
    * @param[in] uniform Имя uniform-переменной.
    * @param[in] col Значение uniform-переменной.

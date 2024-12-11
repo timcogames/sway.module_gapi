@@ -1,0 +1,14 @@
+#ifndef SWAY_GAPI_IDGENERATORTYPES_HPP
+#define SWAY_GAPI_IDGENERATORTYPES_HPP
+
+#include <sway/core.hpp>
+
+NS_BEGIN_SWAY()
+NS_BEGIN(gapi)
+
+DECLARE_ENUM_IDX(IdGeneratorType, BUFFER_OBJECT, TEXTURE, FRAME_BUFFER, RENDER_BUFFER)
+
+NS_END()  // namespace gapi
+NS_END()  // namespace sway
+
+#endif  // SWAY_GAPI_IDGENERATORTYPES_HPP

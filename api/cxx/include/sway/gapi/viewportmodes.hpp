@@ -8,7 +8,7 @@ NS_BEGIN(gapi)
 
 /**
  * @enum ViewportMode::Enum
- * @brief Перечисление поведения окна просмотра.
+ * \~russian @brief Перечисление поведения окна просмотра.
  */
 
 DECLARE_ENUM(ViewportMode, ENABLED, DISABLED, RENDER_TO_TEXTURE);

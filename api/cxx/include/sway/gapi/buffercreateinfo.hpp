@@ -9,7 +9,7 @@ NS_BEGIN(gapi)
 
 struct BufferCreateInfo {
   BufferDescriptor desc;
-  void *data;  // Первоначальный данные.
+  void *data;  ///< Первоначальный данные.
 };
 
 NS_END()  // namespace gapi

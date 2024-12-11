@@ -8,22 +8,22 @@ NS_BEGIN(gapi)
 
 /**
  * @enum TopologyType::Enum
- * @brief Перечисление типов топологии.
+ * \~russian @brief Перечисление внутренних типов отрисовки примитивов.
  */
 
 /**
  * @var TopologyType::Enum::POINT_LIST
- * @brief Список точек.
+ * \~russian @brief Список точек.
  */
 
 /**
  * @var TopologyType::Enum::LINE_LIST
- * @brief Список линий.
+ * \~russian @brief Список линий.
  */
 
 /**
  * @var TopologyType::Enum::TRIANGLE_LIST
- * @brief Список треугольников.
+ * \~russian @brief Список треугольников.
  */
 
 // clang-format off

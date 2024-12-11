@@ -12,38 +12,42 @@ NS_BEGIN_SWAY()
 NS_BEGIN(gapi)
 
 /**
- * @brief Представление шейдера.
+ * \~russian @brief Представление шейдера.
  */
 class Shader : public core::foundation::Uniqueable<ObjectUid_t> {
   DECLARE_PTR_ALIASES(Shader)
 
 public:
+#pragma region "Ctors/Dtor"
+
   /**
-   * @brief Конструктор класса.
+   * \~russian @brief Конструктор класса.
    *
    * @param[in] type Тип создаваемого шейдера.
    */
   Shader(ShaderType::Enum type)
       : core::foundation::Uniqueable<ObjectUid_t>(std::nullopt) {}
 
-  virtual ~Shader() = default;
+  DTOR_VIRTUAL_DEFAULT(Shader);
+
+#pragma endregion
 
   /**
-   * @brief Выполняет компиляцию шейдерного объекта.
+   * \~russian @brief Выполняет компиляцию шейдерного объекта.
    *
    * @param[in] source Исходный код шейдера.
    */
   PURE_VIRTUAL(void compile(lpcstr_t source));
 
   /**
-   * @brief Получает статус компиляции.
+   * \~russian @brief Получает статус компиляции.
    *
    * @return Если компиляция прошла успешно 'true', иначе 'false'.
    */
   PURE_VIRTUAL(auto isCompiled() const -> bool);
 
   /**
-   * @brief Получает ссылку на идентификатор атрибута вершинного шейдера.
+   * \~russian @brief Получает ссылку на идентификатор атрибута вершинного шейдера.
    *
    * @param[in] name Имя атрибута.
    * @return Ссылка на идентификатор атрибута.
@@ -51,7 +55,7 @@ public:
   PURE_VIRTUAL(auto getAttribLocation(ObjectUidOpt_t progId, lpcstr_t name) -> i32_t);
 
   /**
-   * @brief Получает тип шейдера.
+   * \~russian @brief Получает тип шейдера.
    *
    * @return Тип шейдера.
    */

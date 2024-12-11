@@ -12,22 +12,26 @@ class VertexAttribLayout {
   DECLARE_PTR_ALIASES(VertexAttribLayout)
 
 public:
-  virtual ~VertexAttribLayout() = default;
+#pragma region "Ctors/Dtor"
+
+  DTOR_VIRTUAL_DEFAULT(VertexAttribLayout);
+
+#pragma endregion
 
   /**
-   * @brief Добавляет вершинный атрибут.
+   * \~russian @brief Добавляет вершинный атрибут.
    *
    * @param[in] desc Описание вершинного атрибута.
    */
   PURE_VIRTUAL(void addAttribute(VertexAttribDescriptor desc));
 
   /**
-   * @brief Включает чтение атрибутов.
+   * \~russian @brief Включает чтение атрибутов.
    */
   PURE_VIRTUAL(void enable());
 
   /**
-   * @brief Отключает чтение атрибутов.
+   * \~russian @brief Отключает чтение атрибутов.
    */
   PURE_VIRTUAL(void disable());
 };

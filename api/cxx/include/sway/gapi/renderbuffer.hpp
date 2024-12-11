@@ -13,10 +13,14 @@ class RenderBuffer : public core::foundation::Uniqueable<ObjectUid_t> {
   DECLARE_PTR_ALIASES(RenderBuffer)
 
 public:
+#pragma region "Ctors/Dtor"
+
   RenderBuffer()
       : core::foundation::Uniqueable<ObjectUid_t>(std::nullopt) {}
 
-  virtual ~RenderBuffer() = default;
+  DTOR_VIRTUAL_DEFAULT(RenderBuffer);
+
+#pragma endregion
 
   PURE_VIRTUAL(void bind());
 

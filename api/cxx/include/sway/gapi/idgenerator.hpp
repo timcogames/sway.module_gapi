@@ -11,7 +11,11 @@ class IdGenerator {
   DECLARE_PTR_ALIASES(IdGenerator)
 
 public:
-  virtual ~IdGenerator() = default;
+#pragma region "Ctors/Dtor"
+
+  DTOR_VIRTUAL_DEFAULT(IdGenerator);
+
+#pragma endregion
 
   PURE_VIRTUAL(auto getNextUid() -> ObjectUid_t);
 };

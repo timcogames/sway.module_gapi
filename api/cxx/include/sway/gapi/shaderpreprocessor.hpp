@@ -13,9 +13,13 @@ class ShaderPreprocessor {
   DECLARE_PTR_ALIASES(ShaderPreprocessor)
 
 public:
-  ShaderPreprocessor() {}
+#pragma region "Ctors/Dtor"
 
-  virtual ~ShaderPreprocessor() = default;
+  ShaderPreprocessor() = default;
+
+  DTOR_VIRTUAL_DEFAULT(ShaderPreprocessor);
+
+#pragma endregion
 
   PURE_VIRTUAL(void addDefine(const std::string &name, const std::string &val));
 

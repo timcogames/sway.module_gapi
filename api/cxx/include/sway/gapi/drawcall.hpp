@@ -13,12 +13,16 @@ class DrawCall {
   DECLARE_PTR_ALIASES(DrawCall)
 
 public:
-  DrawCall() {}
+#pragma region "Ctors/Dtor"
 
-  virtual ~DrawCall() = default;
+  DrawCall() = default;
+
+  DTOR_VIRTUAL_DEFAULT(DrawCall);
+
+#pragma endregion
 
   /**
-   * @brief Выполняет отрисовку примитива.
+   * \~russian @brief Выполняет отрисовку примитива.
    *
    * @param[in] topology Топология примитива.
    * @param[in] bufset Набор буферных объектов.

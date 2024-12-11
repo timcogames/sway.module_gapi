@@ -21,6 +21,8 @@
 #include <sway/gapi/framebuffer.hpp>
 #include <sway/gapi/framebufferattachments.hpp>
 #include <sway/gapi/frontfaces.hpp>
+#include <sway/gapi/idgenerator.hpp>
+#include <sway/gapi/idgeneratortypes.hpp>
 #include <sway/gapi/pixelformats.hpp>
 #include <sway/gapi/pixelstoragemodes.hpp>
 #include <sway/gapi/polygonmodes.hpp>
@@ -125,6 +127,50 @@ struct ConcreatePluginFunctionSet : public core::PluginFunctionSet {
     createStateContext = nullptr;
     createRasterizerState = nullptr;
   }
+};
+
+struct PluginFunctionSetInterface : public core::PluginFunctionSet {
+#pragma region "Ctors/Dtor"
+
+  DTOR_VIRTUAL_DEFAULT(PluginFunctionSetInterface);
+
+#pragma endregion
+
+  PURE_VIRTUAL(auto createCapability() -> gapi::CapabilityPtr_t);
+
+  PURE_VIRTUAL(auto createShader(const gapi::ShaderCreateInfo &) -> gapi::ShaderPtr_t);
+
+  PURE_VIRTUAL(auto createShaderProgram() -> gapi::ShaderProgramPtr_t);
+
+  PURE_VIRTUAL(auto createBufferIdGenerator() -> gapi::IdGeneratorPtr_t);
+
+  PURE_VIRTUAL(auto createBuffer(gapi::IdGeneratorPtr_t, const gapi::BufferCreateInfo &) -> gapi::BufferPtr_t);
+
+  PURE_VIRTUAL(auto createFrameBufferIdGenerator() -> gapi::IdGeneratorPtr_t);
+
+  PURE_VIRTUAL(auto createFrameBuffer(gapi::IdGeneratorPtr_t) -> gapi::FrameBufferPtr_t);
+
+  PURE_VIRTUAL(auto createRenderBuffer() -> gapi::RenderBufferPtr_t);
+
+  PURE_VIRTUAL(auto createVertexArray() -> gapi::VertexArrayPtr_t);
+
+  PURE_VIRTUAL(auto createVertexAttribLayout(gapi::ShaderProgramPtr_t) -> gapi::VertexAttribLayoutPtr_t);
+
+  PURE_VIRTUAL(auto createTextureIdGenerator() -> gapi::IdGeneratorPtr_t);
+
+  PURE_VIRTUAL(auto createTexture(gapi::IdGeneratorPtr_t, const gapi::TextureCreateInfo &) -> gapi::TexturePtr_t);
+
+  PURE_VIRTUAL(auto createTextureSampler(gapi::TexturePtr_t) -> gapi::TextureSamplerPtr_t);
+
+  PURE_VIRTUAL(auto createDrawCall() -> gapi::DrawCallPtr_t);
+
+  PURE_VIRTUAL(auto createViewport() -> gapi::ViewportPtr_t);
+
+  PURE_VIRTUAL(auto createStateContext() -> gapi::StateContextPtr_t);
+
+  PURE_VIRTUAL(auto createShaderPreprocessor(u32_t, lpcstr_t) -> gapi::ShaderPreprocessor::Ptr_t);
+
+  PURE_VIRTUAL(auto createRasterizerState() -> gapi::StateEnableable<gapi::RasterizerDescriptor> *);
 };
 
 EXTERN_C_BEGIN

@@ -16,7 +16,11 @@ class StateContext {
   DECLARE_PTR_ALIASES(StateContext)
 
 public:
-  virtual ~StateContext() = default;
+#pragma region "Ctors/Dtor"
+
+  DTOR_VIRTUAL_DEFAULT(StateContext);
+
+#pragma endregion
 
   PURE_VIRTUAL(void setCapabilityEnable(StateCapability::Enum cap, bool enable));
 

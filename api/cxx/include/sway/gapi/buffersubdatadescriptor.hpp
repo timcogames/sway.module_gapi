@@ -7,9 +7,9 @@ NS_BEGIN_SWAY()
 NS_BEGIN(gapi)
 
 struct BufferSubdataDescriptor {
-  u32_t offset;  // Начало изменяемого блока данных.
-  u32_t size;  // Размер изменяемого блока данных.
-  const void *data;  // Область памяти, содержащая новые значения.
+  u32_t offset;  ///< Начало изменяемого блока данных.
+  u32_t size;  ///< Размер изменяемого блока данных.
+  const void *data;  ///< Область памяти, содержащая новые значения.
 };
 
 NS_END()  // namespace gapi

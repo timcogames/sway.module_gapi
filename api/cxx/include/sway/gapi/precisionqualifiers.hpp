@@ -7,9 +7,9 @@ NS_BEGIN_SWAY()
 NS_BEGIN(gapi)
 
 enum class PrecisionQualifier : u32_t {
-  LW,  // Low
-  MD,  // Medium
-  HI,  // Hight
+  LW,  ///< Low
+  MD,  ///< Medium
+  HI,  ///< Hight
   Latest
 };
 
