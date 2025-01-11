@@ -3,8 +3,7 @@
 
 #include <sway/core.hpp>
 
-NS_BEGIN_SWAY()
-NS_BEGIN(gapi)
+namespace sway::gapi {
 
 // clang-format off
 DECLARE_ENUM(TextureFilter,
@@ -17,7 +16,6 @@ DECLARE_ENUM(TextureFilter,
 );
 // clang-format on
 
-NS_END()  // namespace gapi
-NS_END()  // namespace sway
+}  // namespace sway::gapi
 
 #endif  // SWAY_GAPI_TEXTUREFILTERS_HPP

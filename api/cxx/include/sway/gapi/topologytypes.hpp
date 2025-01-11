@@ -3,8 +3,7 @@
 
 #include <sway/core.hpp>
 
-NS_BEGIN_SWAY()
-NS_BEGIN(gapi)
+namespace sway::gapi {
 
 /**
  * @enum TopologyType::Enum
@@ -34,7 +33,6 @@ DECLARE_ENUM(TopologyType,
 );
 // clang-format on
 
-NS_END()  // namespace gapi
-NS_END()  // namespace sway
+}  // namespace sway::gapi
 
 #endif  // SWAY_GAPI_TOPOLOGYTYPES_HPP

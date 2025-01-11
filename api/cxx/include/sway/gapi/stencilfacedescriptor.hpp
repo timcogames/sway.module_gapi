@@ -5,8 +5,7 @@
 #include <sway/gapi/comparefunctions.hpp>
 #include <sway/gapi/stenciloperations.hpp>
 
-NS_BEGIN_SWAY()
-NS_BEGIN(gapi)
+namespace sway::gapi {
 
 struct StencilFaceDescriptor {
   gapi::CompareFn::Enum func;
@@ -18,7 +17,6 @@ struct StencilFaceDescriptor {
   u32_t wmask;
 };
 
-NS_END()  // namespace gapi
-NS_END()  // namespace sway
+}  // namespace sway::gapi
 
 #endif  // SWAY_GAPI_STENCILFACEDESCRIPTOR_HPP

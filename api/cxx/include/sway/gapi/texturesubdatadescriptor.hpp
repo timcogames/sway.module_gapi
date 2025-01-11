@@ -5,8 +5,7 @@
 #include <sway/gapi/pixelformats.hpp>
 #include <sway/math.hpp>
 
-NS_BEGIN_SWAY()
-NS_BEGIN(gapi)
+namespace sway::gapi {
 
 struct TextureSubdataDescriptor {
   int level;
@@ -17,7 +16,6 @@ struct TextureSubdataDescriptor {
   const void *pixels;
 };
 
-NS_END()  // namespace gapi
-NS_END()  // namespace sway
+}  // namespace sway::gapi
 
 #endif  // SWAY_GAPI_TEXTURESUBDATADESCRIPTOR_HPP

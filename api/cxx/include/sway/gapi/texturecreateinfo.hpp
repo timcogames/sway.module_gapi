@@ -6,8 +6,7 @@
 #include <sway/gapi/texturetargets.hpp>
 #include <sway/math.hpp>
 
-NS_BEGIN_SWAY()
-NS_BEGIN(gapi)
+namespace sway::gapi {
 
 struct TextureCreateInfo {
   TextureTarget::Enum target;
@@ -20,7 +19,6 @@ struct TextureCreateInfo {
   u32_t sampleCount;
 };
 
-NS_END()  // namespace gapi
-NS_END()  // namespace sway
+}  // namespace sway::gapi
 
 #endif  // SWAY_GAPI_TEXTURECREATEINFO_HPP

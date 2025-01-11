@@ -5,12 +5,9 @@
 #include <sway/gapi/typedefs.hpp>
 #include <sway/gapi/vertexattribdescriptor.hpp>
 
-NS_BEGIN_SWAY()
-NS_BEGIN(gapi)
+namespace sway::gapi {
 
 class VertexAttribLayout {
-  DECLARE_PTR_ALIASES(VertexAttribLayout)
-
 public:
 #pragma region "Ctors/Dtor"
 
@@ -36,7 +33,6 @@ public:
   PURE_VIRTUAL(void disable());
 };
 
-NS_END()  // namespace gapi
-NS_END()  // namespace sway
+}  // namespace sway::gapi
 
 #endif  // SWAY_GAPI_VERTEXATTRIBLAYOUT_HPP

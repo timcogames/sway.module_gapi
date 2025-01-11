@@ -4,8 +4,7 @@
 #include <sway/core.hpp>
 #include <sway/gapi/statecapabilities.hpp>
 
-NS_BEGIN_SWAY()
-NS_BEGIN(gapi)
+namespace sway::gapi {
 
 class StateContext;
 
@@ -25,7 +24,6 @@ public:
   PURE_VIRTUAL(void apply(StateContext *state, const CONCRETE_DATA &data));
 };
 
-NS_END()  // namespace gapi
-NS_END()  // namespace sway
+}  // namespace sway::gapi
 
 #endif  // SWAY_GAPI_STATEENABLEABLE_HPP

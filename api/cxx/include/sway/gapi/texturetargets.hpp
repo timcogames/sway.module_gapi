@@ -3,12 +3,10 @@
 
 #include <sway/core.hpp>
 
-NS_BEGIN_SWAY()
-NS_BEGIN(gapi)
+namespace sway::gapi {
 
 DECLARE_ENUM(TextureTarget, TEX_2D, TEX_2D_ARRAY, MULTISAMPLE, MULTISAMPLE_ARRAY, RECT, CUBE_MAP);
 
-NS_END()  // namespace gapi
-NS_END()  // namespace sway
+}  // namespace sway::gapi
 
 #endif  // SWAY_GAPI_TEXTURETARGETS_HPP

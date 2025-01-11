@@ -65,27 +65,28 @@
 #  include <emscripten.h>
 #endif
 
-NS_BEGIN_SWAY()
-NS_BEGIN(gapi)
+namespace sway::gapi {
 
-using CreateCapabilityFunc_t = core::binding::TFunction<CapabilityPtr_t(void)>;
-using CreateShaderFunc_t = core::binding::TFunction<ShaderPtr_t(const struct ShaderCreateInfo &)>;
-using CreateShaderProgramFunc_t = core::binding::TFunction<ShaderProgramPtr_t(void)>;
-using CreateShaderPreprocessorFunc_t = core::binding::TFunction<ShaderPreprocessor::Ptr_t(u32_t, lpcstr_t)>;
-using CreateBufferIdGeneratorFunc_t = core::binding::TFunction<IdGeneratorPtr_t()>;
-using CreateBufferFunc_t = core::binding::TFunction<BufferPtr_t(IdGeneratorPtr_t, const struct BufferCreateInfo &)>;
-using CreateFrameBufferIdGeneratorFunc_t = core::binding::TFunction<IdGeneratorPtr_t()>;
-using CreateFrameBufferFunc_t = core::binding::TFunction<FrameBufferPtr_t(IdGeneratorPtr_t)>;
-using CreateRenderBufferFunc_t = core::binding::TFunction<RenderBufferPtr_t(void)>;
-using CreateVertexArrayFunc_t = core::binding::TFunction<VertexArrayPtr_t(void)>;
-using CreateVertexAttribLayoutFunc_t = core::binding::TFunction<VertexAttribLayoutPtr_t(ShaderProgramPtr_t)>;
-using CreateTextureIdGeneratorFunc_t = core::binding::TFunction<IdGeneratorPtr_t()>;
-using CreateTextureFunc_t = core::binding::TFunction<TexturePtr_t(IdGeneratorPtr_t, const struct TextureCreateInfo &)>;
-using CreateTextureSamplerFunc_t = core::binding::TFunction<TextureSamplerPtr_t(TexturePtr_t)>;
-using CreateDrawCallFunc_t = core::binding::TFunction<DrawCallPtr_t(void)>;
-using CreateViewportFunc_t = core::binding::TFunction<ViewportPtr_t(void)>;
-using CreateStateContextFunc_t = core::binding::TFunction<StateContextPtr_t(void)>;
-using CreateRasterizerStateFunc_t = core::binding::TFunction<StateEnableable<RasterizerDescriptor> *(void)>;
+using CreateCapabilityFunc_t = core::TFunction<typedefs::CapabilityPtr_t(void)>;
+using CreateShaderFunc_t = core::TFunction<typedefs::ShaderPtr_t(const struct ShaderCreateInfo &)>;
+using CreateShaderProgramFunc_t = core::TFunction<typedefs::ShaderProgramPtr_t(void)>;
+using CreateShaderPreprocessorFunc_t = core::TFunction<typedefs::ShaderPreprocessorPtr_t(u32_t, lpcstr_t)>;
+using CreateBufferIdGeneratorFunc_t = core::TFunction<typedefs::IdGeneratorPtr_t()>;
+using CreateBufferFunc_t =
+    core::TFunction<typedefs::BufferPtr_t(typedefs::IdGeneratorPtr_t, const struct BufferCreateInfo &)>;
+using CreateFrameBufferIdGeneratorFunc_t = core::TFunction<typedefs::IdGeneratorPtr_t()>;
+using CreateFrameBufferFunc_t = core::TFunction<typedefs::FrameBufferPtr_t(typedefs::IdGeneratorPtr_t)>;
+using CreateRenderBufferFunc_t = core::TFunction<typedefs::RenderBufferPtr_t(void)>;
+using CreateVertexArrayFunc_t = core::TFunction<typedefs::VertexArrayPtr_t(void)>;
+using CreateVertexAttribLayoutFunc_t = core::TFunction<typedefs::VertexAttribLayoutPtr_t(typedefs::ShaderProgramPtr_t)>;
+using CreateTextureIdGeneratorFunc_t = core::TFunction<typedefs::IdGeneratorPtr_t()>;
+using CreateTextureFunc_t =
+    core::TFunction<typedefs::TexturePtr_t(typedefs::IdGeneratorPtr_t, const struct TextureCreateInfo &)>;
+using CreateTextureSamplerFunc_t = core::TFunction<typedefs::TextureSamplerPtr_t(typedefs::TexturePtr_t)>;
+using CreateDrawCallFunc_t = core::TFunction<typedefs::DrawCallPtr_t(void)>;
+using CreateViewportFunc_t = core::TFunction<typedefs::ViewportPtr_t(void)>;
+using CreateStateContextFunc_t = core::TFunction<typedefs::StateContextPtr_t(void)>;
+using CreateRasterizerStateFunc_t = core::TFunction<StateEnableable<RasterizerDescriptor> *(void)>;
 
 struct ConcreatePluginFunctionSet : public core::PluginFunctionSet {
   CreateCapabilityFunc_t createCapability;
@@ -136,41 +137,41 @@ struct PluginFunctionSetInterface : public core::PluginFunctionSet {
 
 #pragma endregion
 
-  PURE_VIRTUAL(auto createCapability() -> gapi::CapabilityPtr_t);
+  PURE_VIRTUAL(auto createCapability() -> typedefs::CapabilityPtr_t);
 
-  PURE_VIRTUAL(auto createShader(const gapi::ShaderCreateInfo &) -> gapi::ShaderPtr_t);
+  PURE_VIRTUAL(auto createShader(const ShaderCreateInfo &) -> typedefs::ShaderPtr_t);
 
-  PURE_VIRTUAL(auto createShaderProgram() -> gapi::ShaderProgramPtr_t);
+  PURE_VIRTUAL(auto createShaderProgram() -> typedefs::ShaderProgramPtr_t);
 
-  PURE_VIRTUAL(auto createBufferIdGenerator() -> gapi::IdGeneratorPtr_t);
+  PURE_VIRTUAL(auto createBufferIdGenerator() -> typedefs::IdGeneratorPtr_t);
 
-  PURE_VIRTUAL(auto createBuffer(gapi::IdGeneratorPtr_t, const gapi::BufferCreateInfo &) -> gapi::BufferPtr_t);
+  PURE_VIRTUAL(auto createBuffer(typedefs::IdGeneratorPtr_t, const BufferCreateInfo &) -> typedefs::BufferPtr_t);
 
-  PURE_VIRTUAL(auto createFrameBufferIdGenerator() -> gapi::IdGeneratorPtr_t);
+  PURE_VIRTUAL(auto createFrameBufferIdGenerator() -> typedefs::IdGeneratorPtr_t);
 
-  PURE_VIRTUAL(auto createFrameBuffer(gapi::IdGeneratorPtr_t) -> gapi::FrameBufferPtr_t);
+  PURE_VIRTUAL(auto createFrameBuffer(typedefs::IdGeneratorPtr_t) -> typedefs::FrameBufferPtr_t);
 
-  PURE_VIRTUAL(auto createRenderBuffer() -> gapi::RenderBufferPtr_t);
+  PURE_VIRTUAL(auto createRenderBuffer() -> typedefs::RenderBufferPtr_t);
 
-  PURE_VIRTUAL(auto createVertexArray() -> gapi::VertexArrayPtr_t);
+  PURE_VIRTUAL(auto createVertexArray() -> typedefs::VertexArrayPtr_t);
 
-  PURE_VIRTUAL(auto createVertexAttribLayout(gapi::ShaderProgramPtr_t) -> gapi::VertexAttribLayoutPtr_t);
+  PURE_VIRTUAL(auto createVertexAttribLayout(typedefs::ShaderProgramPtr_t) -> typedefs::VertexAttribLayoutPtr_t);
 
-  PURE_VIRTUAL(auto createTextureIdGenerator() -> gapi::IdGeneratorPtr_t);
+  PURE_VIRTUAL(auto createTextureIdGenerator() -> typedefs::IdGeneratorPtr_t);
 
-  PURE_VIRTUAL(auto createTexture(gapi::IdGeneratorPtr_t, const gapi::TextureCreateInfo &) -> gapi::TexturePtr_t);
+  PURE_VIRTUAL(auto createTexture(typedefs::IdGeneratorPtr_t, const TextureCreateInfo &) -> typedefs::TexturePtr_t);
 
-  PURE_VIRTUAL(auto createTextureSampler(gapi::TexturePtr_t) -> gapi::TextureSamplerPtr_t);
+  PURE_VIRTUAL(auto createTextureSampler(typedefs::TexturePtr_t) -> typedefs::TextureSamplerPtr_t);
 
-  PURE_VIRTUAL(auto createDrawCall() -> gapi::DrawCallPtr_t);
+  PURE_VIRTUAL(auto createDrawCall() -> typedefs::DrawCallPtr_t);
 
-  PURE_VIRTUAL(auto createViewport() -> gapi::ViewportPtr_t);
+  PURE_VIRTUAL(auto createViewport() -> typedefs::ViewportPtr_t);
 
-  PURE_VIRTUAL(auto createStateContext() -> gapi::StateContextPtr_t);
+  PURE_VIRTUAL(auto createStateContext() -> typedefs::StateContextPtr_t);
 
-  PURE_VIRTUAL(auto createShaderPreprocessor(u32_t, lpcstr_t) -> gapi::ShaderPreprocessor::Ptr_t);
+  PURE_VIRTUAL(auto createShaderPreprocessor(u32_t, lpcstr_t) -> typedefs::ShaderPreprocessorPtr_t);
 
-  PURE_VIRTUAL(auto createRasterizerState() -> gapi::StateEnableable<gapi::RasterizerDescriptor> *);
+  PURE_VIRTUAL(auto createRasterizerState() -> StateEnableable<RasterizerDescriptor> *);
 };
 
 EXTERN_C_BEGIN
@@ -181,7 +182,6 @@ D_MODULE_GAPI_INTERFACE_EXPORT_API void pluginInitialize(core::PluginFunctionSet
 
 EXTERN_C_END
 
-NS_END()  // namespace gapi
-NS_END()  // namespace sway
+}  // namespace sway::gapi
 
 #endif  // SWAY_GAPI_HPP

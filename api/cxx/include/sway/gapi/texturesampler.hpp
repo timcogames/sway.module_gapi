@@ -6,12 +6,9 @@
 #include <sway/gapi/texturewraps.hpp>
 #include <sway/gapi/typedefs.hpp>
 
-NS_BEGIN_SWAY()
-NS_BEGIN(gapi)
+namespace sway::gapi {
 
 class TextureSampler {
-  DECLARE_PTR_ALIASES(TextureSampler)
-
 public:
 #pragma region "Ctors/Dtor"
 
@@ -24,7 +21,6 @@ public:
   PURE_VIRTUAL(void setFilterMode(TextureFilter::Enum minFilter, TextureFilter::Enum magFilter));
 };
 
-NS_END()  // namespace gapi
-NS_END()  // namespace sway
+}  // namespace sway::gapi
 
 #endif  // SWAY_GAPI_TEXTURESAMPLER_HPP

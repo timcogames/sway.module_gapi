@@ -5,19 +5,15 @@
 #include <sway/gapi/typedefs.hpp>
 #include <sway/gapi/vertexattribdescriptor.hpp>
 
-NS_BEGIN_SWAY()
-NS_BEGIN(gapi)
+namespace sway::gapi {
 
 class VertexArray {
-  DECLARE_PTR_ALIASES(VertexArray)
-
 public:
   PURE_VIRTUAL(void bind());
 
   PURE_VIRTUAL(void unbind());
 };
 
-NS_END()  // namespace gapi
-NS_END()  // namespace sway
+}  // namespace sway::gapi
 
 #endif  // SWAY_GAPI_VERTEXARRAY_HPP

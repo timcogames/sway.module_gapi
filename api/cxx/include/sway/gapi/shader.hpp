@@ -8,15 +8,12 @@
 
 #include <optional>  // std::optional, std::nullopt
 
-NS_BEGIN_SWAY()
-NS_BEGIN(gapi)
+namespace sway::gapi {
 
 /**
  * \~russian @brief Представление шейдера.
  */
-class Shader : public core::foundation::Uniqueable<ObjectUid_t> {
-  DECLARE_PTR_ALIASES(Shader)
-
+class Shader : public core::Uniqueable<ObjectUid_t> {
 public:
 #pragma region "Ctors/Dtor"
 
@@ -26,7 +23,7 @@ public:
    * @param[in] type Тип создаваемого шейдера.
    */
   Shader(ShaderType::Enum type)
-      : core::foundation::Uniqueable<ObjectUid_t>(std::nullopt) {}
+      : core::Uniqueable<ObjectUid_t>(std::nullopt) {}
 
   DTOR_VIRTUAL_DEFAULT(Shader);
 
@@ -62,7 +59,6 @@ public:
   PURE_VIRTUAL(auto getType() const -> ShaderType::Enum);
 };
 
-NS_END()  // namespace gapi
-NS_END()  // namespace sway
+}  // namespace sway::gapi
 
 #endif  // SWAY_GAPI_SHADER_HPP

@@ -10,22 +10,19 @@
 #include <sway/gapi/bufferusages.hpp>
 #include <sway/gapi/typedefs.hpp>
 
-NS_BEGIN_SWAY()
-NS_BEGIN(gapi)
+namespace sway::gapi {
 
 /**
  * \~russian @brief Представление аппаратного буфера.
  */
-class Buffer : public core::foundation::Uniqueable<ObjectUid_t> {
-  DECLARE_PTR_ALIASES(Buffer)
-
+class Buffer : public core::Uniqueable<ObjectUid_t> {
 public:
   struct BindFunctor {
-    void operator()(BufferPtr_t buf) { buf->bind(); }
+    void operator()(typedefs::BufferPtr_t buf) { buf->bind(); }
   };
 
   struct UnbindFunctor {
-    void operator()(BufferPtr_t buf) { buf->unbind(); }
+    void operator()(typedefs::BufferPtr_t buf) { buf->unbind(); }
   };
 
 #pragma region "Ctors/Dtor"
@@ -36,7 +33,7 @@ public:
    * @param[in] desc Описание буфера.
    */
   Buffer(const BufferDescriptor &desc)
-      : core::foundation::Uniqueable<ObjectUid_t>(std::nullopt) {}
+      : core::Uniqueable<ObjectUid_t>(std::nullopt) {}
 
   DTOR_VIRTUAL_DEFAULT(Buffer);
 
@@ -69,7 +66,7 @@ public:
 
   PURE_VIRTUAL(auto map(BufferMapAccess::Enum flags) -> void *);
 
-  PURE_VIRTUAL(auto mapRange(i32_t offset, i32_t len, core::detail::EnumClassBitset<BufferMapRangeAccess::Enum> bitset)
+  PURE_VIRTUAL(auto mapRange(i32_t offset, i32_t len, core::EnumClassBitset<BufferMapRangeAccess::Enum> bitset)
           -> void *);
 
   PURE_VIRTUAL(void unmap());
@@ -111,7 +108,6 @@ public:
   PURE_VIRTUAL(auto getByteStride() const -> i32_t);
 };
 
-NS_END()  // namespace gapi
-NS_END()  // namespace sway
+}  // namespace sway::gapi
 
 #endif  // SWAY_GAPI_BUFFER_HPP

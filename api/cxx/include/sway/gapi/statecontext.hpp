@@ -9,12 +9,9 @@
 #include <sway/gapi/stenciloperations.hpp>
 #include <sway/gapi/typedefs.hpp>
 
-NS_BEGIN_SWAY()
-NS_BEGIN(gapi)
+namespace sway::gapi {
 
 class StateContext {
-  DECLARE_PTR_ALIASES(StateContext)
-
 public:
 #pragma region "Ctors/Dtor"
 
@@ -55,7 +52,6 @@ public:
   PURE_VIRTUAL(void setPolygonMode(PolygonMode::Enum mode));
 };
 
-NS_END()  // namespace gapi
-NS_END()  // namespace sway
+}  // namespace sway::gapi
 
 #endif  // SWAY_GAPI_STATECONTEXT_HPP

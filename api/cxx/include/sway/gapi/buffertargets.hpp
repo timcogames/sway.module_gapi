@@ -3,12 +3,10 @@
 
 #include <sway/core.hpp>
 
-NS_BEGIN_SWAY()
-NS_BEGIN(gapi)
+namespace sway::gapi {
 
 DECLARE_ENUM(BufferTarget, ARRAY, ELEMENT_ARRAY, UNIFORM, TEXTURE);
 
-NS_END()  // namespace gapi
-NS_END()  // namespace sway
+}  // namespace sway::gapi
 
 #endif  // SWAY_GAPI_BUFFERTARGETS_HPP

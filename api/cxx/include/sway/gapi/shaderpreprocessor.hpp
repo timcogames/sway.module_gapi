@@ -6,12 +6,9 @@
 #include <memory>
 #include <string>
 
-NS_BEGIN_SWAY()
-NS_BEGIN(gapi)
+namespace sway::gapi {
 
 class ShaderPreprocessor {
-  DECLARE_PTR_ALIASES(ShaderPreprocessor)
-
 public:
 #pragma region "Ctors/Dtor"
 
@@ -26,7 +23,6 @@ public:
   PURE_VIRTUAL(auto hasDefined(const std::string &name) const -> bool);
 };
 
-NS_END()  // namespace gapi
-NS_END()  // namespace sway
+}  // namespace sway::gapi
 
 #endif  // SWAY_GAPI_SHADERPREPROCESSOR_HPP

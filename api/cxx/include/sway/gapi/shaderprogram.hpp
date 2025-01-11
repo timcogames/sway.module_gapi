@@ -8,20 +8,17 @@
 
 #include <string>
 
-NS_BEGIN_SWAY()
-NS_BEGIN(gapi)
+namespace sway::gapi {
 
 /**
  * \~russian @brief Представление шейдерной программы.
  */
-class ShaderProgram : public core::foundation::Uniqueable<ObjectUid_t> {
-  DECLARE_PTR_ALIASES(ShaderProgram)
-
+class ShaderProgram : public core::Uniqueable<ObjectUid_t> {
 public:
 #pragma region "Ctors/Dtor"
 
   ShaderProgram()
-      : core::foundation::Uniqueable<ObjectUid_t>(std::nullopt) {}
+      : core::Uniqueable<ObjectUid_t>(std::nullopt) {}
 
   DTOR_VIRTUAL_DEFAULT(ShaderProgram);
 
@@ -33,7 +30,7 @@ public:
    * @param[in] shader Указатель на связываемый шейдерный объект.
    * @sa detach(std::pair<ShaderType::Enum, ShaderPtr_t>)
    */
-  PURE_VIRTUAL(void attach(ShaderPtr_t shader));
+  PURE_VIRTUAL(void attach(typedefs::ShaderPtr_t shader));
 
   /**
    * \~russian @brief Отсоединяет шейдерный объект от программного объекта.
@@ -42,9 +39,9 @@ public:
    * @param[in] erasing Убрать из коллекции?.
    * @sa attach(ShaderPtr_t)
    */
-  PURE_VIRTUAL(void detach(std::pair<ShaderType::Enum, ShaderPtr_t> pair, bool erasing));
+  PURE_VIRTUAL(void detach(std::pair<ShaderType::Enum, typedefs::ShaderPtr_t> pair, bool erasing));
 
-  PURE_VIRTUAL(auto getShader(ShaderType::Enum type) -> ShaderPtr_t);
+  PURE_VIRTUAL(auto getShader(ShaderType::Enum type) -> typedefs::ShaderPtr_t);
 
   /**
    * \~russian @brief Компонует программный объект.
@@ -122,7 +119,6 @@ public:
   PURE_VIRTUAL(void setUniform1f(const std::string &uniform, f32_t val));
 };
 
-NS_END()  // namespace gapi
-NS_END()  // namespace sway
+}  // namespace sway::gapi
 
 #endif  // SWAY_GAPI_SHADERPROGRAM_HPP

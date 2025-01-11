@@ -3,8 +3,7 @@
 
 #include <sway/core.hpp>
 
-NS_BEGIN_SWAY()
-NS_BEGIN(gapi)
+namespace sway::gapi {
 
 /**
  * @enum ViewportMode::Enum
@@ -13,7 +12,6 @@ NS_BEGIN(gapi)
 
 DECLARE_ENUM(ViewportMode, ENABLED, DISABLED, RENDER_TO_TEXTURE);
 
-NS_END()  // namespace gapi
-NS_END()  // namespace sway
+}  // namespace sway::gapi
 
 #endif  // SWAY_GAPI_VIEWPORTMODES_HPP

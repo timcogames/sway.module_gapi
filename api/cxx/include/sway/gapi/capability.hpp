@@ -4,12 +4,9 @@
 #include <sway/core.hpp>
 #include <sway/gapi/typedefs.hpp>
 
-NS_BEGIN_SWAY()
-NS_BEGIN(gapi)
+namespace sway::gapi {
 
 class Capability {
-  DECLARE_PTR_ALIASES(Capability)
-
 public:
 #pragma region "Ctors/Dtor"
 
@@ -22,7 +19,6 @@ public:
   PURE_VIRTUAL(auto getVersion() const -> core::Version);
 };
 
-NS_END()  // namespace gapi
-NS_END()  // namespace sway
+}  // namespace sway::gapi
 
 #endif  // SWAY_GAPI_CAPABILITY_HPP

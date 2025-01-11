@@ -7,34 +7,34 @@
 #include <sway/gapi/texture.hpp>
 #include <sway/gapi/typedefs.hpp>
 
-NS_BEGIN_SWAY()
-NS_BEGIN(gapi)
+namespace sway::gapi {
 
-class FrameBuffer : public core::foundation::Uniqueable<ObjectUid_t> {
-  DECLARE_PTR_ALIASES(FrameBuffer)
-
+class FrameBuffer : public core::Uniqueable<ObjectUid_t> {
 public:
 #pragma region "Ctors/Dtor"
 
   FrameBuffer()
-      : core::foundation::Uniqueable<ObjectUid_t>(std::nullopt) {}
+      : core::Uniqueable<ObjectUid_t>(std::nullopt) {}
 
-  DTOR_VIRTUAL_DEFAULT(FrameBuffer);
+  virtual ~FrameBuffer() = default;
 
 #pragma endregion
 
-  PURE_VIRTUAL(void bind());
+#pragma region "Pure virtual methods"
 
-  PURE_VIRTUAL(void unbind());
+  virtual void bind() = 0;
 
-  PURE_VIRTUAL(void attach(FrameBufferAttachment::Enum attachment, TexturePtr_t tex, i32_t mipLevels));
+  virtual void unbind() = 0;
 
-  PURE_VIRTUAL(void attach(FrameBufferAttachment::Enum attachment, RenderBufferPtr_t buf));
+  virtual void attach(FrameBufferAttachment::Enum attachment, typedefs::TexturePtr_t tex, i32_t mipLevels) = 0;
 
-  PURE_VIRTUAL(void drawBuffers(i32_t num, const u32_t *bufs));
+  virtual void attach(FrameBufferAttachment::Enum attachment, typedefs::RenderBufferPtr_t buf) = 0;
+
+  virtual void drawBuffers(i32_t num, const u32_t *bufs) = 0;
+
+#pragma endregion
 };
 
-NS_END()  // namespace gapi
-NS_END()  // namespace sway
+}  // namespace sway::gapi
 
 #endif  // SWAY_GAPI_FRAMEBUFFER_HPP

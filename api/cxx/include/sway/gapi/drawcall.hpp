@@ -6,12 +6,9 @@
 #include <sway/gapi/topologytypes.hpp>
 #include <sway/gapi/typedefs.hpp>
 
-NS_BEGIN_SWAY()
-NS_BEGIN(gapi)
+namespace sway::gapi {
 
 class DrawCall {
-  DECLARE_PTR_ALIASES(DrawCall)
-
 public:
 #pragma region "Ctors/Dtor"
 
@@ -31,7 +28,6 @@ public:
   PURE_VIRTUAL(void execute(TopologyType::Enum topology, BufferSet bufset, core::ValueDataType::Enum type));
 };
 
-NS_END()  // namespace gapi
-NS_END()  // namespace sway
+}  // namespace sway::gapi
 
 #endif  // SWAY_GAPI_DRAWCALL_HPP

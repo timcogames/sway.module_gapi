@@ -4,16 +4,14 @@
 #include <sway/core.hpp>
 #include <sway/gapi/typedefs.hpp>
 
-NS_BEGIN_SWAY()
-NS_BEGIN(gapi)
+namespace sway::gapi {
 
 struct BufferSet {
-  VertexArrayPtr_t vao;
-  BufferPtr_t vbo;
-  BufferPtr_t ebo;
+  typedefs::VertexArrayPtr_t vao;
+  typedefs::BufferPtr_t vbo;
+  typedefs::BufferPtr_t ebo;
 };
 
-NS_END()  // namespace gapi
-NS_END()  // namespace sway
+}  // namespace sway::gapi
 
 #endif  // SWAY_GAPI_BUFFERSET_HPP

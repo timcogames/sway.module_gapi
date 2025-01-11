@@ -8,17 +8,14 @@
 #include <sway/gapi/typedefs.hpp>
 #include <sway/math.hpp>
 
-NS_BEGIN_SWAY()
-NS_BEGIN(gapi)
+namespace sway::gapi {
 
-class Texture : public core::foundation::Uniqueable<ObjectUid_t> {
-  DECLARE_PTR_ALIASES(Texture)
-
+class Texture : public core::Uniqueable<ObjectUid_t> {
 public:
 #pragma region "Ctors/Dtor"
 
   Texture()
-      : core::foundation::Uniqueable<ObjectUid_t>(std::nullopt) {}
+      : core::Uniqueable<ObjectUid_t>(std::nullopt) {}
 
   DTOR_VIRTUAL_DEFAULT(Texture);
 
@@ -39,7 +36,6 @@ public:
   PURE_VIRTUAL(auto getTarget() -> TextureTarget::Enum);
 };
 
-NS_END()  // namespace gapi
-NS_END()  // namespace sway
+}  // namespace sway::gapi
 
 #endif  // SWAY_GAPI_TEXTURE_HPP

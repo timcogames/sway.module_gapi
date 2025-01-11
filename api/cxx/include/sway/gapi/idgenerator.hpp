@@ -4,23 +4,29 @@
 #include <sway/core.hpp>
 #include <sway/gapi/typedefs.hpp>
 
-NS_BEGIN_SWAY()
-NS_BEGIN(gapi)
+namespace sway::gapi {
 
 class IdGenerator {
-  DECLARE_PTR_ALIASES(IdGenerator)
-
 public:
 #pragma region "Ctors/Dtor"
+  /** \~english @name Constructor & Destructor */ /** \~russian @name Конструктор и Деструктор */
+  /** @{ */
 
-  DTOR_VIRTUAL_DEFAULT(IdGenerator);
+  virtual ~IdGenerator() = default;
 
+  /** @} */
 #pragma endregion
 
-  PURE_VIRTUAL(auto getNextUid() -> ObjectUid_t);
+#pragma region "Pure virtual methods"
+  /** \~english @name Pure virtual methods */ /** \~russian @name Чисто виртуальные методы */
+  /** @{ */
+
+  virtual auto getNextUid() -> ObjectUid_t = 0;
+
+  /** @} */
+#pragma endregion
 };
 
-NS_END()  // namespace gapi
-NS_END()  // namespace sway
+}  // namespace sway::gapi
 
 #endif  // SWAY_GAPI_IDGENERATOR_HPP

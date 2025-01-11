@@ -6,14 +6,11 @@
 
 #include <string>
 
-NS_BEGIN_SWAY()
-NS_BEGIN(gapi)
+namespace sway::gapi {
 
 // enum class UniformType : u32_t { MAT4, FLOAT, INT, BOOLEAN, VEC2, VEC3, VEC4, TRANSFORM, COL, SAMPLER };
 
 struct Uniform {
-  DECLARE_PTR_ALIASES(Uniform)
-
   static const int maxUniformNameSize = 24;
 
   i32_t location;
@@ -27,7 +24,6 @@ struct Uniform {
   PURE_VIRTUAL(u32_t getType() const);
 };
 
-NS_END()  // namespace gapi
-NS_END()  // namespace sway
+}  // namespace sway::gapi
 
 #endif  // SWAY_GAPI_UNIFORM_HPP

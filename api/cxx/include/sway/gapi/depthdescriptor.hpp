@@ -4,8 +4,7 @@
 #include <sway/core.hpp>
 #include <sway/gapi/comparefunctions.hpp>
 
-NS_BEGIN_SWAY()
-NS_BEGIN(gapi)
+namespace sway::gapi {
 
 struct DepthDescriptor {
   bool enabled;
@@ -15,7 +14,6 @@ struct DepthDescriptor {
   f64_t far;
 };
 
-NS_END()  // namespace gapi
-NS_END()  // namespace sway
+}  // namespace sway::gapi
 
 #endif  // SWAY_GAPI_DEPTHDESCRIPTOR_HPP

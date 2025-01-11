@@ -3,8 +3,7 @@
 
 #include <sway/core.hpp>
 
-NS_BEGIN_SWAY()
-NS_BEGIN(gapi)
+namespace sway::gapi {
 
 enum class VertexSemantic : u32_t {
   NONE = 0,
@@ -26,8 +25,7 @@ enum class VertexSemantic : u32_t {
   Latest
 };
 
-NS_END()  // namespace gapi
-NS_END()  // namespace sway
+}  // namespace sway::gapi
 
 #include <sway/gapi/vertexsemantics.inl>
 

@@ -3,12 +3,10 @@
 
 #include <sway/core.hpp>
 
-NS_BEGIN_SWAY()
-NS_BEGIN(gapi)
+namespace sway::gapi {
 
 DECLARE_ENUM(PixelStorageMode, UNPACK_ALIGNMENT, UNPACK_ROW_LENGTH);
 
-NS_END()  // namespace gapi
-NS_END()  // namespace sway
+}  // namespace sway::gapi
 
 #endif  // SWAY_GAPI_PIXELSTORAGEMODES_HPP

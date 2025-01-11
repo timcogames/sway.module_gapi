@@ -5,12 +5,9 @@
 #include <sway/gapi/typedefs.hpp>
 #include <sway/math.hpp>
 
-NS_BEGIN_SWAY()
-NS_BEGIN(gapi)
+namespace sway::gapi {
 
 class Viewport {
-  DECLARE_PTR_ALIASES(Viewport)
-
 public:
 #pragma region "Ctors/Dtor"
 
@@ -53,7 +50,6 @@ public:
   PURE_VIRTUAL(void clear(ClearFlag flags));
 };
 
-NS_END()  // namespace gapi
-NS_END()  // namespace sway
+}  // namespace sway::gapi
 
 #endif  // SWAY_GAPI_VIEWPORT_HPP

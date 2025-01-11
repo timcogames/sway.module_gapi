@@ -3,8 +3,7 @@
 
 #include <sway/core.hpp>
 
-NS_BEGIN_SWAY()
-NS_BEGIN(gapi)
+namespace sway::gapi {
 
 enum class PrecisionQualifier : u32_t {
   LW,  ///< Low
@@ -13,8 +12,7 @@ enum class PrecisionQualifier : u32_t {
   Latest
 };
 
-NS_END()  // namespace gapi
-NS_END()  // namespace sway
+}  // namespace sway::gapi
 
 #include <sway/gapi/precisionqualifiers.inl>
 

@@ -3,8 +3,7 @@
 
 #include <sway/core.hpp>
 
-NS_BEGIN_SWAY()
-NS_BEGIN(gapi)
+namespace sway::gapi {
 
 /**
  * @enum ShaderType::Enum
@@ -23,8 +22,7 @@ NS_BEGIN(gapi)
 
 DECLARE_ENUM_IDX(ShaderType, VERT, FRAG);
 
-NS_END()  // namespace gapi
-NS_END()  // namespace sway
+}  // namespace sway::gapi
 
 #include <sway/gapi/shadertypes.inl>
 

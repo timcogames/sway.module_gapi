@@ -3,8 +3,7 @@
 
 #include <sway/core.hpp>
 
-NS_BEGIN_SWAY()
-NS_BEGIN(gapi)
+namespace sway::gapi {
 
 // clang-format off
 enum class ClearFlag : u8_t {
@@ -23,7 +22,6 @@ inline constexpr ClearFlag operator|(ClearFlag lhs, ClearFlag rhs) {
   return static_cast<ClearFlag>(static_cast<u8_t>(lhs) | static_cast<u8_t>(rhs));
 }
 
-NS_END()  // namespace gapi
-NS_END()  // namespace sway
+}  // namespace sway::gapi
 
 #endif  // SWAY_GAPI_CLEARFLAGS_HPP

@@ -3,8 +3,7 @@
 
 #include <sway/core.hpp>
 
-NS_BEGIN_SWAY()
-NS_BEGIN(gapi)
+namespace sway::gapi {
 
 // clang-format off
 DECLARE_ENUM(CompareFn,
@@ -19,7 +18,6 @@ DECLARE_ENUM(CompareFn,
 );
 // clang-format on
 
-NS_END()  // namespace gapi
-NS_END()  // namespace sway
+}  // namespace sway::gapi
 
 #endif  // SWAY_GAPI_COMPAREFUNCTIONS_HPP
