@@ -5,7 +5,13 @@
 
 namespace sway::gapi {
 
-DECLARE_ENUM(PolygonMode, FILL, LINE);
+// clang-format off
+#define PILYGON_MODE_LIST(ITEM) \
+  ITEM(FILL, 1) \
+  ITEM(LINE, 2)
+// clang-format on
+
+DECLARE_ENUM_U32(PolygonMode, PILYGON_MODE_LIST)
 
 }  // namespace sway::gapi
 

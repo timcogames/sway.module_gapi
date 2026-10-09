@@ -5,7 +5,14 @@
 
 namespace sway::gapi {
 
-DECLARE_ENUM(BufferMapAccess, READ, WRITE, READ_WRITE);
+// clang-format off
+#define BUFFER_MAP_ACCESS_LIST(ITEM) \
+  ITEM(READ, 1) \
+  ITEM(WRITE, 2) \
+  ITEM(READ_WRITE, 3)
+// clang-format on
+
+DECLARE_ENUM_U32(BufferMapAccess, BUFFER_MAP_ACCESS_LIST)
 
 }  // namespace sway::gapi
 

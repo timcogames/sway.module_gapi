@@ -10,7 +10,14 @@ namespace sway::gapi {
  * \~russian @brief Перечисление поведения окна просмотра.
  */
 
-DECLARE_ENUM(ViewportMode, ENABLED, DISABLED, RENDER_TO_TEXTURE);
+// clang-format off
+#define VIEWPORT_MODE_LIST(ITEM) \
+  ITEM(ENABLED, 1) \
+  ITEM(DISABLED, 2) \
+  ITEM(RENDER_TO_TEXTURE, 3)
+// clang-format on
+
+DECLARE_ENUM_U32(ViewportMode, VIEWPORT_MODE_LIST)
 
 }  // namespace sway::gapi
 

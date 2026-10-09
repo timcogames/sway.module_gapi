@@ -20,7 +20,13 @@ namespace sway::gapi {
  * \~russian @brief Фрагментный шейдер.
  */
 
-DECLARE_ENUM_IDX(ShaderType, VERT, FRAG);
+// clang-format off
+#define SHADER_TYPE_LIST(ITEM) \
+  ITEM(VERT, 0) \
+  ITEM(FRAG, 1)
+// clang-format on
+
+DECLARE_ENUM_IDX(ShaderType, SHADER_TYPE_LIST)
 
 }  // namespace sway::gapi
 

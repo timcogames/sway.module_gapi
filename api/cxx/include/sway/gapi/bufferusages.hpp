@@ -5,7 +5,14 @@
 
 namespace sway::gapi {
 
-DECLARE_ENUM(BufferUsage, STATIC, DYNAMIC, STREAM);
+// clang-format off
+#define BUFFER_USAGE_LIST(ITEM) \
+  ITEM(STATIC, 1) \
+  ITEM(DYNAMIC, 2) \
+  ITEM(STREAM, 3)
+// clang-format on
+
+DECLARE_ENUM_U32(BufferUsage, BUFFER_USAGE_LIST)
 
 }  // namespace sway::gapi
 

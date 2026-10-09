@@ -6,17 +6,18 @@
 namespace sway::gapi {
 
 // clang-format off
-DECLARE_ENUM(CompareFn,
-  ALWAYS,
-  NEVER,
-  EQUAL,
-  NOT_EQUAL,
-  LESS,
-  LESS_OR_EQUAL,
-  GREATER,
-  GREATER_OR_EQUAL
-);
+#define COMPARE_FUNCTION_LIST(ITEM) \
+  ITEM(ALWAYS, 1) \
+  ITEM(NEVER, 2) \
+  ITEM(EQUAL, 3) \
+  ITEM(NOT_EQUAL, 4) \
+  ITEM(LESS, 5) \
+  ITEM(LESS_OR_EQUAL, 6) \
+  ITEM(GREATER, 7) \
+  ITEM(GREATER_OR_EQUAL, 8)
 // clang-format on
+
+DECLARE_ENUM_U32(CompareFn, COMPARE_FUNCTION_LIST)
 
 }  // namespace sway::gapi
 

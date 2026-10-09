@@ -5,7 +5,13 @@
 
 namespace sway::gapi {
 
-DECLARE_ENUM(FrontFace, CLOCK_WISE, COUNTER_CLOCK_WISE);
+// clang-format off
+#define FRONT_FACE_LIST(ITEM) \
+  ITEM(CLOCK_WISE, 1) \
+  ITEM(COUNTER_CLOCK_WISE, 2)
+// clang-format on
+
+DECLARE_ENUM_U32(FrontFace, FRONT_FACE_LIST)
 
 }  // namespace sway::gapi
 

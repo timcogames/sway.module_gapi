@@ -26,12 +26,16 @@ namespace sway::gapi {
  */
 
 // clang-format off
-DECLARE_ENUM(TopologyType,
-  POINT_LIST,  
-  LINE_LIST, LINE_STRIP,
-  TRIANGLE_LIST, TRIANGLE_STRIP, TRIANGLE_FAN
-);
+#define TOPOLOGY_TYPE_LIST(ITEM) \
+  ITEM(POINT_LIST, 1) \
+  ITEM(LINE_LIST, 2) \
+  ITEM(LINE_STRIP, 3) \
+  ITEM(TRIANGLE_LIST, 4) \
+  ITEM(TRIANGLE_STRIP, 5) \
+  ITEM(TRIANGLE_FAN, 6)
 // clang-format on
+
+DECLARE_ENUM_U32(TopologyType, TOPOLOGY_TYPE_LIST)
 
 }  // namespace sway::gapi
 

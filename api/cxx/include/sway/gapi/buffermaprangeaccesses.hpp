@@ -6,14 +6,16 @@
 namespace sway::gapi {
 
 // clang-format off
-DECLARE_ENUM(BufferMapRangeAccess,
-  READ, WRITE,
-  INVALIDATE_RANGE,
-  INVALIDATE_BUFFER,
-  FLUSH_EXPLICIT,
-  UNSYNCHRONIZED
-);
+#define BUFFER_MAP_RANGE_ACCESS_LIST(ITEM) \
+  ITEM(READ, 1) \
+  ITEM(WRITE, 2) \
+  ITEM(INVALIDATE_RANGE, 3) \
+  ITEM(INVALIDATE_BUFFER, 4) \
+  ITEM(FLUSH_EXPLICIT, 5) \
+  ITEM(UNSYNCHRONIZED, 6)
 // clang-format on
+
+DECLARE_ENUM_U32(BufferMapRangeAccess, BUFFER_MAP_RANGE_ACCESS_LIST)
 
 }  // namespace sway::gapi
 

@@ -14,8 +14,8 @@ struct BufferDescriptor {
   i32_t capacity;  ///< Количество элементов в массиве.
 
   BufferDescriptor()
-      : target(BufferTarget::Enum::NONE)
-      , usage(BufferUsage::Enum::NONE)
+      : target(BufferTarget::Enum::INITIAL)
+      , usage(BufferUsage::Enum::INITIAL)
       , byteStride(0)
       , capacity(0) {}
 };

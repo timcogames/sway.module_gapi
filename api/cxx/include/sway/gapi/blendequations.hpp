@@ -5,7 +5,16 @@
 
 namespace sway::gapi {
 
-DECLARE_ENUM(BlendEq, ADD, SUBTRACT, REVERSE_SUBTRACT, MIN, MAX);
+// clang-format off
+#define BLEND_EQ_LIST(ITEM) \
+  ITEM(ADD, 1) \
+  ITEM(SUBTRACT, 2) \
+  ITEM(REVERSE_SUBTRACT, 3) \
+  ITEM(MIN, 4) \
+  ITEM(MAX, 5)
+// clang-format on
+
+DECLARE_ENUM_U32(BlendEq, BLEND_EQ_LIST)
 
 }  // namespace sway::gapi
 
